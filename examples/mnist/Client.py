@@ -79,9 +79,11 @@ if __name__ == "__main__":
     # get arguments from the console
     parser = argparse.ArgumentParser()
     parser.add_argument('id', type=int, help='Client ID')
+    parser.add_argument('--host', type=str, default='127.0.0.1', help='Server hostname')
+    parser.add_argument('--port', type=int, default=5000, help='Server port')
     args = parser.parse_args()
 
-    server_address = ('localhost', 12345)
+    server_address = (args.host, args.port)
 
     # Create client
     client = Client(server_address, args.id)

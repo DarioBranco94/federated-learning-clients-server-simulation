@@ -64,8 +64,8 @@ class TCPClient(ABC):
             self._info_profiling['bytes_input'] += m_len
 
             # behave differently with respect to the type of message received
-            match m_type:
-                case MessageType.FEDERATED_WEIGHTS:
+            if m_type == MessageType.FEDERATED_WEIGHTS:
+                 
                     print("Received federated weights")
                     # get weights from server
                     weights = m_body["weights"]
@@ -111,7 +111,7 @@ class TCPClient(ABC):
 
                     # send trained weights to the server
                     self._send_local_model()
-                case MessageType.END_FL_TRAINING:
+            elif m_type == MessageType.END_FL_TRAINING:
                     print("Received final federated weights. Federated training has finished.")
                     # get weights from server
                     weights = m_body["weights"]
@@ -123,7 +123,7 @@ class TCPClient(ABC):
                     self._send_kpi_data()
                     # Client disconnect to the server
                     break
-                case _:
+            else:
                     continue
 
     def _send_message(self, msg_type: MessageType, body: object) -> None:

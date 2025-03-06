@@ -1,0 +1,4 @@
+apiVersion: v2
+name: federated-learning
+description: "Helm chart per lanciare server (Deployment) e client (StatefulSet) di Federated Learning"
+version: 0.1.0

@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fed-server-svc
+spec:
+  selector:
+    app: fed-server
+  ports:
+    - name: tcp
+      port: 12345
+      targetPort: 12345
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fed-server-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fed-server
+  template:
+    metadata:
+      labels:
+        app: fed-server
+    spec:
+      containers:
+      - name: fed-server
+        image: fed-server:latest   # Usa l'immagine Docker del server
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 12345

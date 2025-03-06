@@ -175,8 +175,7 @@ class TCPServer(ABC):
                     self._output_bytes_clients[client_id] = m_len
 
                 # behave differently with respect to the type of message received
-                match m_type:
-                    case MessageType.CLIENT_MODEL:
+                if m_type == MessageType.CLIENT_MODEL:
                         # Received trained weights from the client
                         # print("Received trained weights")
                         # Add weights to the shared variable
@@ -189,13 +188,13 @@ class TCPServer(ABC):
                                                               "n_training_samples": n_training_samples}
                             # Notify the server thread
                             self.condition_add_weights.notify()
-                    case MessageType.CLIENT_EVALUATION:
+                elif m_type == MessageType.CLIENT_EVALUATION:
                         # print("Received evaluation")
                         with self.condition_add_client_evaluation:
                             self.clients_evaluations[client_id] = m_body
                             # Notify the server thread
                             self.condition_add_client_evaluation.notify()
-                    case _:
+                else:
                         continue
 
         except (socket.error, BrokenPipeError) as e:

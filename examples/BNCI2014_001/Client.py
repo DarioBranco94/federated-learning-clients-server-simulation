@@ -41,7 +41,7 @@ class Client(TCPClient):
         ])
 
     def load_dataset(self) -> tuple:
-        folder_path = f"dataset/{self.id}"
+        folder_path = f"examples/BNCI2014_001/dataset/{self.id}"
         # Check dataset has saved
         if not os.path.isdir(folder_path):
             sys.exit(
@@ -78,7 +78,7 @@ class Client(TCPClient):
 if __name__ == "__main__":
     # get arguments from the console
     parser = argparse.ArgumentParser()
-    parser.add_argument('id', type=int, help='Client ID')
+    parser.add_argument('id', type=str, help='Client ID')
     args = parser.parse_args()
 
     server_address = ('localhost', 12345)

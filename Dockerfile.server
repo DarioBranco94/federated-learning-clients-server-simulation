@@ -1,0 +1,21 @@
+# Usa Python come base
+FROM python:3.11-slim
+
+# Crea una directory di lavoro
+WORKDIR /app
+
+# Copia il file dei requisiti
+COPY requirements.txt /app
+
+# Installa le dipendenze
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia tutto il contenuto della repo (incluso examples, src, etc.)
+COPY . /app
+
+# Esponiamo la porta su cui il tuo Server.py ascolta (assumiamo 5000)
+EXPOSE 12345
+
+# Comando di default: avvia il server MNIST
+# (se vuoi un altro scenario, cambierai la riga sotto)
+CMD ["python", "examples/mnist/Server.py"]

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: fed-client
+spec:
+  serviceName: "fed-client-svc"
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fed-client
+  template:
+    metadata:
+      labels:
+        app: fed-client
+    spec:
+      containers:
+      - name: fed-client
+        image: fed-client:latest
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: HOSTNAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            # Esempio: se HOSTNAME = "fed-client-0"
+            # estraggo "0" con sed:
+            ID_SUFFIX=$(echo $HOSTNAME | sed 's/.*-//')
+            python examples/mnist/Client.py $ID_SUFFIX

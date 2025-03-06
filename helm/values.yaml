@@ -1,0 +1,14 @@
+replicas:
+  server: 1
+  client: 3
+
+server:
+  image: "fed-server:latest"
+  imagePullPolicy: "Always"
+  port: 12345
+
+client:
+  image: "fed-client:latest"
+  imagePullPolicy: "Always"
+  port: 12345
+  serverHost: "federated-learning-server-svc"
