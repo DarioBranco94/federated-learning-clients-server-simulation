@@ -21,6 +21,14 @@ This is a design of a simple client/server architecture to simulate federated le
 * [Requirements](#requirements)
 * [Simulation Mnist Dataset](#simulation-mnist-dataset)
 * [Simulation BNCI2014_001 Dataset](#simulation-bnci2014_001-dataset)
+* [Distributed Deployment With Kubernetes and Helm](#distributed-deployment)
+    + [Install Docker](#install-docker)
+    + [Install Minikube](#install-minikube)
+    + [Install Helm](#install-helm)
+    + [Building Images](#building-images)
+    + [Configure Execution](#configure-execution)
+    + [Deploy with Helm](#deploy-with-helm)
+    + [Cleanup](#cleanup)
 
 ## Overview
 
@@ -292,4 +300,74 @@ Automating the execution of clients is possible by ```start_clients.sh``` bash s
 ./examples/BNCI2014_001/start_clients.sh
 ```
 > [!Note]
-> It will execute the Client.py script 9 times on a different terminal. You can specify any type of terminal; in our case, xterm is used, so if you want to use this script, make sure you have it installed!!!. 
+> It will execute the Client.py script 9 times on a different terminal. You can specify any type of terminal; in our case, xterm is used, so if you want to use this script, make sure you have it installed!!!.
+> 
+
+## Distributed Deployment With Kubernetes and Helm
+In this section we will show how to setup a distributed environment running the software using Kubernetes and Helm. To offer a ready-to-go solution we will use Minikube to test the approach. Launch the deployment scripts in a real distributed architecture needs just to substitute Minikube Cluster with a real Kubernetes Cluster.
+
+### Install Docker (Ubuntu)
+```bash
+sudo apt-get update
+sudo apt-get install -y docker.io
+sudo usermod -aG docker $USER
+docker version
+```
+
+### Install Minikube
+
+```bash
+curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+```
+
+### Start Minikube and Check Minikube Installation
+```bash
+minikube start
+kubectl get nodes
+```
+
+### Install Helm
+```bash
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+helm version
+```
+
+### Building Docker Images (switching into Minikube Env)
+
+```bash
+eval $(minikube docker-env)
+docker build -t fed-server:latest -f Dockerfile.server .
+docker build -t fed-client:latest -f Dockerfile.client .
+```
+
+### Configure Execution
+To setup your experiment just modify Helm configuration files. Specifically, you have to modify
+```bash
+helm/values.yaml
+```
+in which you can setup the experiment folder, the server port you want to use and the number of clients to deploy.
+
+
+###  Deploy with Helm
+Inside the `helm/` folder:
+```bash
+helm upgrade --install fl-demo .
+kubectl get pods
+```
+To scale:
+```bash
+helm upgrade fl-demo . --set replicas.client=5
+```
+
+### Cleanup
+Inside the `helm/` folder:
+
+```bash
+helm uninstall fl-demo 
+minikube stop
+minikube delete
+```
+
+
+
