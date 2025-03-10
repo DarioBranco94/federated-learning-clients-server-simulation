@@ -21,11 +21,11 @@ This is a design of a simple client/server architecture to simulate federated le
 * [Requirements](#requirements)
 * [Simulation Mnist Dataset](#simulation-mnist-dataset)
 * [Simulation BNCI2014_001 Dataset](#simulation-bnci2014_001-dataset)
-* [Distributed Deployment With Kubernetes and Helm](#distributed-deployment)
+* [Distributed Deployment With Kubernetes and Helm](#distributed-deployment-with-kubernetes-and-helm)
     + [Install Docker](#install-docker)
     + [Install Minikube](#install-minikube)
     + [Install Helm](#install-helm)
-    + [Building Images](#building-images)
+    + [Building Images](#building-docker-images)
     + [Configure Execution](#configure-execution)
     + [Deploy with Helm](#deploy-with-helm)
     + [Cleanup](#cleanup)
@@ -304,9 +304,9 @@ Automating the execution of clients is possible by ```start_clients.sh``` bash s
 > 
 
 ## Distributed Deployment With Kubernetes and Helm
-In this section we will show how to setup a distributed environment running the software using Kubernetes and Helm. To offer a ready-to-go solution we will use Minikube to test the approach. Launch the deployment scripts in a real distributed architecture needs just to substitute Minikube Cluster with a real Kubernetes Cluster.
+In this section we will show how to setup a distributed environment running the software using Kubernetes and Helm. To offer a ready-to-go solution we will use Minikube to test the approach. Launch the deployment scripts in a real distributed architecture needs just to substitute Minikube Cluster with a real Kubernetes Cluster. This guide is tested on Ubuntu 22.04.
 
-### Install Docker (Ubuntu)
+### Install Docker
 ```bash
 sudo apt-get update
 sudo apt-get install -y docker.io
@@ -333,8 +333,10 @@ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 helm version
 ```
 
-### Building Docker Images (switching into Minikube Env)
+### Building Docker Images 
 
+> [!IMPORTANT]
+> Before building images you have to switch to  Minikube Env!
 ```bash
 eval $(minikube docker-env)
 docker build -t fed-server:latest -f Dockerfile.server .
