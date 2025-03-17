@@ -8,12 +8,30 @@ import socket
 import tensorflow as tf
 from tensorflow import keras
 from sklearn.metrics import confusion_matrix
-from src.CSUtils import MessageType, build_message, unpack_message
+from CSUtils import MessageType, build_message, unpack_message
 import time
+import logging
+import os
+
+# Crea directory logs se non esiste
+log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs')
+os.makedirs(log_dir, exist_ok=True)
+
+# Configure logging to file and console
+log_file = os.path.join(log_dir, 'client.log')
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file),
+        logging.StreamHandler()
+    ]
+)
 
 class TCPClient(ABC):
 
     def __init__(self, server_address, client_id: int):
+        logging.debug("Initializing TCPClient with server address: %s and client ID: %d", server_address, client_id)
         self.server_address = server_address
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.id = client_id
@@ -49,14 +67,15 @@ class TCPClient(ABC):
 
     def _connect(self) -> None:
         """Connect to the server"""
+        logging.debug("Connecting to server at address: %s", self.server_address)
         self.socket.connect(self.server_address)
+        logging.info("Connected to server")
 
     def _manage_communication(self) -> None:
-        """ It manages the message communication with the server"""
+        logging.debug("Managing communication with server")
         while True:
-            # Wait for Server message
             m_body, m_type, m_len = self._receive_message()
-
+            logging.debug("Received message of type: %s with length: %d", m_type, m_len)
             # check if server closed the connection
             if m_body is None or m_type is None:
                 break
@@ -132,8 +151,10 @@ class TCPClient(ABC):
         :param msg_type: type of the message.
         :param body: body of the message.
         """
+        logging.debug("Sending message of type: %s to server", msg_type)
         msg_serialized = build_message(msg_type, body)
         self.socket.sendall(msg_serialized)
+        logging.debug("Message sent successfully")
 
     def _receive_message(self) -> tuple:
         """
@@ -158,10 +179,13 @@ class TCPClient(ABC):
 
     def _close_connection(self) -> None:
         """It closes connection with the server"""
+        logging.info("Closing connection with server")
         self.socket.close()
+        logging.debug("Connection closed")
 
     def _load_compiled_model(self) -> keras.Model:
         """ It loads the local model to be trained"""
+        logging.debug("Loading and compiling model")
         model = self.get_skeleton_model()
 
         optimizer = self.get_optimizer()
@@ -169,13 +193,15 @@ class TCPClient(ABC):
         metric = self.get_metric()
 
         model.compile(optimizer=optimizer, loss=loss, metrics=[metric])
-
+        logging.info("Model compiled successfully")
         return model
 
     def _update_weights(self, weights) -> None:
         """ It updates the weights of the local model"""
+        logging.debug("Updating model weights")
         self.weights = weights
         self._model.set_weights(weights)
+        logging.debug("Model weights updated successfully")
 
     @tf.function
     def _train_step(self, x, y):
@@ -206,10 +232,13 @@ class TCPClient(ABC):
         """
         It trains the model.
         """
+        logging.info("Starting model training for %d epochs", self._epochs)
         for epoch in range(self._epochs):
+            logging.debug("Starting epoch %d/%d", epoch + 1, self._epochs)
             print(f"Epoch {epoch + 1}/{self._epochs}")
 
             if self._shuffle_dataset_each_epoch:
+                logging.debug("Shuffling dataset for epoch %d", epoch + 1)
                 indices = np.arange(self.x_train.shape[0])
                 np.random.shuffle(indices)
                 self.x_train = self.x_train[indices]
@@ -249,6 +278,7 @@ class TCPClient(ABC):
             print(f"Epoch {epoch + 1}: Loss: {epoch_loss_avg.result()}, Accuracy: {epoch_accuracy.result()}")
 
         # set trained weights
+        logging.info("Training completed, saving model weights")
         self.weights = np.array(self._model.get_weights(), dtype='object')
         # evaluate model
         self._evaluate_model(self._model)
@@ -259,11 +289,15 @@ class TCPClient(ABC):
         :param model: model to evaluate, otherwise it loads it.
         :return: numpy array of (accuracy, loss)
         """
+        logging.info("Evaluating model performance")
         is_evaluating_fm = False
 
         if model is None:
             model = self._model
             is_evaluating_fm = True
+            logging.debug("Evaluating federated model")
+        else:
+            logging.debug("Evaluating training model")
 
         test_loss_avg = tf.metrics.Mean()
         test_accuracy = self.get_metric()
@@ -309,11 +343,14 @@ class TCPClient(ABC):
 
     def _send_local_model(self) -> None:
         """Send trained weights to the server"""
+        logging.info("Sending local model to server")
         msg_body = {'client_id': self.id, 'weights': self.weights, 'gradients': self.gradients, 'n_training_samples': len(self.y_train)}
         self._send_message(MessageType.CLIENT_MODEL, msg_body)
+        logging.debug("Local model sent successfully")
 
     def _send_kpi_data(self) -> None:
         """Send evaluation data to the server"""
+        logging.info("Sending KPI data to server")
         msg_body = {'client_id': self.id,
                     'evaluation_federated': self.evaluation_data_federated_model,
                     'evaluation_training': self.evaluation_data_training_model,
@@ -322,17 +359,23 @@ class TCPClient(ABC):
                     'training_execution_time': self._training_execution_time}
 
         if self._is_profiling:
+            logging.debug("Including profiling information in KPI data")
             self._info_profiling['train_samples'] = len(self.y_train)
             self._info_profiling['test_samples'] = len(self.y_test)
             msg_body['info_profiling'] = self._info_profiling
 
         self._send_message(MessageType.CLIENT_EVALUATION, msg_body)
+        logging.debug("KPI data sent successfully")
 
     def run(self) -> None:
         """
         Execute client tasks
         """
+        logging.info("Starting client execution with ID: %d", self.id)
+        logging.debug("Loading dataset")
         self.x_train, self.x_test, self.y_train, self.y_test = self.load_dataset()
+        logging.info("Dataset loaded: %d training samples, %d test samples", 
+                    len(self.y_train), len(self.y_test))
 
         if self._model is None:
             self._model = self._load_compiled_model()
@@ -344,10 +387,13 @@ class TCPClient(ABC):
             self._manage_communication()
 
         except socket.error as e:
+            logging.error("Socket error: %s", e)
             print(f"Socket error: {e}")
         finally:
             # Close socket
             self._close_connection()
+            logging.info("Client execution completed")
+            
 
     @staticmethod
     def enable_op_determinism() -> None:

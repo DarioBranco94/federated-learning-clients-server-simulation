@@ -2,3 +2,4 @@ tensorflow
 tensorflow-federated
 numpy
 scikit-learn
+matplotlib

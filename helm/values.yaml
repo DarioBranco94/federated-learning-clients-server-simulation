@@ -2,13 +2,41 @@ replicas:
   server: 1
   client: 3
 
+experiment: "mnist"
+
 server:
   image: "fed-server:latest"
   imagePullPolicy: "Always"
   port: 12345
+  numberOfRounds: 8
 
 client:
   image: "fed-client:latest"
-  imagePullPolicy: "Always"
+  imagePullPolicy: "IfNotPresent"
   port: 12345
   serverHost: "federated-learning-server-svc"
+  model: "model1"
+  loss: "CategoricalCrossentropy"
+  lossParams: "{}"
+  metric: "CategoricalAccuracy"
+  metricParams: "{}"
+  optimizer: "Adam"
+  optimizerParams: '{"learning_rate": 0.001}'
+  numClasses: 10
+  batchSize: 32
+  trainEpochs: 5
+
+volumes:
+  logs:
+    name: logs-volume
+    mountPath: /app/logs
+    size: 1Gi
+    storageClass: manual
+    hostPath: /logs
+
+  evaluations:
+    name: evaluations-volume
+    mountPath: /app/evaluations
+    size: 1Gi
+    storageClass: manual
+    hostPath: /evaluations

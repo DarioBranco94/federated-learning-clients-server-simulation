@@ -1,0 +1,32 @@
+2025-03-14 14:14:51,245 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-03-14 14:14:52,006 - DEBUG - Creating converter from 7 to 5
+2025-03-14 14:14:52,008 - DEBUG - Creating converter from 5 to 7
+2025-03-14 14:14:52,010 - DEBUG - Creating converter from 7 to 5
+2025-03-14 14:14:52,012 - DEBUG - Creating converter from 5 to 7
+2025-03-14 14:14:53,101 - DEBUG - Initializing MLIR with module: _site_initialize_0
+2025-03-14 14:14:53,111 - DEBUG - Registering dialects from initializer <module 'jaxlib.mlir._mlir_libs._site_initialize_0' from '/usr/local/lib/python3.11/site-packages/jaxlib/mlir/_mlir_libs/_site_initialize_0.so'>
+2025-03-14 14:14:53,422 - DEBUG - No jax_plugins namespace packages available
+2025-03-14 14:14:53,723 - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2025-03-14 14:14:56,433 - DEBUG - Initializing TCPServer with address: ('0.0.0.0', 12345), clients: 3, rounds: 8
+2025-03-14 14:14:56,436 - INFO - Setting aggregation algorithm to: FedAvg
+2025-03-14 14:14:56,439 - INFO - Setting client profiling to: False
+2025-03-14 14:14:56,499 - INFO - Setting evaluation plots to: True
+2025-03-14 14:14:56,502 - INFO - Starting server execution
+2025-03-14 14:14:56,504 - DEBUG - No initial weights provided, initializing federated model
+2025-03-14 14:14:56,505 - INFO - Initializing federated model weights
+2025-03-14 14:14:56,734 - DEBUG - Skeleton model created
+2025-03-14 14:14:56,746 - DEBUG - Model weights initialized
+2025-03-14 14:14:56,800 - DEBUG - Initializing server
+2025-03-14 14:14:56,802 - DEBUG - Waiting for clients
+2025-03-14 14:14:56,803 - INFO - Waiting for client connections on 0.0.0.0:12345
+2025-03-14 14:14:56,804 - DEBUG - Creating server threads
+2025-03-14 14:14:56,806 - DEBUG - Creating server threads
+2025-03-14 14:14:56,807 - INFO - Starting to accept client connections
+2025-03-14 14:14:56,807 - DEBUG - Client connections thread started
+2025-03-14 14:14:56,810 - INFO - Starting federated learning rounds management
+2025-03-14 14:14:56,810 - DEBUG - Federated learning algorithms thread started
+2025-03-14 14:14:56,811 - DEBUG - Waiting for client weights
+2025-03-14 14:14:56,813 - DEBUG - Final evaluations thread started
+2025-03-14 14:14:56,815 - INFO - Server running
+2025-03-14 14:14:56,816 - INFO - Server shutting down
+2025-03-14 14:14:56,818 - INFO - Waiting for all threads to complete

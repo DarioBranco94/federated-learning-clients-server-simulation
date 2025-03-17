@@ -1,0 +1,55 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Chart.Name }}-client-job
+spec:
+  completionMode: Indexed  # 🔹 Abilita "Indexed Jobs" per assegnare ID univoci
+  completions: {{ .Values.replicas.client }}  # Numero totale di client
+  parallelism: {{ .Values.replicas.client }}  # Numero massimo di client eseguiti in parallelo
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}-client
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: fed-client
+        image: {{ .Values.client.image }}
+        imagePullPolicy: {{ .Values.client.imagePullPolicy }}
+        env:
+          - name: JOB_COMPLETION_INDEX
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            # Assegna un ID univoco al client
+            ID=${JOB_COMPLETION_INDEX:-$RANDOM}  # Se non è definito, usa valore casuale per debug
+            echo "Starting Client with ID $ID"
+
+            python src/run_experiment.py \
+              --experiment {{ .Values.experiment }} \
+              --id $ID \
+              --host {{ .Values.client.serverHost }} \
+              --port {{ .Values.client.port }} \
+              --model {{ .Values.client.model }} \
+              --loss {{ .Values.client.loss }} \
+              --loss_params '{{ .Values.client.lossParams }}' \
+              --metric {{ .Values.client.metric }} \
+              --metric_params '{{ .Values.client.metricParams }}' \
+              --optimizer {{ .Values.client.optimizer }} \
+              --optimizer_params '{{ .Values.client.optimizerParams }}' \
+              --num_classes {{ .Values.client.numClasses }} \
+              --batch_size {{ .Values.client.batchSize }} \
+              --train_epochs {{ .Values.client.trainEpochs }}
+
+            echo "Training complete. Exiting..."
+        volumeMounts:
+          - name: logs-volume
+            mountPath: {{ .Values.volumes.logs.mountPath }}
+      volumes:
+        - name: logs-volume
+          persistentVolumeClaim:
+            claimName: {{ .Values.volumes.logs.name }}-pvc
+  backoffLimit: 0

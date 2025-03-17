@@ -30,5 +30,28 @@ spec:
         ports:
           - containerPort: {{ .Values.server.port }}
         # Esempio: se il tuo Server.py sta in examples/mnist/Server.py
-        command: ["python"]
-        args: ["examples/mnist/Server.py"]
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            # Esempio: se HOSTNAME = "federated-learning-client-stateful-0"
+            # estraiamo l'indice numerico dopo l'ultimo trattino:
+            ID_SUFFIX=$(echo $HOSTNAME | sed 's/.*-//')
+
+            # Avvia il client con quell'indice come "id"
+            python src/run_experiment.py \
+              --experiment {{ .Values.experiment }} \
+              --id -1 \
+              --numberOfClients {{ .Values.replicas.client }} \
+              --numberOfRounds {{.Values.server.numberOfRounds }} 
+        volumeMounts:
+          - name: logs-volume
+            mountPath: {{ .Values.volumes.logs.mountPath }}
+          - name: evaluations-volume
+            mountPath: {{ .Values.volumes.evaluations.mountPath }}
+      volumes:
+        - name: logs-volume
+          persistentVolumeClaim:
+            claimName: {{ .Values.volumes.logs.name }}-pvc
+        - name: evaluations-volume
+          persistentVolumeClaim:
+            claimName: {{ .Values.volumes.evaluations.name }}-pvc
