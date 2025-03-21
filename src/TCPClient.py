@@ -14,7 +14,7 @@ import logging
 import os
 
 # Crea directory logs se non esiste
-log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), '/output/logs')
+log_dir = '/app/output/logs'
 os.makedirs(log_dir, exist_ok=True)
 
 # Configure logging to file and console

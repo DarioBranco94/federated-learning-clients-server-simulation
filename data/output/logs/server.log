@@ -1,0 +1,351 @@
+2025-03-21 14:57:15,237 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-03-21 14:57:15,641 - DEBUG - Creating converter from 7 to 5
+2025-03-21 14:57:15,641 - DEBUG - Creating converter from 5 to 7
+2025-03-21 14:57:15,642 - DEBUG - Creating converter from 7 to 5
+2025-03-21 14:57:15,642 - DEBUG - Creating converter from 5 to 7
+2025-03-21 14:57:16,551 - DEBUG - Initializing MLIR with module: _site_initialize_0
+2025-03-21 14:57:16,552 - DEBUG - Registering dialects from initializer <module 'jaxlib.mlir._mlir_libs._site_initialize_0' from '/usr/local/lib/python3.11/site-packages/jaxlib/mlir/_mlir_libs/_site_initialize_0.so'>
+2025-03-21 14:57:16,646 - DEBUG - No jax_plugins namespace packages available
+2025-03-21 14:57:16,742 - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2025-03-21 14:57:18,074 - DEBUG - Initializing TCPServer with address: ('0.0.0.0', 12345), clients: 3, rounds: 8
+2025-03-21 14:57:18,075 - INFO - Setting aggregation algorithm to: FedAvg
+2025-03-21 14:57:18,075 - INFO - Setting client profiling to: False
+2025-03-21 14:57:18,076 - INFO - Setting evaluation plots to: True
+2025-03-21 14:57:18,076 - INFO - Starting server execution
+2025-03-21 14:57:18,076 - DEBUG - No initial weights provided, initializing federated model
+2025-03-21 14:57:18,077 - INFO - Initializing federated model weights
+2025-03-21 14:57:18,352 - DEBUG - Skeleton model created
+2025-03-21 14:57:18,361 - DEBUG - Model weights initialized
+2025-03-21 14:57:18,362 - DEBUG - Initializing server
+2025-03-21 14:57:18,362 - DEBUG - Waiting for clients
+2025-03-21 14:57:18,362 - INFO - Waiting for client connections on 0.0.0.0:12345
+2025-03-21 14:57:18,363 - DEBUG - Creating server threads
+2025-03-21 14:57:18,363 - DEBUG - Creating server threads
+2025-03-21 14:57:18,364 - INFO - Starting to accept client connections
+2025-03-21 14:57:18,364 - DEBUG - Client connections thread started
+2025-03-21 14:57:18,364 - INFO - Starting federated learning rounds management
+2025-03-21 14:57:18,365 - DEBUG - Federated learning algorithms thread started
+2025-03-21 14:57:18,365 - DEBUG - Waiting for client weights
+2025-03-21 14:57:18,365 - DEBUG - Final evaluations thread started
+2025-03-21 14:57:18,366 - INFO - Server running
+2025-03-21 14:57:18,366 - INFO - Server shutting down
+2025-03-21 14:57:18,366 - INFO - Waiting for all threads to complete
+2025-03-21 14:58:02,625 - DEBUG - Accepted connection from ('10.244.0.4', 51572)
+2025-03-21 14:58:02,626 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:02,626 - INFO - Client connected: ('10.244.0.4', 51572) (Total: 1/3)
+2025-03-21 14:58:02,626 - DEBUG - Sending weights for training (round 0/8)
+2025-03-21 14:58:02,628 - DEBUG - Sent federated model to client
+2025-03-21 14:58:04,140 - DEBUG - Accepted connection from ('10.244.0.6', 53064)
+2025-03-21 14:58:04,141 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:04,141 - INFO - Client connected: ('10.244.0.6', 53064) (Total: 2/3)
+2025-03-21 14:58:04,141 - DEBUG - Sending weights for training (round 0/8)
+2025-03-21 14:58:04,143 - DEBUG - Sent federated model to client
+2025-03-21 14:58:05,470 - DEBUG - Waiting for client weights
+2025-03-21 14:58:06,499 - DEBUG - Waiting for client weights
+2025-03-21 14:58:14,172 - DEBUG - Accepted connection from ('10.244.0.5', 35336)
+2025-03-21 14:58:14,173 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:14,173 - INFO - Client connected: ('10.244.0.5', 35336) (Total: 3/3)
+2025-03-21 14:58:14,173 - DEBUG - Sending weights for training (round 0/8)
+2025-03-21 14:58:14,174 - DEBUG - Client connections thread joined
+2025-03-21 14:58:14,174 - DEBUG - Sent federated model to client
+2025-03-21 14:58:15,588 - INFO - Starting round 1 of 8
+2025-03-21 14:58:15,588 - DEBUG - Aggregating weights from 3 clients
+2025-03-21 14:58:15,589 - DEBUG - Aggregating weights using FedAvg algorithm
+2025-03-21 14:58:15,590 - DEBUG - Weights aggregated successfully
+2025-03-21 14:58:15,590 - DEBUG - Client weights dictionary cleared
+2025-03-21 14:58:15,591 - INFO - Weights aggregated successfully
+2025-03-21 14:58:15,591 - DEBUG - Sending new federated model to clients
+2025-03-21 14:58:15,591 - DEBUG - Sending federated model to 3 clients
+2025-03-21 14:58:15,591 - DEBUG - Sending federated model to client
+2025-03-21 14:58:15,592 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:15,592 - DEBUG - Sending weights for training (round 1/8)
+2025-03-21 14:58:15,593 - DEBUG - Sent federated model to client
+2025-03-21 14:58:15,593 - DEBUG - Sending federated model to client
+2025-03-21 14:58:15,593 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:15,594 - DEBUG - Sending weights for training (round 1/8)
+2025-03-21 14:58:15,594 - DEBUG - Sent federated model to client
+2025-03-21 14:58:15,594 - DEBUG - Sending federated model to client
+2025-03-21 14:58:15,595 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:15,595 - DEBUG - Sending weights for training (round 1/8)
+2025-03-21 14:58:15,595 - DEBUG - Sent federated model to client
+2025-03-21 14:58:15,596 - INFO - Federated model sent to 3 active clients
+2025-03-21 14:58:15,596 - INFO - New federated model sent to all clients
+2025-03-21 14:58:15,596 - DEBUG - Waiting for client weights
+2025-03-21 14:58:16,339 - DEBUG - Waiting for client weights
+2025-03-21 14:58:16,340 - DEBUG - Waiting for client weights
+2025-03-21 14:58:16,388 - INFO - Starting round 2 of 8
+2025-03-21 14:58:16,388 - DEBUG - Aggregating weights from 3 clients
+2025-03-21 14:58:16,388 - DEBUG - Aggregating weights using FedAvg algorithm
+2025-03-21 14:58:16,389 - DEBUG - Weights aggregated successfully
+2025-03-21 14:58:16,389 - DEBUG - Client weights dictionary cleared
+2025-03-21 14:58:16,389 - INFO - Weights aggregated successfully
+2025-03-21 14:58:16,390 - DEBUG - Sending new federated model to clients
+2025-03-21 14:58:16,390 - DEBUG - Sending federated model to 3 clients
+2025-03-21 14:58:16,391 - DEBUG - Sending federated model to client
+2025-03-21 14:58:16,391 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:16,391 - DEBUG - Sending weights for training (round 2/8)
+2025-03-21 14:58:16,392 - DEBUG - Sent federated model to client
+2025-03-21 14:58:16,392 - DEBUG - Sending federated model to client
+2025-03-21 14:58:16,392 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:16,393 - DEBUG - Sending weights for training (round 2/8)
+2025-03-21 14:58:16,393 - DEBUG - Sent federated model to client
+2025-03-21 14:58:16,394 - DEBUG - Sending federated model to client
+2025-03-21 14:58:16,394 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:16,394 - DEBUG - Sending weights for training (round 2/8)
+2025-03-21 14:58:16,395 - DEBUG - Sent federated model to client
+2025-03-21 14:58:16,395 - INFO - Federated model sent to 3 active clients
+2025-03-21 14:58:16,396 - INFO - New federated model sent to all clients
+2025-03-21 14:58:16,396 - DEBUG - Waiting for client weights
+2025-03-21 14:58:17,136 - DEBUG - Waiting for client weights
+2025-03-21 14:58:17,141 - DEBUG - Waiting for client weights
+2025-03-21 14:58:17,210 - INFO - Starting round 3 of 8
+2025-03-21 14:58:17,210 - DEBUG - Aggregating weights from 3 clients
+2025-03-21 14:58:17,210 - DEBUG - Aggregating weights using FedAvg algorithm
+2025-03-21 14:58:17,211 - DEBUG - Weights aggregated successfully
+2025-03-21 14:58:17,211 - DEBUG - Client weights dictionary cleared
+2025-03-21 14:58:17,212 - INFO - Weights aggregated successfully
+2025-03-21 14:58:17,212 - DEBUG - Sending new federated model to clients
+2025-03-21 14:58:17,212 - DEBUG - Sending federated model to 3 clients
+2025-03-21 14:58:17,212 - DEBUG - Sending federated model to client
+2025-03-21 14:58:17,213 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:17,213 - DEBUG - Sending weights for training (round 3/8)
+2025-03-21 14:58:17,213 - DEBUG - Sent federated model to client
+2025-03-21 14:58:17,214 - DEBUG - Sending federated model to client
+2025-03-21 14:58:17,214 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:17,214 - DEBUG - Sending weights for training (round 3/8)
+2025-03-21 14:58:17,215 - DEBUG - Sent federated model to client
+2025-03-21 14:58:17,215 - DEBUG - Sending federated model to client
+2025-03-21 14:58:17,215 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:17,216 - DEBUG - Sending weights for training (round 3/8)
+2025-03-21 14:58:17,216 - DEBUG - Sent federated model to client
+2025-03-21 14:58:17,216 - INFO - Federated model sent to 3 active clients
+2025-03-21 14:58:17,217 - INFO - New federated model sent to all clients
+2025-03-21 14:58:17,217 - DEBUG - Waiting for client weights
+2025-03-21 14:58:17,942 - DEBUG - Waiting for client weights
+2025-03-21 14:58:17,945 - DEBUG - Waiting for client weights
+2025-03-21 14:58:18,002 - INFO - Starting round 4 of 8
+2025-03-21 14:58:18,003 - DEBUG - Aggregating weights from 3 clients
+2025-03-21 14:58:18,003 - DEBUG - Aggregating weights using FedAvg algorithm
+2025-03-21 14:58:18,004 - DEBUG - Weights aggregated successfully
+2025-03-21 14:58:18,004 - DEBUG - Client weights dictionary cleared
+2025-03-21 14:58:18,004 - INFO - Weights aggregated successfully
+2025-03-21 14:58:18,004 - DEBUG - Sending new federated model to clients
+2025-03-21 14:58:18,005 - DEBUG - Sending federated model to 3 clients
+2025-03-21 14:58:18,005 - DEBUG - Sending federated model to client
+2025-03-21 14:58:18,005 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:18,005 - DEBUG - Sending weights for training (round 4/8)
+2025-03-21 14:58:18,006 - DEBUG - Sent federated model to client
+2025-03-21 14:58:18,006 - DEBUG - Sending federated model to client
+2025-03-21 14:58:18,006 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:18,007 - DEBUG - Sending weights for training (round 4/8)
+2025-03-21 14:58:18,007 - DEBUG - Sent federated model to client
+2025-03-21 14:58:18,007 - DEBUG - Sending federated model to client
+2025-03-21 14:58:18,008 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:18,008 - DEBUG - Sending weights for training (round 4/8)
+2025-03-21 14:58:18,009 - DEBUG - Sent federated model to client
+2025-03-21 14:58:18,009 - INFO - Federated model sent to 3 active clients
+2025-03-21 14:58:18,009 - INFO - New federated model sent to all clients
+2025-03-21 14:58:18,009 - DEBUG - Waiting for client weights
+2025-03-21 14:58:18,746 - DEBUG - Waiting for client weights
+2025-03-21 14:58:18,802 - INFO - Starting round 5 of 8
+2025-03-21 14:58:18,802 - DEBUG - Aggregating weights from 3 clients
+2025-03-21 14:58:18,803 - DEBUG - Aggregating weights using FedAvg algorithm
+2025-03-21 14:58:18,803 - DEBUG - Weights aggregated successfully
+2025-03-21 14:58:18,804 - DEBUG - Client weights dictionary cleared
+2025-03-21 14:58:18,804 - INFO - Weights aggregated successfully
+2025-03-21 14:58:18,804 - DEBUG - Sending new federated model to clients
+2025-03-21 14:58:18,805 - DEBUG - Sending federated model to 3 clients
+2025-03-21 14:58:18,805 - DEBUG - Sending federated model to client
+2025-03-21 14:58:18,805 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:18,805 - DEBUG - Sending weights for training (round 5/8)
+2025-03-21 14:58:18,806 - DEBUG - Sent federated model to client
+2025-03-21 14:58:18,806 - DEBUG - Sending federated model to client
+2025-03-21 14:58:18,807 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:18,807 - DEBUG - Sending weights for training (round 5/8)
+2025-03-21 14:58:18,807 - DEBUG - Sent federated model to client
+2025-03-21 14:58:18,808 - DEBUG - Sending federated model to client
+2025-03-21 14:58:18,808 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:18,808 - DEBUG - Sending weights for training (round 5/8)
+2025-03-21 14:58:18,809 - DEBUG - Sent federated model to client
+2025-03-21 14:58:18,809 - INFO - Federated model sent to 3 active clients
+2025-03-21 14:58:18,809 - INFO - New federated model sent to all clients
+2025-03-21 14:58:18,810 - DEBUG - Waiting for client weights
+2025-03-21 14:58:19,539 - DEBUG - Waiting for client weights
+2025-03-21 14:58:19,540 - DEBUG - Waiting for client weights
+2025-03-21 14:58:19,607 - INFO - Starting round 6 of 8
+2025-03-21 14:58:19,607 - DEBUG - Aggregating weights from 3 clients
+2025-03-21 14:58:19,608 - DEBUG - Aggregating weights using FedAvg algorithm
+2025-03-21 14:58:19,608 - DEBUG - Weights aggregated successfully
+2025-03-21 14:58:19,609 - DEBUG - Client weights dictionary cleared
+2025-03-21 14:58:19,609 - INFO - Weights aggregated successfully
+2025-03-21 14:58:19,609 - DEBUG - Sending new federated model to clients
+2025-03-21 14:58:19,609 - DEBUG - Sending federated model to 3 clients
+2025-03-21 14:58:19,610 - DEBUG - Sending federated model to client
+2025-03-21 14:58:19,610 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:19,610 - DEBUG - Sending weights for training (round 6/8)
+2025-03-21 14:58:19,611 - DEBUG - Sent federated model to client
+2025-03-21 14:58:19,611 - DEBUG - Sending federated model to client
+2025-03-21 14:58:19,611 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:19,612 - DEBUG - Sending weights for training (round 6/8)
+2025-03-21 14:58:19,612 - DEBUG - Sent federated model to client
+2025-03-21 14:58:19,612 - DEBUG - Sending federated model to client
+2025-03-21 14:58:19,613 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:19,613 - DEBUG - Sending weights for training (round 6/8)
+2025-03-21 14:58:19,614 - DEBUG - Sent federated model to client
+2025-03-21 14:58:19,614 - INFO - Federated model sent to 3 active clients
+2025-03-21 14:58:19,614 - INFO - New federated model sent to all clients
+2025-03-21 14:58:19,615 - DEBUG - Waiting for client weights
+2025-03-21 14:58:20,359 - DEBUG - Waiting for client weights
+2025-03-21 14:58:20,373 - DEBUG - Waiting for client weights
+2025-03-21 14:58:20,416 - INFO - Starting round 7 of 8
+2025-03-21 14:58:20,417 - DEBUG - Aggregating weights from 3 clients
+2025-03-21 14:58:20,417 - DEBUG - Aggregating weights using FedAvg algorithm
+2025-03-21 14:58:20,417 - DEBUG - Weights aggregated successfully
+2025-03-21 14:58:20,418 - DEBUG - Client weights dictionary cleared
+2025-03-21 14:58:20,418 - INFO - Weights aggregated successfully
+2025-03-21 14:58:20,418 - DEBUG - Sending new federated model to clients
+2025-03-21 14:58:20,418 - DEBUG - Sending federated model to 3 clients
+2025-03-21 14:58:20,419 - DEBUG - Sending federated model to client
+2025-03-21 14:58:20,419 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:20,419 - DEBUG - Sending weights for training (round 7/8)
+2025-03-21 14:58:20,420 - DEBUG - Sent federated model to client
+2025-03-21 14:58:20,420 - DEBUG - Sending federated model to client
+2025-03-21 14:58:20,420 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:20,421 - DEBUG - Sending weights for training (round 7/8)
+2025-03-21 14:58:20,421 - DEBUG - Sent federated model to client
+2025-03-21 14:58:20,422 - DEBUG - Sending federated model to client
+2025-03-21 14:58:20,422 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:20,422 - DEBUG - Sending weights for training (round 7/8)
+2025-03-21 14:58:20,423 - DEBUG - Sent federated model to client
+2025-03-21 14:58:20,423 - INFO - Federated model sent to 3 active clients
+2025-03-21 14:58:20,423 - INFO - New federated model sent to all clients
+2025-03-21 14:58:20,424 - DEBUG - Waiting for client weights
+2025-03-21 14:58:21,158 - DEBUG - Waiting for client weights
+2025-03-21 14:58:21,171 - DEBUG - Waiting for client weights
+2025-03-21 14:58:21,216 - INFO - Starting round 8 of 8
+2025-03-21 14:58:21,216 - DEBUG - Aggregating weights from 3 clients
+2025-03-21 14:58:21,217 - DEBUG - Aggregating weights using FedAvg algorithm
+2025-03-21 14:58:21,217 - DEBUG - Weights aggregated successfully
+2025-03-21 14:58:21,234 - DEBUG - Client weights dictionary cleared
+2025-03-21 14:58:21,234 - INFO - Weights aggregated successfully
+2025-03-21 14:58:21,234 - DEBUG - Sending new federated model to clients
+2025-03-21 14:58:21,235 - DEBUG - Sending federated model to 3 clients
+2025-03-21 14:58:21,235 - DEBUG - Sending federated model to client
+2025-03-21 14:58:21,235 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:21,236 - DEBUG - Sending final weights for evaluation
+2025-03-21 14:58:21,236 - DEBUG - Sent federated model to client
+2025-03-21 14:58:21,237 - DEBUG - Sending federated model to client
+2025-03-21 14:58:21,237 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:21,237 - DEBUG - Sending final weights for evaluation
+2025-03-21 14:58:21,238 - DEBUG - Sent federated model to client
+2025-03-21 14:58:21,238 - DEBUG - Sending federated model to client
+2025-03-21 14:58:21,238 - DEBUG - Preparing to send federated model to client
+2025-03-21 14:58:21,239 - DEBUG - Sending final weights for evaluation
+2025-03-21 14:58:21,239 - DEBUG - Sent federated model to client
+2025-03-21 14:58:21,240 - INFO - Federated model sent to 3 active clients
+2025-03-21 14:58:21,240 - INFO - New federated model sent to all clients
+2025-03-21 14:58:21,240 - INFO - Federated learning completed after 8 rounds
+2025-03-21 14:58:21,240 - DEBUG - Waiting for client weights
+2025-03-21 14:58:21,340 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 14:58:21,340 - DEBUG - Client thread removed from active threads list
+2025-03-21 14:58:21,340 - DEBUG - Client socket removed from active sockets list
+2025-03-21 14:58:21,341 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 14:58:21,342 - DEBUG - Client thread removed from active threads list
+2025-03-21 14:58:21,342 - DEBUG - Client socket removed from active sockets list
+2025-03-21 14:58:21,343 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 14:58:21,343 - DEBUG - Client thread removed from active threads list
+2025-03-21 14:58:21,345 - DEBUG - Client socket removed from active sockets list
+2025-03-21 14:58:21,485 - DEBUG - matplotlib data path: /usr/local/lib/python3.11/site-packages/matplotlib/mpl-data
+2025-03-21 14:58:21,540 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-03-21 14:58:21,541 - DEBUG - interactive is False
+2025-03-21 14:58:21,542 - DEBUG - platform is linux
+2025-03-21 14:58:21,657 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-03-21 14:58:21,658 - DEBUG - font search path [PosixPath('/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf'), PosixPath('/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/afm'), PosixPath('/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts')]
+2025-03-21 14:58:22,042 - INFO - generated new fontManager
+2025-03-21 14:58:22,944 - DEBUG - Loaded backend agg version v2.2.
+2025-03-21 14:58:22,949 - DEBUG - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0.
+2025-03-21 14:58:22,951 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf', name='STIXSizeFiveSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,951 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,952 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-03-21 14:58:22,952 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-03-21 14:58:22,952 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:22,953 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-03-21 14:58:22,953 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf', name='cmtt10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,954 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf', name='cmss10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,954 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,955 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf', name='DejaVu Sans Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,955 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmex10.ttf', name='cmex10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,955 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 1.05
+2025-03-21 14:58:22,956 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-03-21 14:58:22,956 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:22,957 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf', name='STIXGeneral', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-03-21 14:58:22,957 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,957 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf', name='DejaVu Serif Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,958 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-03-21 14:58:22,958 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,958 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf', name='cmb10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,959 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,959 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmr10.ttf', name='cmr10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,959 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
+2025-03-21 14:58:22,960 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
+2025-03-21 14:58:22,960 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:22,961 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-03-21 14:58:22,961 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,961 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,961 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 1.335
+2025-03-21 14:58:22,962 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf', name='cmmi10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,962 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:22,962 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf', name='STIXGeneral', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,963 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf', name='STIXGeneral', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-03-21 14:58:22,963 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf', name='cmsy10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:22,963 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:22,964 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:22,964 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:22,964 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf', name='STIXGeneral', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:22,965 - DEBUG - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+2025-03-21 14:58:23,139 - DEBUG - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0.
+2025-03-21 14:58:23,140 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf', name='STIXSizeFiveSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,140 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,141 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-03-21 14:58:23,141 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-03-21 14:58:23,141 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:23,142 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-03-21 14:58:23,142 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf', name='cmtt10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,143 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf', name='cmss10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,143 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,144 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf', name='DejaVu Sans Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,144 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmex10.ttf', name='cmex10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,144 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 1.05
+2025-03-21 14:58:23,145 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-03-21 14:58:23,145 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:23,145 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf', name='STIXGeneral', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-03-21 14:58:23,146 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,146 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf', name='DejaVu Serif Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,146 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-03-21 14:58:23,147 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,147 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf', name='cmb10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,147 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,148 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmr10.ttf', name='cmr10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,148 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
+2025-03-21 14:58:23,148 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
+2025-03-21 14:58:23,148 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:23,149 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-03-21 14:58:23,149 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,149 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,150 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 1.335
+2025-03-21 14:58:23,150 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf', name='cmmi10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,150 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:23,151 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf', name='STIXGeneral', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,151 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf', name='STIXGeneral', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-03-21 14:58:23,151 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf', name='cmsy10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-03-21 14:58:23,152 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:23,152 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:23,152 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:23,153 - DEBUG - findfont: score(FontEntry(fname='/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf', name='STIXGeneral', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-03-21 14:58:23,153 - DEBUG - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans ('/usr/local/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+2025-03-21 14:58:23,340 - INFO - Saved metric plot to /app/output/experiments/mnist/metrics/accuracy_per_client.png
+2025-03-21 14:58:23,644 - INFO - Saved metric plot to /app/output/experiments/mnist/metrics/loss_per_client.png
+2025-03-21 14:58:23,850 - INFO - Saved average metric plot to /app/output/experiments/mnist/average/accuracy_federated_model.png
+2025-03-21 14:58:24,146 - INFO - Saved average metric plot to /app/output/experiments/mnist/average/loss_federated_model.png
+2025-03-21 14:58:24,175 - DEBUG - locator: <matplotlib.ticker.AutoLocator object at 0x7f42a033b250>
+2025-03-21 14:58:24,614 - INFO - Saved confusion matrix to /app/output/experiments/mnist/confusion_matrix/confusion_matrix_FedAvg.png
