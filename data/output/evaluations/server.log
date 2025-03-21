@@ -1,0 +1,137 @@
+2025-03-21 15:54:08,133 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-03-21 15:54:09,829 - DEBUG - Creating converter from 7 to 5
+2025-03-21 15:54:09,830 - DEBUG - Creating converter from 5 to 7
+2025-03-21 15:54:09,831 - DEBUG - Creating converter from 7 to 5
+2025-03-21 15:54:09,832 - DEBUG - Creating converter from 5 to 7
+2025-03-21 15:54:12,432 - DEBUG - Initializing MLIR with module: _site_initialize_0
+2025-03-21 15:54:12,433 - DEBUG - Registering dialects from initializer <module 'jaxlib.mlir._mlir_libs._site_initialize_0' from '/usr/local/lib/python3.11/site-packages/jaxlib/mlir/_mlir_libs/_site_initialize_0.so'>
+2025-03-21 15:54:12,835 - DEBUG - No jax_plugins namespace packages available
+2025-03-21 15:54:13,137 - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2025-03-21 15:54:18,339 - DEBUG - Initializing TCPServer with address: ('0.0.0.0', 12345), clients: 9, rounds: 3
+2025-03-21 15:54:18,423 - INFO - Setting aggregation algorithm to: FedAvg
+2025-03-21 15:54:18,425 - INFO - Setting client profiling to: False
+2025-03-21 15:54:18,426 - INFO - Setting evaluation plots to: True
+2025-03-21 15:54:18,426 - INFO - Starting server execution
+2025-03-21 15:54:18,427 - DEBUG - No initial weights provided, initializing federated model
+2025-03-21 15:54:18,427 - INFO - Initializing federated model weights
+2025-03-21 15:54:19,442 - DEBUG - Skeleton model created
+2025-03-21 15:54:19,630 - DEBUG - Model weights initialized
+2025-03-21 15:54:19,632 - DEBUG - Initializing server
+2025-03-21 15:54:19,632 - DEBUG - Waiting for clients
+2025-03-21 15:54:19,633 - INFO - Waiting for client connections on 0.0.0.0:12345
+2025-03-21 15:54:19,633 - DEBUG - Creating server threads
+2025-03-21 15:54:19,633 - DEBUG - Creating server threads
+2025-03-21 15:54:19,634 - INFO - Starting to accept client connections
+2025-03-21 15:54:19,634 - DEBUG - Client connections thread started
+2025-03-21 15:54:19,635 - INFO - Starting federated learning rounds management
+2025-03-21 15:54:19,635 - DEBUG - Federated learning algorithms thread started
+2025-03-21 15:54:19,635 - DEBUG - Waiting for client weights
+2025-03-21 15:54:19,723 - DEBUG - Final evaluations thread started
+2025-03-21 15:54:19,724 - INFO - Server running
+2025-03-21 15:54:19,725 - INFO - Server shutting down
+2025-03-21 15:54:19,725 - INFO - Waiting for all threads to complete
+2025-03-21 15:56:31,321 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-03-21 15:56:32,837 - DEBUG - Creating converter from 7 to 5
+2025-03-21 15:56:32,919 - DEBUG - Creating converter from 5 to 7
+2025-03-21 15:56:32,920 - DEBUG - Creating converter from 7 to 5
+2025-03-21 15:56:32,920 - DEBUG - Creating converter from 5 to 7
+2025-03-21 15:56:35,627 - DEBUG - Initializing MLIR with module: _site_initialize_0
+2025-03-21 15:56:35,628 - DEBUG - Registering dialects from initializer <module 'jaxlib.mlir._mlir_libs._site_initialize_0' from '/usr/local/lib/python3.11/site-packages/jaxlib/mlir/_mlir_libs/_site_initialize_0.so'>
+2025-03-21 15:56:36,025 - DEBUG - No jax_plugins namespace packages available
+2025-03-21 15:56:36,333 - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2025-03-21 15:56:41,434 - DEBUG - Initializing TCPServer with address: ('0.0.0.0', 12345), clients: 9, rounds: 3
+2025-03-21 15:56:41,519 - INFO - Setting aggregation algorithm to: FedAvg
+2025-03-21 15:56:41,520 - INFO - Setting client profiling to: False
+2025-03-21 15:56:41,521 - INFO - Setting evaluation plots to: True
+2025-03-21 15:56:41,521 - INFO - Starting server execution
+2025-03-21 15:56:41,522 - DEBUG - No initial weights provided, initializing federated model
+2025-03-21 15:56:41,522 - INFO - Initializing federated model weights
+2025-03-21 15:56:42,425 - DEBUG - Skeleton model created
+2025-03-21 15:56:42,524 - DEBUG - Model weights initialized
+2025-03-21 15:56:42,525 - DEBUG - Initializing server
+2025-03-21 15:56:42,526 - DEBUG - Waiting for clients
+2025-03-21 15:56:42,526 - INFO - Waiting for client connections on 0.0.0.0:12345
+2025-03-21 15:56:42,527 - DEBUG - Creating server threads
+2025-03-21 15:56:42,527 - DEBUG - Creating server threads
+2025-03-21 15:56:42,528 - INFO - Starting to accept client connections
+2025-03-21 15:56:42,528 - DEBUG - Client connections thread started
+2025-03-21 15:56:42,529 - INFO - Starting federated learning rounds management
+2025-03-21 15:56:42,530 - DEBUG - Waiting for client weights
+2025-03-21 15:56:42,529 - DEBUG - Federated learning algorithms thread started
+2025-03-21 15:56:42,620 - DEBUG - Final evaluations thread started
+2025-03-21 15:56:42,621 - INFO - Server running
+2025-03-21 15:56:42,622 - INFO - Server shutting down
+2025-03-21 15:56:42,627 - INFO - Waiting for all threads to complete
+2025-03-21 15:56:49,434 - DEBUG - Accepted connection from ('10.244.0.90', 48268)
+2025-03-21 15:56:49,519 - DEBUG - Preparing to send federated model to client
+2025-03-21 15:56:49,519 - INFO - Client connected: ('10.244.0.90', 48268) (Total: 1/9)
+2025-03-21 15:56:49,519 - DEBUG - Sending weights for training (round 0/3)
+2025-03-21 15:56:49,521 - DEBUG - Sent federated model to client
+2025-03-21 15:56:49,521 - DEBUG - Accepted connection from ('10.244.0.83', 53044)
+2025-03-21 15:56:49,522 - DEBUG - Preparing to send federated model to client
+2025-03-21 15:56:49,523 - INFO - Client connected: ('10.244.0.83', 53044) (Total: 2/9)
+2025-03-21 15:56:49,523 - DEBUG - Sending weights for training (round 0/3)
+2025-03-21 15:56:49,525 - DEBUG - Sent federated model to client
+2025-03-21 15:56:49,531 - DEBUG - Accepted connection from ('10.244.0.89', 58922)
+2025-03-21 15:56:49,532 - DEBUG - Preparing to send federated model to client
+2025-03-21 15:56:49,532 - INFO - Client connected: ('10.244.0.89', 58922) (Total: 3/9)
+2025-03-21 15:56:49,533 - DEBUG - Sending weights for training (round 0/3)
+2025-03-21 15:56:49,535 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 15:56:49,535 - DEBUG - Client thread removed from active threads list
+2025-03-21 15:56:49,535 - DEBUG - Sent federated model to client
+2025-03-21 15:56:49,618 - DEBUG - Client socket removed from active sockets list
+2025-03-21 15:56:49,619 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 15:56:49,620 - DEBUG - Client thread removed from active threads list
+2025-03-21 15:56:49,620 - DEBUG - Client socket removed from active sockets list
+2025-03-21 15:56:49,630 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 15:56:49,631 - DEBUG - Client thread removed from active threads list
+2025-03-21 15:56:49,631 - DEBUG - Client socket removed from active sockets list
+2025-03-21 15:56:50,027 - DEBUG - Accepted connection from ('10.244.0.88', 41896)
+2025-03-21 15:56:50,028 - DEBUG - Preparing to send federated model to client
+2025-03-21 15:56:50,029 - DEBUG - Sending weights for training (round 0/3)
+2025-03-21 15:56:50,028 - INFO - Client connected: ('10.244.0.88', 41896) (Total: 4/9)
+2025-03-21 15:56:50,030 - DEBUG - Sent federated model to client
+2025-03-21 15:56:50,127 - DEBUG - Accepted connection from ('10.244.0.85', 56128)
+2025-03-21 15:56:50,128 - DEBUG - Preparing to send federated model to client
+2025-03-21 15:56:50,128 - INFO - Client connected: ('10.244.0.85', 56128) (Total: 5/9)
+2025-03-21 15:56:50,128 - DEBUG - Sending weights for training (round 0/3)
+2025-03-21 15:56:50,129 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 15:56:50,130 - DEBUG - Client thread removed from active threads list
+2025-03-21 15:56:50,130 - DEBUG - Client socket removed from active sockets list
+2025-03-21 15:56:50,130 - DEBUG - Sent federated model to client
+2025-03-21 15:56:50,222 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 15:56:50,223 - DEBUG - Client thread removed from active threads list
+2025-03-21 15:56:50,225 - DEBUG - Client socket removed from active sockets list
+2025-03-21 15:56:50,226 - DEBUG - Accepted connection from ('10.244.0.86', 57490)
+2025-03-21 15:56:50,227 - DEBUG - Preparing to send federated model to client
+2025-03-21 15:56:50,228 - INFO - Client connected: ('10.244.0.86', 57490) (Total: 6/9)
+2025-03-21 15:56:50,228 - DEBUG - Sending weights for training (round 0/3)
+2025-03-21 15:56:50,230 - DEBUG - Sent federated model to client
+2025-03-21 15:56:50,324 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 15:56:50,325 - DEBUG - Client thread removed from active threads list
+2025-03-21 15:56:50,325 - DEBUG - Client socket removed from active sockets list
+2025-03-21 15:56:50,332 - DEBUG - Accepted connection from ('10.244.0.87', 39712)
+2025-03-21 15:56:50,333 - DEBUG - Preparing to send federated model to client
+2025-03-21 15:56:50,333 - INFO - Client connected: ('10.244.0.87', 39712) (Total: 7/9)
+2025-03-21 15:56:50,333 - DEBUG - Sending weights for training (round 0/3)
+2025-03-21 15:56:50,335 - DEBUG - Sent federated model to client
+2025-03-21 15:56:50,419 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 15:56:50,421 - DEBUG - Client thread removed from active threads list
+2025-03-21 15:56:50,423 - DEBUG - Client socket removed from active sockets list
+2025-03-21 15:56:50,428 - DEBUG - Accepted connection from ('10.244.0.84', 42848)
+2025-03-21 15:56:50,430 - DEBUG - Preparing to send federated model to client
+2025-03-21 15:56:50,430 - INFO - Client connected: ('10.244.0.84', 42848) (Total: 8/9)
+2025-03-21 15:56:50,430 - DEBUG - Sending weights for training (round 0/3)
+2025-03-21 15:56:50,432 - DEBUG - Sent federated model to client
+2025-03-21 15:56:50,527 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 15:56:50,528 - DEBUG - Client thread removed from active threads list
+2025-03-21 15:56:50,528 - DEBUG - Client socket removed from active sockets list
+2025-03-21 15:56:51,325 - DEBUG - Accepted connection from ('10.244.0.92', 55382)
+2025-03-21 15:56:51,326 - DEBUG - Preparing to send federated model to client
+2025-03-21 15:56:51,326 - INFO - Client connected: ('10.244.0.92', 55382) (Total: 9/9)
+2025-03-21 15:56:51,326 - DEBUG - Sending weights for training (round 0/3)
+2025-03-21 15:56:51,327 - DEBUG - Client connections thread joined
+2025-03-21 15:56:51,328 - DEBUG - Sent federated model to client
+2025-03-21 15:56:51,421 - DEBUG - Closing client socket and removing from active connections
+2025-03-21 15:56:51,422 - DEBUG - Client thread removed from active threads list
+2025-03-21 15:56:51,423 - DEBUG - Client socket removed from active sockets list

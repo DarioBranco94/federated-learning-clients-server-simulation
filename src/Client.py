@@ -14,9 +14,13 @@ class Client(TCPClient):
         self.num_classes = num_classes
         self.batch_size = batch_size
         self.train_epochs = train_epochs
-        self.model_instance = self.load_model_class(model)()
-        self.get_skeleton_model = self.model_instance.get_skeleton_model
         self.load_dataset = self.load_dataset_function(dataset_loader)
+        self.id = id
+        x_train, x_test, y_train, y_test = self.load_dataset()
+        self.model_instance = self.load_model_class(model)()
+        self.input_shape = x_train.shape[1:]
+
+        self.get_skeleton_model = lambda: self.model_instance.get_skeleton_model(self.input_shape)
 
         self.loss_function = self.build_loss_function(loss, loss_params)
         self.metric_function = self.build_metric(metric, metric_params)
