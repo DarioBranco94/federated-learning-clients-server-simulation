@@ -29,7 +29,7 @@ spec:
             echo "Starting Client with ID $ID"
 
             python src/run_experiment.py \
-              --experiment {{ .Values.experiment }} \
+              --datasetLoader {{ .Values.client.datasetLoader }} \
               --id $ID \
               --host {{ .Values.client.serverHost }} \
               --port {{ .Values.client.port }} \

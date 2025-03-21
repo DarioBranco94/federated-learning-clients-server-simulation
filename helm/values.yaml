@@ -15,7 +15,8 @@ client:
   imagePullPolicy: "IfNotPresent"
   port: 12345
   serverHost: "federated-learning-server-svc"
-  model: "model1"
+  model: "src.models.model1"
+  datasetLoader: "src.dataLoaders.mnist.datasetLoader"
   loss: "CategoricalCrossentropy"
   lossParams: "{}"
   metric: "CategoricalAccuracy"
@@ -29,14 +30,14 @@ client:
 volumes:
   logs:
     name: logs-volume
-    mountPath: /app/logs
+    mountPath: /app/output/logs
     size: 1Gi
     storageClass: manual
-    hostPath: /logs
+    hostPath: /output/logs
 
   evaluations:
     name: evaluations-volume
-    mountPath: /app/evaluations
+    mountPath: /app/output/experiments
     size: 1Gi
     storageClass: manual
-    hostPath: /evaluations
+    hostPath: /output/evaluations

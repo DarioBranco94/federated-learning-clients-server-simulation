@@ -7,7 +7,7 @@ import argparse
 import numpy as np
 import tensorflow_federated as tff
 import json
-
+import inspect
 
 class Client(TCPClient):
     def __init__(self, server_address, id, num_classes, batch_size, train_epochs, model, dataset_loader, loss , metric , optimizer , loss_params, metric_params, optimizer_params):
@@ -24,30 +24,56 @@ class Client(TCPClient):
         super().__init__(server_address, id)
 
     def load_model_class(self, model_name):
-            """ Carica dinamicamente la classe modello da un file nella cartella models."""
-            module_path = os.path.join("Inputs/models", f"{model_name}.py")
-            spec = importlib.util.spec_from_file_location(model_name, module_path)
-            module = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(module)
-            
-            if hasattr(module, model_name):
-                return getattr(module, model_name)
-            else:
-                raise ValueError(f"Il modulo {model_name} non contiene una classe con nome {model_name}.")
-        
+        """Carica dinamicamente l'unica classe presente in un file Python specificato da model_name."""
+
+        # Converte il nome del modulo in percorso file
+        model_sanitized = model_name.replace(".", os.sep)
+        module_path = f"{model_sanitized}.py"
+
+        # Verifica che il file esista
+        if not os.path.exists(module_path):
+            raise FileNotFoundError(f"Il file {module_path} non esiste.")
+
+        # Carica il modulo dinamicamente
+        spec = importlib.util.spec_from_file_location("loaded_module", module_path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+
+        # Trova tutte le classi definite direttamente in questo modulo
+        classes = [cls for _, cls in inspect.getmembers(module, inspect.isclass) if cls.__module__ == module.__name__]
+
+        # Verifica che ci sia una sola classe definita
+        if len(classes) != 1:
+            raise ValueError(f"Il modulo {model_name} deve contenere esattamente UNA classe, trovate {len(classes)}.")
+
+        # Restituisce la classe trovata
+        return classes[0]
+    
     def load_dataset_function(self, dataset_loader_name):
         """ Carica dinamicamente la funzione load_dataset dalla classe DatasetLoader nella cartella Dataset/{dataset_loader_name}."""
-        module_path = os.path.join("Inputs/datasets", dataset_loader_name, "datasetLoader.py")
+        dataset_sanitized = dataset_loader_name.replace(".", "/")
+        module_path = dataset_sanitized + ".py"
         spec = importlib.util.spec_from_file_location("datasetLoader", module_path)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         
-        if hasattr(module, "DatasetLoader"):
-            dataset_loader_class = getattr(module, "DatasetLoader")
-            dataset_loader_instance = dataset_loader_class()
+        # Trova tutte le classi definite nel modulo
+        classes = [cls for _, cls in inspect.getmembers(module, inspect.isclass) if cls.__module__ == module.__name__]
+
+        # Controlla che ci sia una sola classe
+        if len(classes) != 1:
+            raise ValueError(f"Il modulo {dataset_loader_name} deve contenere esattamente una classe, trovate {len(classes)}.")
+
+        # Istanzia la classe
+        dataset_loader_class = classes[0]
+        dataset_loader_instance = dataset_loader_class()
+
+        # Restituisce la funzione load_dataset della classe
+        if hasattr(dataset_loader_instance, "load_dataset"):
             return lambda: dataset_loader_instance.load_dataset(self.id)
         else:
-            raise ValueError(f"Il modulo datasetLoader in {dataset_loader_name} non contiene la classe DatasetLoader.")
+            raise AttributeError(f"La classe {dataset_loader_class.__name__} non contiene il metodo load_dataset.")
+        
     def get_num_classes(self) -> int:
         return self.num_classes
 

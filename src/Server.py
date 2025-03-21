@@ -28,11 +28,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--numberOfClients', type=int, help='Number of clients')
     parser.add_argument('--numberOfRounds', type=int, help='Number of rounds')
+    parser.add_argument('--experiment', type=str, help='Experiment name')
     args = parser.parse_args()
     server_address = ('0.0.0.0', 12345)
 
     # Server creation and execution
-    server = Server(server_address, args.numberOfClients, args.numberOfRounds)
+    server = Server(server_address, args.numberOfClients, args.numberOfRounds,args.experiment)
     server.set_aggregation_algorithm(FedAvg())
     # server.set_aggregation_algorithm(FedAdam(beta1=0.5,learning_rate=0.01))
     # server.load_initial_weights("weights/prova.npy")

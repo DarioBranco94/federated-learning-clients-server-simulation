@@ -42,7 +42,8 @@ spec:
               --experiment {{ .Values.experiment }} \
               --id -1 \
               --numberOfClients {{ .Values.replicas.client }} \
-              --numberOfRounds {{.Values.server.numberOfRounds }} 
+              --numberOfRounds {{.Values.server.numberOfRounds }} \
+              --experiment {{ .Values.experiment }}
         volumeMounts:
           - name: logs-volume
             mountPath: {{ .Values.volumes.logs.mountPath }}

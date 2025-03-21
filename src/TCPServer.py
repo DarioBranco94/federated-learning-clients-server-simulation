@@ -5,7 +5,7 @@ from AggregationAlgorithm import AggregationAlgorithm, FedAvg
 import logging
 
 # Crea directory logs se non esiste
-log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs')
+log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), '/output/logs')
 os.makedirs(log_dir, exist_ok=True)
 
 # Configure logging to file and console
@@ -33,10 +33,11 @@ from tensorflow.keras.models import Model
 
 class TCPServer(ABC):
 
-    def __init__(self, address, number_clients: int, number_rounds: int, save_weights_path: str = None):
+    def __init__(self, address, number_clients: int, number_rounds: int, experiment_name: str, save_weights_path: str = None):
         logging.debug("Initializing TCPServer with address: %s, clients: %d, rounds: %d", 
                      address, number_clients, number_rounds)
         self._server_address = address
+        self.experiment_name = experiment_name
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self._client_sockets = []  # list of client sockets
         self._clients_profiling_enabled = False
@@ -404,7 +405,7 @@ class TCPServer(ABC):
                         import os
 
                         # Crea la directory per salvare i grafici
-                        save_dir = '/app/evaluations/profiling'
+                        save_dir = '/app/output/experiments/'+self.experiment_name+'/profiling'
                         os.makedirs(save_dir, exist_ok=True)
                         
                         clients = []
@@ -443,7 +444,7 @@ class TCPServer(ABC):
                         import os
 
                         # Crea la directory per salvare i grafici
-                        save_dir = '/app/evaluations/metrics'
+                        save_dir = '/app/output/experiments/'+self.experiment_name+'/metrics'
                         os.makedirs(save_dir, exist_ok=True)
 
                         fig, ax = plt.subplots(figsize=(10, 6))
@@ -473,7 +474,7 @@ class TCPServer(ABC):
                         import os
 
                         # Crea la directory per salvare i grafici
-                        save_dir = '/app/evaluations/average'
+                        save_dir = '/app/output/experiments/'+self.experiment_name+'/average'
                         os.makedirs(save_dir, exist_ok=True)
 
                         rounds = list(range(len(values)))
@@ -496,7 +497,7 @@ class TCPServer(ABC):
                         method_name = self.aggregation_algorithm.__class__.__name__
                         # Save the rounds values to a NumPy file
                         # Define the directory to save the file
-                        directory = '/app/evaluations'
+                        directory = '/app/output/experiments/'+self.experiment_name
 
                         # Check if the directory exists, if not, create it
                         os.makedirs(directory, exist_ok=True)
@@ -510,7 +511,7 @@ class TCPServer(ABC):
                         import os
 
                         # Crea la directory per salvare i grafici
-                        save_dir = '/app/evaluations/confusion_matrix'
+                        save_dir = '/app/output/experiments/'+self.experiment_name+'/confusion_matrix'
                         os.makedirs(save_dir, exist_ok=True)
                         
                         plt.figure(figsize=(10, 8))
