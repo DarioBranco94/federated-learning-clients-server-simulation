@@ -243,13 +243,10 @@ The framework supports several aggregation algorithms:
   - Simple Average: Each local model contributes equally to the computation of the federated model.
   
   Weighted Average Formula:
-  \[
-  \theta_{t+1} = \frac{\sum_{k=1}^{K} n_k \theta_t^{(k)}}{n}
-  \]
+ ``````
   Simple Average Formula:
-  \[
-  \theta_{t+1} = \frac{1}{K} \sum_{k=1}^{K} \theta_t^{(k)}
-  \]
+    ![equation](https://latex.codecogs.com/svg.image?\theta_{t&plus;1}=\frac{\sum_{k=1}^{K}n_k\theta_t^{(k)}}{n})
+
 
 - **FedMiddleAvg**: Averages the current federated model with the average of the clients' models calculated using FedAvg.
   \[
