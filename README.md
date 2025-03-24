@@ -375,7 +375,8 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-a
 ```
 
 ### Start Minikube and Check Minikube Installation
-[!IMPORTANT] Substitute $HOSTPATH with your path! 
+> [!IMPORTANT]
+> Substitute $HOSTPATH with your path! 
 
 ```bash
 minikube start --mount –mount-string="$HOSTPATH:/output" 
