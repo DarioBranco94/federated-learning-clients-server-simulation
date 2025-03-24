@@ -249,49 +249,26 @@ The framework supports several aggregation algorithms:
 
 
 - **FedMiddleAvg**: Averages the current federated model with the average of the clients' models calculated using FedAvg.
-  \[
-  \theta_{t+1} = \frac{(\theta_{t+1}) + \theta_t}{2}
-  \]
+    ![equation](https://latex.codecogs.com/svg.image?%5Ctheta_%7Bt&plus;1%7D=%5Cfrac%7B(%5Ctheta_%7Bt&plus;1%7D)&plus;%5Ctheta_t%7D%7B2%7D)
 
 - **FedAvgMomentum**: Integrates the concept of momentum into the aggregation of weights to accelerate convergence and reduce oscillations.
-  \[
-  (\theta_{t+1}) = FedAvg(\theta_t^{(1)}, \theta_t^{(2)}, ..., \theta_t^{(k)})
-  \]
-  \[
-  \Delta_{t+1} = (\theta_{t+1}) - \theta_t
-  \]
-  \[
-  v_{t+1} = \beta v_t + \Delta_{t+1} \quad \beta \in [0, 1]
-  \]
-  \[
-  \theta_{t+1} = \theta_t + \eta v_{t+1}
-  \]
+
+  ![equation](https://latex.codecogs.com/svg.image?(%5Ctheta_%7Bt&plus;1%7D)=FedAvg(%5Ctheta_t%5E%7B(1)%7D,%5Ctheta_t%5E%7B(2)%7D,...,%5Ctheta_t%5E%7B(k)%7D))
+  ![equation](https://latex.codecogs.com/svg.image?%5CDelta_%7Bt&plus;1%7D=(%5Ctheta_%7Bt&plus;1%7D)-%5Ctheta_t%20)
+  ![equation](https://latex.codecogs.com/svg.image?%20v_%7Bt&plus;1%7D=%5Cbeta%20v_t&plus;%5CDelta_%7Bt&plus;1%7D%5Cquad%5Cbeta%5Cin%5B0,1%5D)
+  ![equation[]()](https://latex.codecogs.com/svg.image?%5Ctheta_%7Bt&plus;1%7D=%5Ctheta_t&plus;%5Ceta%20v_%7Bt&plus;1%7D)
+
 
 - **FedAdam**: A variant of the Adam algorithm designed for federated learning, combining the benefits of AdaGrad and RMSProp.
-  \[
-  (\theta_{t+1}) = FedAvg(\theta_t^{(1)}, \theta_t^{(2)}, ..., \theta_t^{(k)})
-  \]
-  \[
-  \Delta_{t+1} = (\theta_{t+1}) - \theta_t
-  \]
-  \[
-  m_{t+1} = \beta_1 m_t + (1 - \beta_1) \Delta_{t+1}
-  \]
-  \[
-  v_{t+1} = \beta_2 v_t + (1 - \beta_2) \Delta_{t+1}^2
-  \]
-  \[
-  \theta_{t+1} = \theta_t + \eta \frac{m_{t+1}}{\sqrt{v_{t+1}} + \epsilon}
-  \]
+  ![equation](https://latex.codecogs.com/svg.image?(%5Ctheta_%7Bt&plus;1%7D)=FedAvg(%5Ctheta_t%5E%7B(1)%7D,%5Ctheta_t%5E%7B(2)%7D,...,%5Ctheta_t%5E%7B(k)%7D))
+  ![equation](https://latex.codecogs.com/svg.image?%5CDelta_%7Bt&plus;1%7D=(%5Ctheta_%7Bt&plus;1%7D)-%5Ctheta_t%20)
+  ![equation](https://latex.codecogs.com/svg.image?%20m_%7Bt&plus;1%7D=%5Cbeta_1%20m_t&plus;(1-%5Cbeta_1)%5CDelta_%7Bt&plus;1%7D)
+  ![equation](https://latex.codecogs.com/svg.image?%20v_%7Bt&plus;1%7D=%5Cbeta_2%20v_t&plus;(1-%5Cbeta_2)%5CDelta_%7Bt&plus;1%7D%5E2%20)
+  ![equation](https://latex.codecogs.com/svg.image?%5Ctheta_%7Bt&plus;1%7D=%5Ctheta_t&plus;%5Ceta%5Cfrac%7Bm_%7Bt&plus;1%7D%7D%7B%5Csqrt%7Bv_%7Bt&plus;1%7D%7D&plus;%5Cepsilon%7D)
 
 - **FedSGD**: A direct extension of Stochastic Gradient Descent (SGD) for federated learning.
-  \[
-  \theta_{t+1}^{(k)} = \theta_t - \eta g_t^{(k)}
-  \]
-  \[
-  \theta_{t+1} = \frac{\sum_{k=1}^{K} n_k \theta_{t+1}^{(k)}}{n}
-  \]
-
+  ![equation](https://latex.codecogs.com/svg.image?%5Ctheta_%7Bt&plus;1%7D%5E%7B(k)%7D=%5Ctheta_t-%5Ceta%20g_t%5E%7B(k)%7D)
+  ![equation](https://latex.codecogs.com/svg.image?%5Ctheta_%7Bt&plus;1%7D=%5Cfrac%7B%5Csum_%7Bk=1%7D%5E%7BK%7Dn_k%5Ctheta_%7Bt&plus;1%7D%5E%7B(k)%7D%7D%7Bn%7D)
 
 ### Creating your own Model 
 Every model must be implemented as a single Python class inside a module (file), and must provide the following method: 
