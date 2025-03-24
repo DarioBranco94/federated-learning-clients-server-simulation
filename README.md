@@ -51,9 +51,8 @@ The following libraries are used to ensure the efficiency and reusability of the
 - **Matplotlib**: For creating graphs and visualizations.
 
 ## Architecture
-![fl_architecture](/images/fl_arc.png)
 
-Here is a representation of the architecture, as shown in the figure. The server awaits the connection of nodes participating in federated learning. Whenever a client connects, the server sends an initialized federated model. Once a certain number of nodes are connected, the federated learning process begins:
+The server awaits the connection of nodes participating in federated learning. Whenever a client connects, the server sends an initialized federated model. Once a certain number of nodes are connected, the federated learning process begins:
 
 1. Clients train their local models on local data using federated weights received from the server.
 2. Upon completion of local training, clients send the new weights to the server.
