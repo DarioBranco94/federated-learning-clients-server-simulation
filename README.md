@@ -362,17 +362,17 @@ docker build -t fed-client:latest -f Dockerfile.client .
 ### Helm Configuration 
 The values.yaml file defines the configuration of a Federated Learning experiment and can be customized before deploying the system with Helm. Users should modify the following fields to match their experiment setup: 
 
-    +  **replicas.client**: Set the number of clients participating in the experiment. 
-    +   **experiment**: Choose a name for the experiment. This name will also be used to store evaluation results. 
-    +   **server section**: Define the server image, communication port, number of training rounds, input shape of the model, and output class labels. 
-    +   **client section**: Specify the client Docker image and configuration: 
-        +   **model**: Path to the Python class implementing the neural network model. 
-        +   **datasetLoader**: Path to the class that loads and partitions the dataset. 
-        +   **loss, metric, optimizer**: Names of Keras components used during training. 
-        +   **lossParams, metricParams, optimizerParams**: JSON strings with parameters for each component. 
-        +   **numClasses**: Number of output classes. 
-        +   **batchSize, trainEpochs**: Training hyperparameters for each client. 
-    +   **volumes section**: Defines the persistent volumes used to store logs and experiment results. These should generally not be modified unless you need to change the storage path or size. 
+    -  **replicas.client**: Set the number of clients participating in the experiment. 
+    -   **experiment**: Choose a name for the experiment. This name will also be used to store evaluation results. 
+    -   **server section**: Define the server image, communication port, number of training rounds, input shape of the model, and output class labels. 
+    -   **client section**: Specify the client Docker image and configuration: 
+        -   **model**: Path to the Python class implementing the neural network model. 
+        -   **datasetLoader**: Path to the class that loads and partitions the dataset. 
+        -   **loss, metric, optimizer**: Names of Keras components used during training. 
+        -   **lossParams, metricParams, optimizerParams**: JSON strings with parameters for each component. 
+        -   **numClasses**: Number of output classes. 
+        -   **batchSize, trainEpochs**: Training hyperparameters for each client. 
+    -   **volumes section**: Defines the persistent volumes used to store logs and experiment results. These should generally not be modified unless you need to change the storage path or size. 
 
 
 
