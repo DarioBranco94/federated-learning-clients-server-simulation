@@ -6,6 +6,7 @@ This is a design of a simple client/server architecture to simulate federated le
 * [Overview](#overview)
 * [Libraries](#libraries)
 * [Architecture](#architecture)
+* [File Structure](#file-structure)
     + [Server](#server)
         - [Methods](#methods)
             * [Abstract Methods](#abstract-methods)
@@ -15,20 +16,19 @@ This is a design of a simple client/server architecture to simulate federated le
             * [Abstract Methods](#abstract-methods-1)
             * [Public Methods](#public-methods-1)
     + [Supported Aggregation Algorithms](#supported-aggregation-algorithms)
+    + [Creating your own Model](#creating-your-own-model)
+    + [Creating your own DatasetLoader](#creating-your-own-datasetloader)
     + [Message Exchange](#message-exchange)
     + [Profiling](#profiling)
-    + [Limits of the Implementation](#limits-of-the-implementation)
-* [Requirements](#requirements)
-* [Simulation Mnist Dataset](#simulation-mnist-dataset)
-* [Simulation BNCI2014_001 Dataset](#simulation-bnci2014_001-dataset)
 * [Distributed Deployment With Kubernetes and Helm](#distributed-deployment-with-kubernetes-and-helm)
     + [Install Docker](#install-docker)
     + [Install Minikube](#install-minikube)
     + [Install Helm](#install-helm)
     + [Building Images](#building-docker-images)
-    + [Configure Execution](#configure-execution)
+    + [Helm Configuration](#helm-configuration)
     + [Deploy with Helm](#deploy-with-helm)
     + [Cleanup](#cleanup)
++ [Limits of the Implementation](#limits-of-the-implementation)
 
 ## Overview
 
@@ -317,21 +317,6 @@ The server will also save:
 ## Distributed Deployment With Kubernetes and Helm
 In this section we will provide a brief description of how configuration files works and then we will show how to setup a distributed environment running the software using Kubernetes and Helm. To offer a ready-to-go solution we will use Minikube to test the approach but you can setup your distributed Kubernetes Cluster. Launch the deployment scripts in a real distributed architecture needs just to substitute Minikube Cluster with a real Kubernetes Cluster. 
 
-### Helm Configuration 
-The values.yaml file defines the configuration of a Federated Learning experiment and can be customized before deploying the system with Helm. Users should modify the following fields to match their experiment setup: 
-    -   **replicas.client**: Set the number of clients participating in the experiment. 
-    -   **experiment**: Choose a name for the experiment. This name will also be used to store evaluation results. 
-    -   **server section**: Define the server image, communication port, number of training rounds, input shape of the model, and output class labels. 
-    -   **client section**: Specify the client Docker image and configuration: 
-        -   **model**: Path to the Python class implementing the neural network model. 
-        -   **datasetLoader**: Path to the class that loads and partitions the dataset. 
-        -   **loss, metric, optimizer**: Names of Keras components used during training. 
-        -   **lossParams, metricParams, optimizerParams**: JSON strings with parameters for each component. 
-        -   **numClasses**: Number of output classes. 
-        -   **batchSize, trainEpochs**: Training hyperparameters for each client. 
-    -   **volumes section**: Defines the persistent volumes used to store logs and experiment results. These should generally not be modified unless you need to change the storage path or size. 
-
-
 
 ### Install Docker
 ```bash
@@ -373,12 +358,21 @@ docker build -t fed-server:latest -f Dockerfile.server .
 docker build -t fed-client:latest -f Dockerfile.client .
 ```
 
-### Configure Execution
-To setup your experiment just modify Helm configuration files. Specifically, you have to modify
-```bash
-helm/values.yaml
-```
-in which you can setup the experiment folder, the server port you want to use and the number of clients to deploy.
+
+### Helm Configuration 
+The values.yaml file defines the configuration of a Federated Learning experiment and can be customized before deploying the system with Helm. Users should modify the following fields to match their experiment setup: 
+    +  **replicas.client**: Set the number of clients participating in the experiment. 
+    +   **experiment**: Choose a name for the experiment. This name will also be used to store evaluation results. 
+    +   **server section**: Define the server image, communication port, number of training rounds, input shape of the model, and output class labels. 
+    +   **client section**: Specify the client Docker image and configuration: 
+        +   **model**: Path to the Python class implementing the neural network model. 
+        +   **datasetLoader**: Path to the class that loads and partitions the dataset. 
+        +   **loss, metric, optimizer**: Names of Keras components used during training. 
+        +   **lossParams, metricParams, optimizerParams**: JSON strings with parameters for each component. 
+        +   **numClasses**: Number of output classes. 
+        +   **batchSize, trainEpochs**: Training hyperparameters for each client. 
+    +   **volumes section**: Defines the persistent volumes used to store logs and experiment results. These should generally not be modified unless you need to change the storage path or size. 
+
 
 
 ###  Deploy with Helm
