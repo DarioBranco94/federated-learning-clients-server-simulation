@@ -361,6 +361,7 @@ docker build -t fed-client:latest -f Dockerfile.client .
 
 ### Helm Configuration 
 The values.yaml file defines the configuration of a Federated Learning experiment and can be customized before deploying the system with Helm. Users should modify the following fields to match their experiment setup: 
+
     +  **replicas.client**: Set the number of clients participating in the experiment. 
     +   **experiment**: Choose a name for the experiment. This name will also be used to store evaluation results. 
     +   **server section**: Define the server image, communication port, number of training rounds, input shape of the model, and output class labels. 
