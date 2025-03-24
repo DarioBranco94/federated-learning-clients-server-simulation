@@ -80,11 +80,11 @@ The project is organized into several top-level folders, each with a distinct pu
                 -   The **configuration model** used (neural network structure)
                 -   The **deployment profile**, describing the machine where the experiment was executed
                 -   Key Performance Indicators (**KPIs**), such as:
-                -   Accuracy
-                -   Loss
-                -   Number of instructions
-                -   RAM usage
-                -   Execution time
+                    -   Accuracy
+                    -   Loss
+                    -   Number of instructions
+                    -   RAM usage
+                    -   Execution time
         -   **logs/**   
             Stores the log files for both clients and server from the most recent execution.
 -   **helm/**
@@ -131,14 +131,20 @@ The project is organized into several top-level folders, each with a distinct pu
     
         In real federated learning, each client owns its own data. Here, data is **simulated** and partitioned using client_id.
 
-###  Server
-The server component is defined by the abstract class [TCPServer](/src/TCPServer.py). The constructor requires three main parameters:
+##  Server
+The server component is defined by the abstract class [TCPServer](/src/TCPServer.py). The constructor requires four main parameters: 
 - `server_address`: The server address.
 - `number_clients`: The number of participating clients.
 - `number_rounds`: The number of federated learning rounds.
+- `experiment_name`: The name of the current experiment, it is also used as the name of the directory in which to save experiment outputs 
 - `save_weights_path` (optional): Path to save the federated learning weights. If not specified, the model is not saved.
 
-Once the TCPServer class is implemented and instantiated with its parameters, the ```run()``` function should be executed to run the server.
+Abstract class TCPServer is implemented by the [Server](/src/Server.py) Class. The constructor of the Server Class requires also: 
+- `model`: The path in which the model class is saved (e.g. src.models.model1). This class must implement get_skeleton_model(). 
+- `input_shape`: The input shape of the model (e.g. 253,1). Must be formatted as a comma-separated string, and converted to a tuple at runtime. 
+- `class_names`: The classes names 
+
+The ```run()``` function is executed to run the server. 
 
 The server opens a socket at the specified address, in our case, localhost:12345, and three threads are created:
 
@@ -186,7 +192,24 @@ The client component is defined by the abstract class [TCPClient](/src/TCPClient
 - `server_address`: The server address to connect to.
 - `client_id`: The ID of the client.
 
-Once the TCPClient class is implemented and instantiated with its parameters, the ```run()``` function should be executed to run the client.
+Abstract class TCPClient  is implemented by the [Client](/src/Client.py) Class. The constructor of the Client Class requires also: 
+
+- `Num_classes`: The number of output classes of the model (e.g. 10 for digits 0–9). Used to define the output layer. 
+- `Batch_size`: The number of training samples used in one forward/backward pass during local training on each client. 
+- `Train_epochs`: Number of epochs each client trains locally before sending weights back to the server for aggregation. 
+- `model`: The path in which the model class is saved (e.g. src.models.model1). This class must implement `get_skeleton_model()`
+- `Dataset_loader`: The path in which the dataset Loader class is saved (e.g. `src.dataloaders.bnci.datasetLoader`)
+- `Loss`: The name of the loss function to be used for training (e.g. `"categorical_crossentropy"`, `"mse"`). Must match a valid Keras loss class. 
+- `Metric`: The name of the evaluation metric used during training/validation (e.g. `"accuracy"`, `"mae"`). Must match a valid Keras metric class. 
+- `Optimizer`: The name of the optimizer to be used (e.g. `"Adam"`, `"SGD"`). Must match a valid Keras optimizer class. 
+- `Loss_params`: A JSON-formatted dictionary with parameters for the loss function. For example: `{"from_logits": false}`. 
+- `Metric_params`: A JSON-formatted dictionary with parameters for the metric. For example: `{}` or `{"top_k": 5}`. 
+- `Optimizer_params`: A JSON-formatted dictionary with parameters for the optimizer. For example: `{"learning_rate": 0.001}`. 
+- `Input_shape`: The input shape of the model (e.g. 253,1). Must be formatted as a comma-separated string, and converted to a tuple at runtime. 
+
+
+
+The ```run()``` is executed to run the client. 
 
 The client opens a socket and connects to the server's address. Then, it waits to receive the federated model from the server. Once it receives the weights and biases, it loads them into the local model (net) and starts an initial evaluation. In this phase, the evaluation helps understanding the accuracy of the federated model using the local test dataset. After evaluating the federated model, the client starts the training on the training data.
 
@@ -272,6 +295,21 @@ The framework supports several aggregation algorithms:
   \theta_{t+1} = \frac{\sum_{k=1}^{K} n_k \theta_{t+1}^{(k)}}{n}
   \]
 
+
+### Creating your own Model 
+Every model must be implemented as a single Python class inside a module (file), and must provide the following method: 
+- `get_skeleton_model(input_shape) -> keras.Model`: This method builds and returns a Keras model given the input shape. 
+You can find models as example in `/src/models/`
+
+### Creating your own DatasetLoader 
+Each dataset loader must be implemented as a single Python class inside a module (file), and must provide at least the following method: 
+- `load_dataset(clientid: int) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]`: This method must return the train/test split for the given client ID: (x_train, x_test, y_train, y_test) 
+You can find dataset loaders as example in `/src/datasetLoaders/` 
+
+
+
+
+
 ### Message exchange
 The server and clients communicate using the TCP/IP protocol. Each exchanged message is composed of a byte sequence, with the first four bytes indicating the message length. The message consists of the following fields:
 - `type`: Message type.
@@ -299,81 +337,27 @@ The server will also save:
 
 + ```bytes_output```: number of bytes uploaded (sent) to each client.
 
-### Limits of the implementation
-The proposed implementation is very simple, and for this reason, some simplifications were necessary, leading to the following limitations:
 
-+ Server and client remain connected until the end of federated learning. In a realistic scenario, clients might participate only in certain rounds, or, better yet, clients may not be available simultaneously.
-+ Dynamic addition of new clients during the learning phase is not supported. The clients participating in learning will remain connected until the last round. No one can opt-out or join later.
-+ Security aspects are missing; anyone can connect to the server.
-+ The exchanged messages are not encrypted.
-+ ...and so on.
 
-## Requirements
-1. Install the Python development environment
-```
-sudo apt install python3-dev python3-pip  # Python 3
-```
-2. Install tensorflow Python package
-```
-pip install tensorflow
-```
-
-## Simulation Mnist Dataset
-
-### Install required packages
-1. Install [Requirements](#requirements).
-
-2. Install the released TensorFlow Federated Python package (for the federated mnist dataset)
-```
-pip install --upgrade tensorflow-federated
-```
-
-### Launch simulation
-1. Execute Server script:
-```
-python3 examples/mnist/Server.py 
-```
-2. Execute Clients script manually:
-```
-python3 examples/mnist/Client.py id_client
-```
-> [!IMPORTANT]
-> To perform a simulation, you need to execute the client script a number of times equal to the value of the variable ***number_clients*** contained in the Server class. This is because federated training starts when that number of clients is connected to the server. It goes without saying that the client ID specified with each execution of the client script must be a positive integer, different for each run.
-
-2. (optional) Execute Clients script automatically:
-Automating the execution of clients is possible by ```start_clients.sh``` bash script:
-```
-./examples/mnist/start_clients.sh n_clients
-```
-> [!IMPORTANT]
-> It will execute the Client.py script 'n_clients' times on a different terminal. As before n_clients must be equal to ***number_clients***. You can specify any type of terminal; in our case, xterm is used, so if you want to use this script, make sure you have it installed!!!. 
-
-## Simulation BNCI2014_001 Dataset
-
-### Install required packages
-1. Install [Requirements](#requirements).
-
-2. Install MOABB
-```
-pip install MOABB
-```
-
-### Launch simulation
-1. Execute Server script:
-```
-python3 examples/BNCI2014_001/Server.py 
-```
-2. Execute Clients script automatically:
-Automating the execution of clients is possible by ```start_clients.sh``` bash script:
-```
-./examples/BNCI2014_001/start_clients.sh
-```
-> [!Note]
-> It will execute the Client.py script 9 times on a different terminal. You can specify any type of terminal; in our case, xterm is used, so if you want to use this script, make sure you have it installed!!!.
-> 
 
 ## Distributed Deployment With Kubernetes and Helm
-In this section we will show how to setup a distributed environment running the software using Kubernetes and Helm. To offer a ready-to-go solution we will use Minikube to test the approach. Launch the deployment scripts in a real distributed architecture needs just to substitute Minikube Cluster with a real Kubernetes Cluster. This guide is tested on Ubuntu 22.04.
+In this section we will provide a brief description of how configuration files works and then we will show how to setup a distributed environment running the software using Kubernetes and Helm. To offer a ready-to-go solution we will use Minikube to test the approach but you can setup your distributed Kubernetes Cluster. Launch the deployment scripts in a real distributed architecture needs just to substitute Minikube Cluster with a real Kubernetes Cluster. 
+
+### Helm Configuration 
+The values.yaml file defines the configuration of a Federated Learning experiment and can be customized before deploying the system with Helm. Users should modify the following fields to match their experiment setup: 
+    -   **replicas.client**: Set the number of clients participating in the experiment. 
+    -   **experiment**: Choose a name for the experiment. This name will also be used to store evaluation results. 
+    -   **server section**: Define the server image, communication port, number of training rounds, input shape of the model, and output class labels. 
+    -   **client section**: Specify the client Docker image and configuration: 
+        -   **model**: Path to the Python class implementing the neural network model. 
+        -   **datasetLoader**: Path to the class that loads and partitions the dataset. 
+        -   **loss, metric, optimizer**: Names of Keras components used during training. 
+        -   **lossParams, metricParams, optimizerParams**: JSON strings with parameters for each component. 
+        -   **numClasses**: Number of output classes. 
+        -   **batchSize, trainEpochs**: Training hyperparameters for each client. 
+    -   **volumes section**: Defines the persistent volumes used to store logs and experiment results. These should generally not be modified unless you need to change the storage path or size. 
+
+
 
 ### Install Docker
 ```bash
@@ -392,7 +376,8 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-a
 
 ### Start Minikube and Check Minikube Installation
 ```bash
-minikube start
+minikube start --mount –mount-string="$HOSTPATH:/output" 
+[!IMPORTANT] Substitute $HOSTPATH with your path! 
 kubectl get nodes
 ```
 
@@ -423,12 +408,16 @@ in which you can setup the experiment folder, the server port you want to use an
 ###  Deploy with Helm
 Inside the `helm/` folder:
 ```bash
-helm upgrade --install fl-demo .
+helm install fl-demo .
 kubectl get pods
 ```
 To scale:
 ```bash
 helm upgrade fl-demo . --set replicas.client=5
+```
+To see Logs: 
+```
+Kubectl logs pod_name 
 ```
 
 ### Cleanup
@@ -440,5 +429,12 @@ minikube stop
 minikube delete
 ```
 
+### Limits of the implementation
+The proposed implementation is very simple, and for this reason, some simplifications were necessary, leading to the following limitations:
 
++ Server and client remain connected until the end of federated learning. In a realistic scenario, clients might participate only in certain rounds, or, better yet, clients may not be available simultaneously.
++ Dynamic addition of new clients during the learning phase is not supported. The clients participating in learning will remain connected until the last round. No one can opt-out or join later.
++ Security aspects are missing; anyone can connect to the server.
++ The exchanged messages are not encrypted.
++ ...and so on.
 
