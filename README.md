@@ -32,9 +32,8 @@ This is a design of a simple client/server architecture to simulate federated le
 
 ## Overview
 
-This document provides a detailed description of the implementation of our Federated Learning (FL) framework. The framework is designed to facilitate the simulation and performance analysis of various federated algorithms. It consists of a central server and multiple clients, each training a model locally on their data and contributing to the global aggregation without sharing raw data.
-
-The implementation is done in Python (version 3.10), leveraging its simplicity and extensive libraries for machine learning. Clients and server communicate via sockets using the TCP/IP protocol.
+This document provides a detailed description of the implementation of our Federated Learning (FL) framework for benchmarking. The framework is designed to facilitate the simulation and performance analysis of various federated algorithms. It consists of a central server and multiple clients, each training a model locally on their data and contributing to the global aggregation without sharing raw data. 
+The implementation is done in Python (version 3.10), leveraging its simplicity and extensive libraries for machine learning. Clients and server communicate via sockets using the TCP/IP protocol. 
 
 ## Libraries
 
@@ -61,6 +60,76 @@ Here is a representation of the architecture, as shown in the figure. The server
 3. The server aggregates the weights from all clients, generating a new model.
 4. The server sends the new federated model to the clients.
 This sequence is iterated for a predetermined number of rounds, at the end of which, clients send the server accuracy and loss data of the federated model before closing the connection with the server.
+
+## File Structure
+
+The project is organized into several top-level folders, each with a distinct purpose to support simulation, configuration, and execution of federated learning experiments.
+
+-   **data/**
+
+    Contains all datasets and experiment outputs.
+
+    -   **data/input/**   
+        Used to load local datasets (if not using TFF datasets). This can contain CSV, image folders, or pre-processed data files.
+    -   **data/output/**   
+        Stores the outputs of each experiment.
+    -   **evaluations/**   
+        Contains subfolders named after each experiment. Each folder includes:
+        -   Model performance metrics: accuracy, loss, confusion matrix
+        -   An XML report with:
+            -   The **configuration model** used (neural network structure)
+            -   The **deployment profile**, describing the machine where the experiment was executed
+            -   Key Performance Indicators (**KPIs**), such as:
+            -   Accuracy
+            -   Loss
+            -   Number of instructions
+            -   RAM usage
+            -   Execution time
+-   **logs/**   
+    Stores the log files for both clients and server from the most recent execution.
+-   **helm/**
+
+    Contains everything related to the deployment of the Federated Learning system using **Helm** and **Kubernetes**.
+
+-   **templates/**   
+    Helm templates defining Kubernetes resources:
+-   server-deployment.yaml:   
+    Deployment and Service definition for the central server
+-   client-job.yaml:   
+    Indexed Job for parallel training on multiple clients with unique IDs
+-   pv.yaml and pvc.yaml:   
+    Persistent Volumes and Claims to retain:
+-   Logs
+-   Evaluation results   
+    These volumes ensure that experiment data persists even after pods are terminated.
+-   **Chart.yaml**   
+    Main configuration file for the Helm chart. Defines metadata and dependencies for the FL deployment.
+-   **values.yaml**   
+    User-editable configuration file for the experiment.   
+    It defines the parameters for launching a Federated Learning session, we will describe in details those parameters in next sections.
+
+The experiment results are saved in `/app/output/evaluations/`, and logs in `/app/output/logs/`.   
+These folders are mounted from Kubernetes volumes and **should not be modified manually**.
+
+-   **src/**
+
+    The core logic of the benchmarking framework. It contains all the codebase to run the Benchmarking software along with user defined classes to allow the usage of user defined models and data.
+
+-   **models/**   
+    Contains all available deep learning models.   
+    Each model must be implemented as a single class and must define the method:
+
+    `get_skeleton_model(input_shape) -> keras.Model 
+     `
+
+-   **dataloaders/**   
+    Contains dataset loader classes used to simulate data distribution to clients.   
+    Each loader class must implement:
+
+    `load_dataset(client_id) -> x_train, x_test, y_train, y_test 
+     `
+
+    In real federated learning, each client owns its own data. Here, data is **simulated** and partitioned using client_id.
 
 ###  Server
 The server component is defined by the abstract class [TCPServer](/src/TCPServer.py). The constructor requires three main parameters:
