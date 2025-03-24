@@ -243,7 +243,7 @@ The framework supports several aggregation algorithms:
   - Simple Average: Each local model contributes equally to the computation of the federated model.
   
   Weighted Average Formula:
- ``````
+
   Simple Average Formula:
     ![equation](https://latex.codecogs.com/svg.image?\theta_{t&plus;1}=\frac{\sum_{k=1}^{K}n_k\theta_t^{(k)}}{n})
 
