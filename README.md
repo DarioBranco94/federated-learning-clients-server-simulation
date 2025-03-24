@@ -93,14 +93,14 @@ The project is organized into several top-level folders, each with a distinct pu
 
 -   **templates/**   
     Helm templates defining Kubernetes resources:
--   server-deployment.yaml:   
+    -   **server-deployment.yaml**:   
     Deployment and Service definition for the central server
--   client-job.yaml:   
+    -   **client-job.yaml**:   
     Indexed Job for parallel training on multiple clients with unique IDs
--   pv.yaml and pvc.yaml:   
+    -   **pv.yaml and pvc.yaml**:   
     Persistent Volumes and Claims to retain:
--   Logs
--   Evaluation results   
+        -   **Logs**
+        -   **Evaluation results**
     These volumes ensure that experiment data persists even after pods are terminated.
 -   **Chart.yaml**   
     Main configuration file for the Helm chart. Defines metadata and dependencies for the FL deployment.
