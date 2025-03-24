@@ -40,7 +40,7 @@ class TCPServer(ABC):
         self.experiment_name = experiment_name
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self._client_sockets = []  # list of client sockets
-        self._clients_profiling_enabled = False
+        self._clients_profiling_enabled = True
         self._evaluation_plots_enabled = True
         self._save_weights_path = save_weights_path
         # FL

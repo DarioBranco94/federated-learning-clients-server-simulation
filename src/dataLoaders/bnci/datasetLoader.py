@@ -35,5 +35,3 @@ class datasetLoader():
 
         return x_train, x_test, y_train, y_test
 
-    def get_optimizer(self):
-        return keras.optimizers.Adam(0.002)

@@ -43,7 +43,10 @@ spec:
               --id -1 \
               --numberOfClients {{ .Values.replicas.client }} \
               --numberOfRounds {{.Values.server.numberOfRounds }} \
-              --experiment {{ .Values.experiment }}
+              --experiment {{ .Values.experiment }} \
+              --model {{ .Values.client.model }} \
+              --input_shape {{ .Values.server.input_shape | join "," }} \
+              --class_names  "{{ .Values.server.class_names | join "," }}"
         volumeMounts:
           - name: logs-volume
             mountPath: {{ .Values.volumes.logs.mountPath }}

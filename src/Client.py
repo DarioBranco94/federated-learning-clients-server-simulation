@@ -10,17 +10,15 @@ import json
 import inspect
 
 class Client(TCPClient):
-    def __init__(self, server_address, id, num_classes, batch_size, train_epochs, model, dataset_loader, loss , metric , optimizer , loss_params, metric_params, optimizer_params):
+    def __init__(self, server_address, id, num_classes, batch_size, train_epochs, model, dataset_loader, loss , metric , optimizer , loss_params, metric_params, optimizer_params, input_shape):
         self.num_classes = num_classes
         self.batch_size = batch_size
         self.train_epochs = train_epochs
         self.load_dataset = self.load_dataset_function(dataset_loader)
         self.id = id
-        x_train, x_test, y_train, y_test = self.load_dataset()
+        #x_train, x_test, y_train, y_test = self.load_dataset()
         self.model_instance = self.load_model_class(model)()
-        self.input_shape = x_train.shape[1:]
-
-        self.get_skeleton_model = lambda: self.model_instance.get_skeleton_model(self.input_shape)
+        self.input_shape = tuple(map(int, args.input_shape.split(",")))
 
         self.loss_function = self.build_loss_function(loss, loss_params)
         self.metric_function = self.build_metric(metric, metric_params)
@@ -112,7 +110,7 @@ class Client(TCPClient):
         return self.optimizer_function
 
     def get_skeleton_model(self) -> keras.Model:
-        return self.model_instance.get_skeleton_model()
+        return self.model_instance.get_skeleton_model(self.input_shape)
 
     def load_dataset(self) -> tuple:
         return self.model_instance.load_dataset()
@@ -135,11 +133,12 @@ if __name__ == "__main__":
     parser.add_argument('--metric_params', type=str, help='Metric parameters in JSON', default='{}')
     parser.add_argument("--optimizer_params", type=str, help="Optimizer parameters in JSON", default='{}')
     parser.add_argument('--port', type=int, default=5000, help='Server port')
+    parser.add_argument('--input_shape', type=str, help='Input shape of the model', default='28,28,1')
     args = parser.parse_args()
 
     server_address = (args.host, args.port)
 
     # Create client
-    client = Client(server_address, args.id, args.num_classes, args.batch_size, args.train_epochs, args.model, args.dataset_loader, args.loss, args.metric, args.optimizer, args.loss_params, args.metric_params, args.optimizer_params)
+    client = Client(server_address, args.id, args.num_classes, args.batch_size, args.train_epochs, args.model, args.dataset_loader, args.loss, args.metric, args.optimizer, args.loss_params, args.metric_params, args.optimizer_params, args.input_shape)
     client.enable_op_determinism()
     client.run()

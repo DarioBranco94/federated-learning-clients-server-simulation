@@ -4,12 +4,15 @@ replicas:
 
 experiment: "BNCI"
 
+
+
 server:
   image: "fed-server:latest"
   imagePullPolicy: "Always"
   port: 12345
   numberOfRounds: 3
-
+  input_shape: [253, 1]
+  class_names: ["Left", "Right"]
 client:
   image: "fed-client:latest"
   imagePullPolicy: "IfNotPresent"
