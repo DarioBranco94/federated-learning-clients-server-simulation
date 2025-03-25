@@ -1,0 +1,11 @@
+python3 ./src/Server.py     --numberOfClients 1     --numberOfRounds 3     --experiment "BNCI"     --model "src.models.model2"     --input_shape "253,1"     --class_names "Left,Right"     --optimizer_params '{"learning_rate": 0.002}'     --optimizer "Adam"     --loss "CategoricalCrossentropy"     --metric "CategoricalAccuracy"     --batch_size 32     --train_epochs 20     --datasetLoader "src.dataLoaders.bnci.datasetLoader"
+
+
+python3 ./src/Client.py     --id 0     --host "federated-learning-server-svc"     --port 12345     --num_classes 2     --batch_size 32     --train_epochs 20     --model "src.models.model2"     --dataset_loader "src.dataLoaders.bnci.datasetLoader"     --loss "CategoricalCrossentropy"     --metric "CategoricalAccuracy"     --optimizer "Adam"     --loss_params "{}"     --metric_params "{}"     --optimizer_params '{"learning_rate": 0.002}'     --input_shape "253,1"
+
+
+
+kubectl run fed-server --image=fed-server:latest --restart=Never --port=12345 --command -- /bin/sh -c "python3 /app/src/run_experiment.py --id -1 --numberOfClients 1 --numberOfRounds 3 --experiment BNCI --model src.models.model2 --input_shape 253,1 --class_names Left,Right --optimizer_params '{\"learning_rate\": 0.002}' --optimizer Adam --loss CategoricalCrossentropy --metric CategoricalAccuracy --batch_size 32 --train_epochs 20 --datasetLoader src.dataLoaders.bnci.datasetLoader"
+
+
+kubectl run fed-server-shell --image=fed-server:latest --restart=Never \--image-pull-policy=IfNotPresent --stdin --tty --command -- /bin/sh

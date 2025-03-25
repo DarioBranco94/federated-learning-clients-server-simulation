@@ -411,4 +411,3 @@ class TCPClient(ABC):
     def get_num_classes(self) -> int:
         """Get the number of classes managed by the dataset"""
         pass
-

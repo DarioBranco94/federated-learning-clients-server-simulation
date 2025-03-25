@@ -1,0 +1,1696 @@
+2025-03-24 07:56:22,748 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 07:56:22,749 - DEBUG - Using selector: EpollSelector
+2025-03-24 07:56:22,755 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 07:56:22,837 - DEBUG - Using selector: EpollSelector
+2025-03-24 07:56:23,040 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 07:56:23,041 - DEBUG - Using selector: EpollSelector
+2025-03-24 07:56:23,152 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 07:56:23,236 - DEBUG - Using selector: EpollSelector
+2025-03-24 07:56:23,336 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 07:56:23,337 - DEBUG - Using selector: EpollSelector
+2025-03-24 07:56:23,442 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 07:56:23,443 - DEBUG - Using selector: EpollSelector
+2025-03-24 07:56:23,448 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 07:56:23,449 - DEBUG - Using selector: EpollSelector
+2025-03-24 07:56:23,451 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 07:56:23,536 - DEBUG - Using selector: EpollSelector
+2025-03-24 07:56:23,640 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 07:56:23,642 - DEBUG - Using selector: EpollSelector
+2025-03-24 07:56:25,148 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 07:56:25,236 - INFO - Starting client execution with ID: 2
+2025-03-24 07:56:25,237 - DEBUG - Loading dataset
+2025-03-24 07:56:25,242 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 07:56:25,243 - DEBUG - Loading and compiling model
+2025-03-24 07:56:25,244 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 07:56:25,246 - INFO - Starting client execution with ID: 1
+2025-03-24 07:56:25,335 - DEBUG - Loading dataset
+2025-03-24 07:56:25,339 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 07:56:25,339 - DEBUG - Loading and compiling model
+2025-03-24 07:56:25,453 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 07:56:25,454 - INFO - Starting client execution with ID: 0
+2025-03-24 07:56:25,455 - DEBUG - Loading dataset
+2025-03-24 07:56:25,458 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 07:56:25,536 - DEBUG - Loading and compiling model
+2025-03-24 07:56:25,549 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 07:56:25,551 - INFO - Starting client execution with ID: 3
+2025-03-24 07:56:25,636 - DEBUG - Loading dataset
+2025-03-24 07:56:25,640 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 07:56:25,640 - DEBUG - Loading and compiling model
+2025-03-24 07:56:25,647 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 07:56:25,649 - INFO - Starting client execution with ID: 8
+2025-03-24 07:56:25,650 - DEBUG - Loading dataset
+2025-03-24 07:56:25,654 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 07:56:25,736 - DEBUG - Loading and compiling model
+2025-03-24 07:56:26,140 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 07:56:26,142 - INFO - Starting client execution with ID: 6
+2025-03-24 07:56:26,143 - DEBUG - Loading dataset
+2025-03-24 07:56:26,147 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 07:56:26,148 - DEBUG - Loading and compiling model
+2025-03-24 07:56:26,236 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 07:56:26,238 - INFO - Starting client execution with ID: 7
+2025-03-24 07:56:26,239 - DEBUG - Loading dataset
+2025-03-24 07:56:26,243 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 07:56:26,244 - DEBUG - Loading and compiling model
+2025-03-24 07:56:26,639 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 07:56:26,640 - INFO - Starting client execution with ID: 5
+2025-03-24 07:56:26,641 - DEBUG - Loading dataset
+2025-03-24 07:56:26,647 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 07:56:26,647 - DEBUG - Loading and compiling model
+2025-03-24 07:56:26,752 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 07:56:26,836 - INFO - Starting client execution with ID: 4
+2025-03-24 07:56:26,837 - DEBUG - Loading dataset
+2025-03-24 07:56:26,842 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 07:56:26,843 - DEBUG - Loading and compiling model
+2025-03-24 20:02:03,303 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:02:03,388 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:02:03,592 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:02:03,594 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:02:03,606 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:02:03,688 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:02:03,890 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:02:03,892 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:02:03,997 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:02:03,998 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:02:04,088 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:02:04,090 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:02:04,289 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:02:04,292 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:02:04,906 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:02:04,987 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:02:05,987 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 20:02:05,989 - INFO - Starting client execution with ID: 2
+2025-03-24 20:02:05,990 - DEBUG - Loading dataset
+2025-03-24 20:02:05,995 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:02:05,996 - DEBUG - Loading and compiling model
+2025-03-24 20:02:06,190 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 20:02:06,193 - INFO - Starting client execution with ID: 6
+2025-03-24 20:02:06,198 - DEBUG - Loading dataset
+2025-03-24 20:02:06,201 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:02:06,202 - DEBUG - Loading and compiling model
+2025-03-24 20:02:06,214 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 20:02:06,288 - INFO - Starting client execution with ID: 7
+2025-03-24 20:02:06,289 - DEBUG - Loading dataset
+2025-03-24 20:02:06,293 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:02:06,293 - DEBUG - Loading and compiling model
+2025-03-24 20:02:06,504 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 20:02:06,505 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 20:02:06,588 - INFO - Starting client execution with ID: 5
+2025-03-24 20:02:06,589 - INFO - Starting client execution with ID: 8
+2025-03-24 20:02:06,590 - DEBUG - Loading dataset
+2025-03-24 20:02:06,590 - DEBUG - Loading dataset
+2025-03-24 20:02:06,593 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:02:06,593 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:02:06,594 - DEBUG - Loading and compiling model
+2025-03-24 20:02:06,594 - DEBUG - Loading and compiling model
+2025-03-24 20:02:06,596 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 20:02:06,598 - INFO - Starting client execution with ID: 1
+2025-03-24 20:02:06,599 - DEBUG - Loading dataset
+2025-03-24 20:02:06,602 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:02:06,607 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 20:02:06,687 - DEBUG - Loading and compiling model
+2025-03-24 20:02:06,688 - INFO - Starting client execution with ID: 4
+2025-03-24 20:02:06,689 - DEBUG - Loading dataset
+2025-03-24 20:02:06,692 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:02:06,693 - DEBUG - Loading and compiling model
+2025-03-24 20:02:06,995 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 20:02:06,996 - INFO - Starting client execution with ID: 3
+2025-03-24 20:02:06,997 - DEBUG - Loading dataset
+2025-03-24 20:02:07,002 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:02:07,004 - INFO - Model compiled successfully
+2025-03-24 20:02:07,088 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:02:07,088 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:02:07,088 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:02:07,089 - DEBUG - Loading and compiling model
+2025-03-24 20:02:07,092 - INFO - Model compiled successfully
+2025-03-24 20:02:07,092 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:02:07,093 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:02:07,093 - INFO - Closing connection with server
+2025-03-24 20:02:07,094 - INFO - Model compiled successfully
+2025-03-24 20:02:07,094 - DEBUG - Connection closed
+2025-03-24 20:02:07,094 - INFO - Client execution completed
+2025-03-24 20:02:07,094 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:02:07,095 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:02:07,096 - INFO - Closing connection with server
+2025-03-24 20:02:07,097 - DEBUG - Connection closed
+2025-03-24 20:02:07,098 - INFO - Client execution completed
+2025-03-24 20:02:07,098 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:02:07,099 - INFO - Closing connection with server
+2025-03-24 20:02:07,099 - DEBUG - Connection closed
+2025-03-24 20:02:07,100 - INFO - Client execution completed
+2025-03-24 20:02:07,402 - INFO - Model compiled successfully
+2025-03-24 20:02:07,403 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:02:07,488 - INFO - Connected to server
+2025-03-24 20:02:07,488 - DEBUG - Managing communication with server
+2025-03-24 20:02:07,490 - INFO - Model compiled successfully
+2025-03-24 20:02:07,491 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:02:07,493 - INFO - Connected to server
+2025-03-24 20:02:07,494 - DEBUG - Managing communication with server
+2025-03-24 20:02:07,497 - INFO - Model compiled successfully
+2025-03-24 20:02:07,498 - DEBUG - Received message of type: MessageType.FEDERATED_WEIGHTS with length: 2080532
+2025-03-24 20:02:07,498 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:02:07,499 - DEBUG - Updating model weights
+2025-03-24 20:02:07,499 - INFO - Model compiled successfully
+2025-03-24 20:02:07,499 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:02:07,500 - INFO - Connected to server
+2025-03-24 20:02:07,501 - INFO - Connected to server
+2025-03-24 20:02:07,501 - DEBUG - Managing communication with server
+2025-03-24 20:02:07,501 - DEBUG - Managing communication with server
+2025-03-24 20:02:07,503 - DEBUG - Received message of type: MessageType.FEDERATED_WEIGHTS with length: 2080532
+2025-03-24 20:02:07,503 - DEBUG - Updating model weights
+2025-03-24 20:02:07,591 - DEBUG - Received message of type: MessageType.FEDERATED_WEIGHTS with length: 2080532
+2025-03-24 20:02:07,591 - DEBUG - Updating model weights
+2025-03-24 20:02:07,593 - DEBUG - Model weights updated successfully
+2025-03-24 20:02:07,594 - INFO - Evaluating model performance
+2025-03-24 20:02:07,594 - DEBUG - Evaluating federated model
+2025-03-24 20:02:07,596 - DEBUG - Model weights updated successfully
+2025-03-24 20:02:07,596 - DEBUG - Received message of type: MessageType.FEDERATED_WEIGHTS with length: 2080532
+2025-03-24 20:02:07,597 - INFO - Evaluating model performance
+2025-03-24 20:02:07,597 - DEBUG - Updating model weights
+2025-03-24 20:02:07,597 - DEBUG - Evaluating federated model
+2025-03-24 20:02:07,601 - DEBUG - Model weights updated successfully
+2025-03-24 20:02:07,602 - INFO - Evaluating model performance
+2025-03-24 20:02:07,602 - DEBUG - Evaluating federated model
+2025-03-24 20:02:07,692 - DEBUG - Model weights updated successfully
+2025-03-24 20:02:07,693 - INFO - Evaluating model performance
+2025-03-24 20:02:07,693 - DEBUG - Evaluating federated model
+2025-03-24 20:02:07,909 - INFO - Model compiled successfully
+2025-03-24 20:02:07,910 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:02:07,924 - INFO - Connected to server
+2025-03-24 20:02:07,924 - DEBUG - Managing communication with server
+2025-03-24 20:02:07,999 - DEBUG - Received message of type: MessageType.FEDERATED_WEIGHTS with length: 2080532
+2025-03-24 20:02:08,000 - DEBUG - Updating model weights
+2025-03-24 20:02:08,012 - DEBUG - Model weights updated successfully
+2025-03-24 20:02:08,012 - INFO - Evaluating model performance
+2025-03-24 20:02:08,013 - DEBUG - Evaluating federated model
+2025-03-24 20:02:08,800 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 20:02:08,801 - INFO - Starting client execution with ID: 0
+2025-03-24 20:02:08,802 - DEBUG - Loading dataset
+2025-03-24 20:02:08,805 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:02:08,806 - DEBUG - Loading and compiling model
+2025-03-24 20:02:09,602 - INFO - Model compiled successfully
+2025-03-24 20:02:09,603 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:02:09,688 - INFO - Connected to server
+2025-03-24 20:02:09,688 - DEBUG - Managing communication with server
+2025-03-24 20:02:09,696 - DEBUG - Received message of type: MessageType.FEDERATED_WEIGHTS with length: 2080532
+2025-03-24 20:02:09,697 - DEBUG - Updating model weights
+2025-03-24 20:02:09,800 - DEBUG - Model weights updated successfully
+2025-03-24 20:02:09,805 - INFO - Evaluating model performance
+2025-03-24 20:02:09,805 - DEBUG - Evaluating federated model
+2025-03-24 20:02:11,201 - INFO - Starting model training for 20 epochs
+2025-03-24 20:02:11,201 - INFO - Starting model training for 20 epochs
+2025-03-24 20:02:11,201 - INFO - Starting model training for 20 epochs
+2025-03-24 20:02:11,201 - DEBUG - Starting epoch 1/20
+2025-03-24 20:02:11,201 - DEBUG - Starting epoch 1/20
+2025-03-24 20:02:11,201 - DEBUG - Starting epoch 1/20
+2025-03-24 20:02:11,201 - DEBUG - Shuffling dataset for epoch 1
+2025-03-24 20:02:11,202 - DEBUG - Shuffling dataset for epoch 1
+2025-03-24 20:02:11,202 - DEBUG - Shuffling dataset for epoch 1
+2025-03-24 20:02:11,292 - INFO - Starting model training for 20 epochs
+2025-03-24 20:02:11,293 - DEBUG - Starting epoch 1/20
+2025-03-24 20:02:11,293 - DEBUG - Shuffling dataset for epoch 1
+2025-03-24 20:02:11,294 - INFO - Starting model training for 20 epochs
+2025-03-24 20:02:11,295 - DEBUG - Starting epoch 1/20
+2025-03-24 20:02:11,295 - DEBUG - Shuffling dataset for epoch 1
+2025-03-24 20:02:13,108 - INFO - Starting model training for 20 epochs
+2025-03-24 20:02:13,108 - DEBUG - Starting epoch 1/20
+2025-03-24 20:02:13,108 - DEBUG - Shuffling dataset for epoch 1
+2025-03-24 20:02:19,009 - DEBUG - Starting epoch 2/20
+2025-03-24 20:02:19,087 - DEBUG - Shuffling dataset for epoch 2
+2025-03-24 20:02:19,492 - DEBUG - Starting epoch 2/20
+2025-03-24 20:02:19,494 - DEBUG - Shuffling dataset for epoch 2
+2025-03-24 20:02:19,692 - DEBUG - Starting epoch 2/20
+2025-03-24 20:02:19,696 - DEBUG - Shuffling dataset for epoch 2
+2025-03-24 20:02:19,802 - DEBUG - Starting epoch 2/20
+2025-03-24 20:02:19,802 - DEBUG - Shuffling dataset for epoch 2
+2025-03-24 20:02:20,596 - DEBUG - Starting epoch 2/20
+2025-03-24 20:02:20,598 - DEBUG - Shuffling dataset for epoch 2
+2025-03-24 20:02:21,093 - DEBUG - Starting epoch 3/20
+2025-03-24 20:02:21,098 - DEBUG - Shuffling dataset for epoch 3
+2025-03-24 20:02:21,703 - DEBUG - Starting epoch 3/20
+2025-03-24 20:02:21,704 - DEBUG - Shuffling dataset for epoch 3
+2025-03-24 20:02:21,893 - DEBUG - Starting epoch 3/20
+2025-03-24 20:02:21,896 - DEBUG - Shuffling dataset for epoch 3
+2025-03-24 20:02:22,003 - DEBUG - Starting epoch 3/20
+2025-03-24 20:02:22,088 - DEBUG - Shuffling dataset for epoch 3
+2025-03-24 20:02:22,391 - DEBUG - Starting epoch 2/20
+2025-03-24 20:02:22,396 - DEBUG - Shuffling dataset for epoch 2
+2025-03-24 20:02:22,804 - DEBUG - Starting epoch 3/20
+2025-03-24 20:02:22,889 - DEBUG - Shuffling dataset for epoch 3
+2025-03-24 20:02:23,194 - DEBUG - Starting epoch 4/20
+2025-03-24 20:02:23,196 - DEBUG - Shuffling dataset for epoch 4
+2025-03-24 20:02:24,095 - DEBUG - Starting epoch 4/20
+2025-03-24 20:02:24,188 - DEBUG - Shuffling dataset for epoch 4
+2025-03-24 20:02:24,293 - DEBUG - Starting epoch 4/20
+2025-03-24 20:02:24,298 - DEBUG - Shuffling dataset for epoch 4
+2025-03-24 20:02:24,589 - DEBUG - Starting epoch 4/20
+2025-03-24 20:02:24,591 - DEBUG - Shuffling dataset for epoch 4
+2025-03-24 20:02:25,290 - DEBUG - Starting epoch 3/20
+2025-03-24 20:02:25,291 - DEBUG - Shuffling dataset for epoch 3
+2025-03-24 20:02:25,390 - DEBUG - Starting epoch 4/20
+2025-03-24 20:02:25,400 - DEBUG - Shuffling dataset for epoch 4
+2025-03-24 20:02:25,691 - DEBUG - Starting epoch 5/20
+2025-03-24 20:02:25,696 - DEBUG - Shuffling dataset for epoch 5
+2025-03-24 20:02:26,498 - DEBUG - Starting epoch 5/20
+2025-03-24 20:02:26,590 - DEBUG - Shuffling dataset for epoch 5
+2025-03-24 20:02:26,795 - DEBUG - Starting epoch 5/20
+2025-03-24 20:02:26,797 - DEBUG - Shuffling dataset for epoch 5
+2025-03-24 20:02:26,802 - DEBUG - Starting epoch 5/20
+2025-03-24 20:02:26,803 - DEBUG - Shuffling dataset for epoch 5
+2025-03-24 20:02:27,604 - DEBUG - Starting epoch 5/20
+2025-03-24 20:02:27,689 - DEBUG - Shuffling dataset for epoch 5
+2025-03-24 20:02:27,695 - DEBUG - Starting epoch 4/20
+2025-03-24 20:02:27,699 - DEBUG - Shuffling dataset for epoch 4
+2025-03-24 20:02:27,992 - DEBUG - Starting epoch 6/20
+2025-03-24 20:02:27,994 - DEBUG - Shuffling dataset for epoch 6
+2025-03-24 20:02:28,700 - DEBUG - Starting epoch 6/20
+2025-03-24 20:02:28,701 - DEBUG - Shuffling dataset for epoch 6
+2025-03-24 20:02:28,990 - DEBUG - Starting epoch 6/20
+2025-03-24 20:02:28,991 - DEBUG - Shuffling dataset for epoch 6
+2025-03-24 20:02:29,307 - DEBUG - Starting epoch 6/20
+2025-03-24 20:02:29,307 - DEBUG - Shuffling dataset for epoch 6
+2025-03-24 20:02:29,905 - DEBUG - Starting epoch 6/20
+2025-03-24 20:02:29,987 - DEBUG - Shuffling dataset for epoch 6
+2025-03-24 20:02:29,995 - DEBUG - Starting epoch 5/20
+2025-03-24 20:02:29,996 - DEBUG - Shuffling dataset for epoch 5
+2025-03-24 20:02:30,105 - DEBUG - Starting epoch 7/20
+2025-03-24 20:02:30,188 - DEBUG - Shuffling dataset for epoch 7
+2025-03-24 20:02:30,693 - DEBUG - Starting epoch 7/20
+2025-03-24 20:02:30,698 - DEBUG - Shuffling dataset for epoch 7
+2025-03-24 20:02:31,191 - DEBUG - Starting epoch 7/20
+2025-03-24 20:02:31,191 - DEBUG - Shuffling dataset for epoch 7
+2025-03-24 20:02:31,489 - DEBUG - Starting epoch 7/20
+2025-03-24 20:02:31,589 - DEBUG - Shuffling dataset for epoch 7
+2025-03-24 20:02:32,005 - DEBUG - Starting epoch 7/20
+2025-03-24 20:02:32,087 - DEBUG - Shuffling dataset for epoch 7
+2025-03-24 20:02:32,204 - DEBUG - Starting epoch 6/20
+2025-03-24 20:02:32,287 - DEBUG - Shuffling dataset for epoch 6
+2025-03-24 20:02:32,404 - DEBUG - Starting epoch 8/20
+2025-03-24 20:02:32,487 - DEBUG - Shuffling dataset for epoch 8
+2025-03-24 20:02:32,500 - DEBUG - Starting epoch 8/20
+2025-03-24 20:02:32,501 - DEBUG - Shuffling dataset for epoch 8
+2025-03-24 20:02:33,398 - DEBUG - Starting epoch 8/20
+2025-03-24 20:02:33,399 - DEBUG - Shuffling dataset for epoch 8
+2025-03-24 20:02:33,691 - DEBUG - Starting epoch 8/20
+2025-03-24 20:02:33,692 - DEBUG - Shuffling dataset for epoch 8
+2025-03-24 20:02:34,396 - DEBUG - Starting epoch 7/20
+2025-03-24 20:02:34,400 - DEBUG - Shuffling dataset for epoch 7
+2025-03-24 20:02:34,400 - DEBUG - Starting epoch 8/20
+2025-03-24 20:02:34,401 - DEBUG - Shuffling dataset for epoch 8
+2025-03-24 20:02:34,697 - DEBUG - Starting epoch 9/20
+2025-03-24 20:02:34,787 - DEBUG - Shuffling dataset for epoch 9
+2025-03-24 20:02:34,891 - DEBUG - Starting epoch 9/20
+2025-03-24 20:02:34,895 - DEBUG - Shuffling dataset for epoch 9
+2025-03-24 20:02:35,691 - DEBUG - Starting epoch 9/20
+2025-03-24 20:02:35,698 - DEBUG - Shuffling dataset for epoch 9
+2025-03-24 20:02:35,894 - DEBUG - Starting epoch 9/20
+2025-03-24 20:02:35,898 - DEBUG - Shuffling dataset for epoch 9
+2025-03-24 20:02:36,405 - DEBUG - Starting epoch 9/20
+2025-03-24 20:02:36,487 - DEBUG - Shuffling dataset for epoch 9
+2025-03-24 20:02:36,492 - DEBUG - Starting epoch 8/20
+2025-03-24 20:02:36,493 - DEBUG - Shuffling dataset for epoch 8
+2025-03-24 20:02:36,899 - DEBUG - Starting epoch 10/20
+2025-03-24 20:02:36,900 - DEBUG - Shuffling dataset for epoch 10
+2025-03-24 20:02:37,091 - DEBUG - Starting epoch 10/20
+2025-03-24 20:02:37,092 - DEBUG - Shuffling dataset for epoch 10
+2025-03-24 20:02:37,892 - DEBUG - Starting epoch 10/20
+2025-03-24 20:02:37,896 - DEBUG - Shuffling dataset for epoch 10
+2025-03-24 20:02:37,990 - DEBUG - Starting epoch 10/20
+2025-03-24 20:02:37,991 - DEBUG - Shuffling dataset for epoch 10
+2025-03-24 20:02:38,504 - DEBUG - Starting epoch 10/20
+2025-03-24 20:02:38,504 - DEBUG - Starting epoch 9/20
+2025-03-24 20:02:38,505 - DEBUG - Shuffling dataset for epoch 10
+2025-03-24 20:02:38,505 - DEBUG - Shuffling dataset for epoch 9
+2025-03-24 20:02:38,800 - DEBUG - Starting epoch 11/20
+2025-03-24 20:02:38,801 - DEBUG - Shuffling dataset for epoch 11
+2025-03-24 20:02:39,107 - DEBUG - Starting epoch 11/20
+2025-03-24 20:02:39,187 - DEBUG - Shuffling dataset for epoch 11
+2025-03-24 20:02:39,800 - DEBUG - Starting epoch 11/20
+2025-03-24 20:02:39,887 - DEBUG - Shuffling dataset for epoch 11
+2025-03-24 20:02:40,002 - DEBUG - Starting epoch 11/20
+2025-03-24 20:02:40,003 - DEBUG - Shuffling dataset for epoch 11
+2025-03-24 20:02:40,598 - DEBUG - Starting epoch 10/20
+2025-03-24 20:02:40,600 - DEBUG - Shuffling dataset for epoch 10
+2025-03-24 20:02:40,694 - DEBUG - Starting epoch 11/20
+2025-03-24 20:02:40,700 - DEBUG - Shuffling dataset for epoch 11
+2025-03-24 20:02:40,895 - DEBUG - Starting epoch 12/20
+2025-03-24 20:02:40,896 - DEBUG - Shuffling dataset for epoch 12
+2025-03-24 20:02:40,904 - DEBUG - Starting epoch 12/20
+2025-03-24 20:02:40,905 - DEBUG - Shuffling dataset for epoch 12
+2025-03-24 20:02:41,994 - DEBUG - Starting epoch 12/20
+2025-03-24 20:02:42,087 - DEBUG - Shuffling dataset for epoch 12
+2025-03-24 20:02:42,098 - DEBUG - Starting epoch 12/20
+2025-03-24 20:02:42,100 - DEBUG - Shuffling dataset for epoch 12
+2025-03-24 20:02:42,704 - DEBUG - Starting epoch 11/20
+2025-03-24 20:02:42,788 - DEBUG - Shuffling dataset for epoch 11
+2025-03-24 20:02:42,796 - DEBUG - Starting epoch 12/20
+2025-03-24 20:02:42,887 - DEBUG - Shuffling dataset for epoch 12
+2025-03-24 20:02:43,090 - DEBUG - Starting epoch 13/20
+2025-03-24 20:02:43,093 - DEBUG - Shuffling dataset for epoch 13
+2025-03-24 20:02:43,189 - DEBUG - Starting epoch 13/20
+2025-03-24 20:02:43,190 - DEBUG - Shuffling dataset for epoch 13
+2025-03-24 20:02:43,994 - DEBUG - Starting epoch 13/20
+2025-03-24 20:02:44,087 - DEBUG - Shuffling dataset for epoch 13
+2025-03-24 20:02:44,303 - DEBUG - Starting epoch 13/20
+2025-03-24 20:02:44,387 - DEBUG - Shuffling dataset for epoch 13
+2025-03-24 20:02:44,699 - DEBUG - Starting epoch 12/20
+2025-03-24 20:02:44,700 - DEBUG - Shuffling dataset for epoch 12
+2025-03-24 20:02:45,002 - DEBUG - Starting epoch 14/20
+2025-03-24 20:02:45,087 - DEBUG - Shuffling dataset for epoch 14
+2025-03-24 20:02:45,092 - DEBUG - Starting epoch 13/20
+2025-03-24 20:02:45,093 - DEBUG - Shuffling dataset for epoch 13
+2025-03-24 20:02:45,191 - DEBUG - Starting epoch 14/20
+2025-03-24 20:02:45,195 - DEBUG - Shuffling dataset for epoch 14
+2025-03-24 20:02:46,101 - DEBUG - Starting epoch 14/20
+2025-03-24 20:02:46,101 - DEBUG - Shuffling dataset for epoch 14
+2025-03-24 20:02:46,399 - DEBUG - Starting epoch 14/20
+2025-03-24 20:02:46,400 - DEBUG - Shuffling dataset for epoch 14
+2025-03-24 20:02:46,692 - DEBUG - Starting epoch 13/20
+2025-03-24 20:02:46,693 - DEBUG - Shuffling dataset for epoch 13
+2025-03-24 20:02:47,002 - DEBUG - Starting epoch 15/20
+2025-03-24 20:02:47,087 - DEBUG - Shuffling dataset for epoch 15
+2025-03-24 20:02:47,191 - DEBUG - Starting epoch 15/20
+2025-03-24 20:02:47,198 - DEBUG - Shuffling dataset for epoch 15
+2025-03-24 20:02:47,287 - DEBUG - Starting epoch 14/20
+2025-03-24 20:02:47,287 - DEBUG - Shuffling dataset for epoch 14
+2025-03-24 20:02:48,203 - DEBUG - Starting epoch 15/20
+2025-03-24 20:02:48,203 - DEBUG - Shuffling dataset for epoch 15
+2025-03-24 20:02:48,600 - DEBUG - Starting epoch 15/20
+2025-03-24 20:02:48,600 - DEBUG - Shuffling dataset for epoch 15
+2025-03-24 20:02:48,793 - DEBUG - Starting epoch 14/20
+2025-03-24 20:02:48,794 - DEBUG - Shuffling dataset for epoch 14
+2025-03-24 20:02:49,100 - DEBUG - Starting epoch 16/20
+2025-03-24 20:02:49,101 - DEBUG - Shuffling dataset for epoch 16
+2025-03-24 20:02:49,191 - DEBUG - Starting epoch 16/20
+2025-03-24 20:02:49,193 - DEBUG - Shuffling dataset for epoch 16
+2025-03-24 20:02:49,496 - DEBUG - Starting epoch 15/20
+2025-03-24 20:02:49,500 - DEBUG - Shuffling dataset for epoch 15
+2025-03-24 20:02:50,199 - DEBUG - Starting epoch 16/20
+2025-03-24 20:02:50,287 - DEBUG - Shuffling dataset for epoch 16
+2025-03-24 20:02:50,792 - DEBUG - Starting epoch 16/20
+2025-03-24 20:02:50,798 - DEBUG - Shuffling dataset for epoch 16
+2025-03-24 20:02:50,890 - DEBUG - Starting epoch 15/20
+2025-03-24 20:02:50,892 - DEBUG - Shuffling dataset for epoch 15
+2025-03-24 20:02:51,101 - DEBUG - Starting epoch 17/20
+2025-03-24 20:02:51,102 - DEBUG - Shuffling dataset for epoch 17
+2025-03-24 20:02:51,490 - DEBUG - Starting epoch 17/20
+2025-03-24 20:02:51,492 - DEBUG - Shuffling dataset for epoch 17
+2025-03-24 20:02:51,494 - DEBUG - Starting epoch 16/20
+2025-03-24 20:02:51,494 - DEBUG - Shuffling dataset for epoch 16
+2025-03-24 20:02:52,308 - DEBUG - Starting epoch 17/20
+2025-03-24 20:02:52,387 - DEBUG - Shuffling dataset for epoch 17
+2025-03-24 20:02:52,694 - DEBUG - Starting epoch 17/20
+2025-03-24 20:02:52,699 - DEBUG - Shuffling dataset for epoch 17
+2025-03-24 20:02:52,897 - DEBUG - Starting epoch 16/20
+2025-03-24 20:02:52,898 - DEBUG - Shuffling dataset for epoch 16
+2025-03-24 20:02:53,200 - DEBUG - Starting epoch 18/20
+2025-03-24 20:02:53,202 - DEBUG - Shuffling dataset for epoch 18
+2025-03-24 20:02:53,594 - DEBUG - Starting epoch 18/20
+2025-03-24 20:02:53,596 - DEBUG - Shuffling dataset for epoch 18
+2025-03-24 20:02:53,599 - DEBUG - Starting epoch 17/20
+2025-03-24 20:02:53,600 - DEBUG - Shuffling dataset for epoch 17
+2025-03-24 20:02:54,305 - DEBUG - Starting epoch 18/20
+2025-03-24 20:02:54,387 - DEBUG - Shuffling dataset for epoch 18
+2025-03-24 20:02:54,690 - DEBUG - Starting epoch 18/20
+2025-03-24 20:02:54,693 - DEBUG - Shuffling dataset for epoch 18
+2025-03-24 20:02:55,193 - DEBUG - Starting epoch 19/20
+2025-03-24 20:02:55,194 - DEBUG - Shuffling dataset for epoch 19
+2025-03-24 20:02:55,205 - DEBUG - Starting epoch 17/20
+2025-03-24 20:02:55,205 - DEBUG - Shuffling dataset for epoch 17
+2025-03-24 20:02:55,489 - DEBUG - Starting epoch 19/20
+2025-03-24 20:02:55,490 - DEBUG - Shuffling dataset for epoch 19
+2025-03-24 20:02:55,504 - DEBUG - Starting epoch 18/20
+2025-03-24 20:02:55,505 - DEBUG - Shuffling dataset for epoch 18
+2025-03-24 20:02:56,586 - DEBUG - Starting epoch 19/20
+2025-03-24 20:02:56,588 - DEBUG - Shuffling dataset for epoch 19
+2025-03-24 20:02:56,801 - DEBUG - Starting epoch 19/20
+2025-03-24 20:02:56,802 - DEBUG - Shuffling dataset for epoch 19
+2025-03-24 20:02:57,294 - DEBUG - Starting epoch 18/20
+2025-03-24 20:02:57,296 - DEBUG - Shuffling dataset for epoch 18
+2025-03-24 20:02:57,491 - DEBUG - Starting epoch 20/20
+2025-03-24 20:02:57,500 - DEBUG - Shuffling dataset for epoch 20
+2025-03-24 20:02:57,590 - DEBUG - Starting epoch 20/20
+2025-03-24 20:02:57,598 - DEBUG - Shuffling dataset for epoch 20
+2025-03-24 20:02:57,690 - DEBUG - Starting epoch 19/20
+2025-03-24 20:02:57,691 - DEBUG - Shuffling dataset for epoch 19
+2025-03-24 20:02:58,593 - DEBUG - Starting epoch 20/20
+2025-03-24 20:02:58,595 - DEBUG - Shuffling dataset for epoch 20
+2025-03-24 20:02:58,993 - DEBUG - Starting epoch 20/20
+2025-03-24 20:02:59,087 - DEBUG - Shuffling dataset for epoch 20
+2025-03-24 20:02:59,201 - DEBUG - Starting epoch 19/20
+2025-03-24 20:02:59,202 - DEBUG - Shuffling dataset for epoch 19
+2025-03-24 20:02:59,394 - INFO - Training completed, saving model weights
+2025-03-24 20:02:59,398 - INFO - Evaluating model performance
+2025-03-24 20:02:59,400 - DEBUG - Evaluating training model
+2025-03-24 20:02:59,500 - DEBUG - Starting epoch 20/20
+2025-03-24 20:02:59,501 - DEBUG - Shuffling dataset for epoch 20
+2025-03-24 20:02:59,696 - INFO - Training completed, saving model weights
+2025-03-24 20:02:59,703 - INFO - Evaluating model performance
+2025-03-24 20:02:59,704 - DEBUG - Evaluating training model
+2025-03-24 20:03:00,404 - INFO - Training completed, saving model weights
+2025-03-24 20:03:00,493 - INFO - Evaluating model performance
+2025-03-24 20:03:00,494 - DEBUG - Evaluating training model
+2025-03-24 20:03:00,602 - INFO - Sending local model to server
+2025-03-24 20:03:00,604 - DEBUG - Sending message of type: MessageType.CLIENT_MODEL to server
+2025-03-24 20:03:00,697 - INFO - Training completed, saving model weights
+2025-03-24 20:03:00,697 - INFO - Sending local model to server
+2025-03-24 20:03:00,698 - DEBUG - Sending message of type: MessageType.CLIENT_MODEL to server
+2025-03-24 20:03:00,700 - INFO - Evaluating model performance
+2025-03-24 20:03:00,701 - DEBUG - Evaluating training model
+2025-03-24 20:03:00,788 - DEBUG - Message sent successfully
+2025-03-24 20:03:00,788 - DEBUG - Local model sent successfully
+2025-03-24 20:03:00,794 - DEBUG - Starting epoch 20/20
+2025-03-24 20:03:00,797 - DEBUG - Shuffling dataset for epoch 20
+2025-03-24 20:03:00,799 - DEBUG - Message sent successfully
+2025-03-24 20:03:00,800 - DEBUG - Local model sent successfully
+2025-03-24 20:03:00,899 - INFO - Training completed, saving model weights
+2025-03-24 20:03:00,901 - INFO - Evaluating model performance
+2025-03-24 20:03:00,901 - DEBUG - Evaluating training model
+2025-03-24 20:03:01,105 - INFO - Sending local model to server
+2025-03-24 20:03:01,106 - DEBUG - Sending message of type: MessageType.CLIENT_MODEL to server
+2025-03-24 20:03:01,189 - DEBUG - Message sent successfully
+2025-03-24 20:03:01,191 - DEBUG - Local model sent successfully
+2025-03-24 20:03:01,205 - INFO - Sending local model to server
+2025-03-24 20:03:01,206 - DEBUG - Sending message of type: MessageType.CLIENT_MODEL to server
+2025-03-24 20:03:01,291 - DEBUG - Message sent successfully
+2025-03-24 20:03:01,292 - DEBUG - Local model sent successfully
+2025-03-24 20:03:01,321 - INFO - Training completed, saving model weights
+2025-03-24 20:03:01,322 - INFO - Evaluating model performance
+2025-03-24 20:03:01,323 - DEBUG - Evaluating training model
+2025-03-24 20:03:01,386 - INFO - Sending local model to server
+2025-03-24 20:03:01,387 - DEBUG - Sending message of type: MessageType.CLIENT_MODEL to server
+2025-03-24 20:03:01,402 - DEBUG - Message sent successfully
+2025-03-24 20:03:01,402 - DEBUG - Local model sent successfully
+2025-03-24 20:03:01,471 - INFO - Sending local model to server
+2025-03-24 20:03:01,472 - DEBUG - Sending message of type: MessageType.CLIENT_MODEL to server
+2025-03-24 20:03:01,484 - DEBUG - Message sent successfully
+2025-03-24 20:03:01,485 - DEBUG - Local model sent successfully
+2025-03-24 20:11:54,382 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:11:54,383 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:11:54,688 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:11:54,690 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:11:54,772 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:11:54,772 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:11:56,576 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 20:11:56,577 - INFO - Starting client execution with ID: 1
+2025-03-24 20:11:56,578 - DEBUG - Loading dataset
+2025-03-24 20:11:56,581 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:11:56,582 - DEBUG - Loading and compiling model
+2025-03-24 20:11:56,681 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 20:11:56,682 - INFO - Starting client execution with ID: 0
+2025-03-24 20:11:56,682 - DEBUG - Loading dataset
+2025-03-24 20:11:56,775 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 20:11:56,775 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:11:56,775 - DEBUG - Loading and compiling model
+2025-03-24 20:11:56,776 - INFO - Starting client execution with ID: 2
+2025-03-24 20:11:56,776 - DEBUG - Loading dataset
+2025-03-24 20:11:56,779 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:11:56,780 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:11:56,780 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:11:56,780 - DEBUG - Loading and compiling model
+2025-03-24 20:11:56,787 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:11:56,788 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:11:57,086 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:11:57,087 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:11:57,178 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:11:57,180 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:11:57,288 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:11:57,372 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:11:57,384 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:11:57,385 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:11:57,389 - INFO - Model compiled successfully
+2025-03-24 20:11:57,472 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:11:57,475 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:11:57,476 - INFO - Closing connection with server
+2025-03-24 20:11:57,476 - DEBUG - Connection closed
+2025-03-24 20:11:57,476 - INFO - Client execution completed
+2025-03-24 20:11:57,591 - INFO - Model compiled successfully
+2025-03-24 20:11:57,591 - INFO - Model compiled successfully
+2025-03-24 20:11:57,673 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:11:57,673 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:11:57,675 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:11:57,676 - INFO - Closing connection with server
+2025-03-24 20:11:57,676 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:11:57,677 - DEBUG - Connection closed
+2025-03-24 20:11:57,677 - INFO - Closing connection with server
+2025-03-24 20:11:57,677 - INFO - Client execution completed
+2025-03-24 20:11:57,677 - DEBUG - Connection closed
+2025-03-24 20:11:57,677 - INFO - Client execution completed
+2025-03-24 20:11:59,087 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 20:11:59,173 - INFO - Starting client execution with ID: 7
+2025-03-24 20:11:59,174 - DEBUG - Loading dataset
+2025-03-24 20:11:59,175 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 20:11:59,177 - INFO - Starting client execution with ID: 4
+2025-03-24 20:11:59,178 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:11:59,178 - DEBUG - Loading and compiling model
+2025-03-24 20:11:59,178 - DEBUG - Loading dataset
+2025-03-24 20:11:59,182 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:11:59,183 - DEBUG - Loading and compiling model
+2025-03-24 20:11:59,389 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 20:11:59,472 - INFO - Starting client execution with ID: 8
+2025-03-24 20:11:59,473 - DEBUG - Loading dataset
+2025-03-24 20:11:59,476 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 20:11:59,477 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:11:59,477 - DEBUG - Loading and compiling model
+2025-03-24 20:11:59,477 - INFO - Starting client execution with ID: 3
+2025-03-24 20:11:59,478 - DEBUG - Loading dataset
+2025-03-24 20:11:59,481 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:11:59,481 - DEBUG - Loading and compiling model
+2025-03-24 20:11:59,583 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 20:11:59,585 - INFO - Starting client execution with ID: 5
+2025-03-24 20:11:59,585 - DEBUG - Loading dataset
+2025-03-24 20:11:59,588 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:11:59,672 - DEBUG - Loading and compiling model
+2025-03-24 20:11:59,776 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 20:11:59,777 - INFO - Starting client execution with ID: 6
+2025-03-24 20:11:59,778 - DEBUG - Loading dataset
+2025-03-24 20:11:59,781 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:11:59,782 - DEBUG - Loading and compiling model
+2025-03-24 20:11:59,981 - INFO - Model compiled successfully
+2025-03-24 20:11:59,982 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:11:59,984 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:11:59,986 - INFO - Model compiled successfully
+2025-03-24 20:12:00,072 - INFO - Closing connection with server
+2025-03-24 20:12:00,072 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:12:00,073 - DEBUG - Connection closed
+2025-03-24 20:12:00,074 - INFO - Client execution completed
+2025-03-24 20:12:00,075 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:12:00,077 - INFO - Closing connection with server
+2025-03-24 20:12:00,077 - DEBUG - Connection closed
+2025-03-24 20:12:00,078 - INFO - Client execution completed
+2025-03-24 20:12:00,278 - INFO - Model compiled successfully
+2025-03-24 20:12:00,279 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:12:00,281 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:12:00,282 - INFO - Closing connection with server
+2025-03-24 20:12:00,282 - DEBUG - Connection closed
+2025-03-24 20:12:00,282 - INFO - Client execution completed
+2025-03-24 20:12:00,386 - INFO - Model compiled successfully
+2025-03-24 20:12:00,391 - INFO - Model compiled successfully
+2025-03-24 20:12:00,472 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:12:00,472 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:12:00,509 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:12:00,572 - INFO - Closing connection with server
+2025-03-24 20:12:00,573 - DEBUG - Connection closed
+2025-03-24 20:12:00,574 - INFO - Client execution completed
+2025-03-24 20:12:00,573 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:12:00,574 - INFO - Closing connection with server
+2025-03-24 20:12:00,575 - DEBUG - Connection closed
+2025-03-24 20:12:00,575 - INFO - Client execution completed
+2025-03-24 20:12:00,576 - INFO - Model compiled successfully
+2025-03-24 20:12:00,576 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:12:00,578 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 20:12:00,580 - INFO - Closing connection with server
+2025-03-24 20:12:00,580 - DEBUG - Connection closed
+2025-03-24 20:12:00,581 - INFO - Client execution completed
+2025-03-24 20:29:41,549 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:29:41,550 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:29:41,652 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:29:41,654 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:29:41,843 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:29:41,844 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:29:41,855 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:29:41,857 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:29:42,151 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:29:42,152 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:29:42,343 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:29:42,344 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:29:42,550 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:29:42,552 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:29:42,766 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:29:42,842 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:29:43,352 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 20:29:43,355 - INFO - Starting client execution with ID: 6
+2025-03-24 20:29:43,357 - DEBUG - Loading dataset
+2025-03-24 20:29:43,546 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:29:43,547 - DEBUG - Loading and compiling model
+2025-03-24 20:29:43,747 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 20:29:43,748 - INFO - Starting client execution with ID: 8
+2025-03-24 20:29:43,749 - DEBUG - Loading dataset
+2025-03-24 20:29:43,760 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:29:43,841 - DEBUG - Loading and compiling model
+2025-03-24 20:29:44,045 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 20:29:44,047 - INFO - Starting client execution with ID: 1
+2025-03-24 20:29:44,049 - DEBUG - Loading dataset
+2025-03-24 20:29:44,059 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:29:44,142 - DEBUG - Loading and compiling model
+2025-03-24 20:29:44,151 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 20:29:44,153 - INFO - Starting client execution with ID: 3
+2025-03-24 20:29:44,241 - DEBUG - Loading dataset
+2025-03-24 20:29:44,346 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:29:44,347 - DEBUG - Loading and compiling model
+2025-03-24 20:29:44,356 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 20:29:44,442 - INFO - Starting client execution with ID: 7
+2025-03-24 20:29:44,443 - DEBUG - Loading dataset
+2025-03-24 20:29:44,455 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:29:44,455 - DEBUG - Loading and compiling model
+2025-03-24 20:29:44,552 - INFO - Model compiled successfully
+2025-03-24 20:29:44,552 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:29:44,553 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 20:29:44,554 - INFO - Starting client execution with ID: 0
+2025-03-24 20:29:44,641 - DEBUG - Loading dataset
+2025-03-24 20:29:44,642 - INFO - Connected to server
+2025-03-24 20:29:44,642 - DEBUG - Managing communication with server
+2025-03-24 20:29:44,652 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:29:44,652 - DEBUG - Loading and compiling model
+2025-03-24 20:29:44,752 - INFO - Model compiled successfully
+2025-03-24 20:29:44,753 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:29:44,756 - INFO - Connected to server
+2025-03-24 20:29:44,756 - DEBUG - Managing communication with server
+2025-03-24 20:29:44,942 - INFO - Model compiled successfully
+2025-03-24 20:29:44,943 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:29:44,944 - INFO - Connected to server
+2025-03-24 20:29:44,945 - DEBUG - Managing communication with server
+2025-03-24 20:29:45,048 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 20:29:45,049 - INFO - Starting client execution with ID: 4
+2025-03-24 20:29:45,050 - DEBUG - Loading dataset
+2025-03-24 20:29:45,051 - INFO - Model compiled successfully
+2025-03-24 20:29:45,052 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:29:45,053 - INFO - Model compiled successfully
+2025-03-24 20:29:45,053 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:29:45,066 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:29:45,141 - DEBUG - Loading and compiling model
+2025-03-24 20:29:45,158 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 20:29:45,159 - INFO - Starting client execution with ID: 5
+2025-03-24 20:29:45,160 - DEBUG - Loading dataset
+2025-03-24 20:29:45,160 - INFO - Model compiled successfully
+2025-03-24 20:29:45,161 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:29:45,167 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:29:45,168 - DEBUG - Loading and compiling model
+2025-03-24 20:29:45,290 - INFO - Model compiled successfully
+2025-03-24 20:29:45,341 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:29:45,361 - INFO - Model compiled successfully
+2025-03-24 20:29:45,362 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:29:45,462 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:29:45,463 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:29:45,686 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 20:29:45,686 - INFO - Starting client execution with ID: 2
+2025-03-24 20:29:45,687 - DEBUG - Loading dataset
+2025-03-24 20:29:45,693 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:29:45,693 - DEBUG - Loading and compiling model
+2025-03-24 20:29:45,786 - INFO - Model compiled successfully
+2025-03-24 20:29:45,786 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:31:54,717 - ERROR - Socket error: [Errno 110] Connection timed out
+2025-03-24 20:31:54,717 - ERROR - Socket error: [Errno 110] Connection timed out
+2025-03-24 20:31:54,718 - INFO - Closing connection with server
+2025-03-24 20:31:54,718 - INFO - Closing connection with server
+2025-03-24 20:31:54,719 - DEBUG - Connection closed
+2025-03-24 20:31:54,719 - DEBUG - Connection closed
+2025-03-24 20:31:54,719 - INFO - Client execution completed
+2025-03-24 20:31:54,719 - INFO - Client execution completed
+2025-03-24 20:31:54,727 - ERROR - Socket error: [Errno 110] Connection timed out
+2025-03-24 20:31:54,727 - ERROR - Socket error: [Errno 110] Connection timed out
+2025-03-24 20:31:54,727 - ERROR - Socket error: [Errno 110] Connection timed out
+2025-03-24 20:31:54,728 - INFO - Closing connection with server
+2025-03-24 20:31:54,728 - INFO - Closing connection with server
+2025-03-24 20:31:54,728 - INFO - Closing connection with server
+2025-03-24 20:31:54,729 - DEBUG - Connection closed
+2025-03-24 20:31:54,729 - DEBUG - Connection closed
+2025-03-24 20:31:54,729 - DEBUG - Connection closed
+2025-03-24 20:31:54,729 - INFO - Client execution completed
+2025-03-24 20:31:54,729 - INFO - Client execution completed
+2025-03-24 20:31:54,729 - INFO - Client execution completed
+2025-03-24 20:31:59,837 - ERROR - Socket error: [Errno 110] Connection timed out
+2025-03-24 20:31:59,838 - INFO - Closing connection with server
+2025-03-24 20:31:59,839 - DEBUG - Connection closed
+2025-03-24 20:31:59,839 - INFO - Client execution completed
+2025-03-24 20:37:00,248 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:37:00,249 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:37:02,036 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 20:37:02,037 - INFO - Starting client execution with ID: 6
+2025-03-24 20:37:02,038 - DEBUG - Loading dataset
+2025-03-24 20:37:02,042 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:37:02,042 - DEBUG - Loading and compiling model
+2025-03-24 20:37:02,840 - INFO - Model compiled successfully
+2025-03-24 20:37:02,840 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:37:02,842 - INFO - Connected to server
+2025-03-24 20:37:02,843 - DEBUG - Managing communication with server
+2025-03-24 20:37:05,732 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:37:05,733 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:37:05,742 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:37:05,743 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:37:06,146 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:37:06,147 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:37:06,240 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:37:06,241 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:37:07,044 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 20:37:07,046 - INFO - Starting client execution with ID: 4
+2025-03-24 20:37:07,047 - DEBUG - Loading dataset
+2025-03-24 20:37:07,047 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:37:07,048 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:37:07,051 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:37:07,051 - DEBUG - Loading and compiling model
+2025-03-24 20:37:07,230 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 20:37:07,232 - INFO - Starting client execution with ID: 1
+2025-03-24 20:37:07,233 - DEBUG - Loading dataset
+2025-03-24 20:37:07,238 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:37:07,239 - DEBUG - Loading and compiling model
+2025-03-24 20:37:07,655 - INFO - Model compiled successfully
+2025-03-24 20:37:07,728 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:37:07,730 - INFO - Connected to server
+2025-03-24 20:37:07,730 - DEBUG - Managing communication with server
+2025-03-24 20:37:07,743 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 20:37:07,745 - INFO - Starting client execution with ID: 7
+2025-03-24 20:37:07,745 - DEBUG - Loading dataset
+2025-03-24 20:37:07,749 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:37:07,750 - DEBUG - Loading and compiling model
+2025-03-24 20:37:07,843 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 20:37:07,844 - INFO - Starting client execution with ID: 0
+2025-03-24 20:37:07,845 - DEBUG - Loading dataset
+2025-03-24 20:37:07,846 - INFO - Model compiled successfully
+2025-03-24 20:37:07,847 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:37:07,848 - INFO - Connected to server
+2025-03-24 20:37:07,850 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:37:07,850 - DEBUG - Loading and compiling model
+2025-03-24 20:37:07,928 - DEBUG - Managing communication with server
+2025-03-24 20:37:08,142 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 20:37:08,143 - INFO - Starting client execution with ID: 8
+2025-03-24 20:37:08,144 - DEBUG - Loading dataset
+2025-03-24 20:37:08,149 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:37:08,150 - DEBUG - Loading and compiling model
+2025-03-24 20:37:08,150 - INFO - Model compiled successfully
+2025-03-24 20:37:08,150 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:37:08,228 - INFO - Connected to server
+2025-03-24 20:37:08,229 - DEBUG - Managing communication with server
+2025-03-24 20:37:08,246 - INFO - Model compiled successfully
+2025-03-24 20:37:08,246 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:37:08,248 - INFO - Connected to server
+2025-03-24 20:37:08,248 - DEBUG - Managing communication with server
+2025-03-24 20:37:08,440 - INFO - Model compiled successfully
+2025-03-24 20:37:08,441 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:37:08,442 - INFO - Connected to server
+2025-03-24 20:37:08,443 - DEBUG - Managing communication with server
+2025-03-24 20:37:09,045 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:37:09,045 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:37:09,049 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:37:09,049 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:37:09,446 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:37:09,447 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:37:09,450 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 20:37:09,451 - INFO - Starting client execution with ID: 5
+2025-03-24 20:37:09,451 - DEBUG - Loading dataset
+2025-03-24 20:37:09,452 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 20:37:09,453 - INFO - Starting client execution with ID: 2
+2025-03-24 20:37:09,453 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:37:09,454 - DEBUG - Loading and compiling model
+2025-03-24 20:37:09,454 - DEBUG - Loading dataset
+2025-03-24 20:37:09,457 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:37:09,457 - DEBUG - Loading and compiling model
+2025-03-24 20:37:09,638 - INFO - Model compiled successfully
+2025-03-24 20:37:09,639 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:37:09,640 - INFO - Connected to server
+2025-03-24 20:37:09,641 - DEBUG - Managing communication with server
+2025-03-24 20:37:09,679 - INFO - Model compiled successfully
+2025-03-24 20:37:09,679 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:37:09,681 - INFO - Connected to server
+2025-03-24 20:37:09,681 - DEBUG - Managing communication with server
+2025-03-24 20:37:09,794 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 20:37:09,794 - INFO - Starting client execution with ID: 3
+2025-03-24 20:37:09,795 - DEBUG - Loading dataset
+2025-03-24 20:37:09,798 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:37:09,799 - DEBUG - Loading and compiling model
+2025-03-24 20:37:09,894 - INFO - Model compiled successfully
+2025-03-24 20:37:09,895 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:37:09,896 - INFO - Connected to server
+2025-03-24 20:37:09,896 - DEBUG - Managing communication with server
+2025-03-24 20:43:13,632 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:43:13,633 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:43:13,721 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:43:13,722 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:43:14,224 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:43:14,226 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:43:14,423 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:43:14,424 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:43:15,429 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:43:15,430 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:43:15,437 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 20:43:15,438 - INFO - Starting client execution with ID: 2
+2025-03-24 20:43:15,438 - DEBUG - Loading dataset
+2025-03-24 20:43:15,441 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:43:15,518 - DEBUG - Loading and compiling model
+2025-03-24 20:43:15,535 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 20:43:15,537 - INFO - Starting client execution with ID: 5
+2025-03-24 20:43:15,618 - DEBUG - Loading dataset
+2025-03-24 20:43:15,622 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:43:15,623 - DEBUG - Loading and compiling model
+2025-03-24 20:43:15,939 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 20:43:16,018 - INFO - Starting client execution with ID: 4
+2025-03-24 20:43:16,019 - DEBUG - Loading dataset
+2025-03-24 20:43:16,023 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:43:16,023 - DEBUG - Loading and compiling model
+2025-03-24 20:43:16,036 - INFO - Model compiled successfully
+2025-03-24 20:43:16,037 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:43:16,039 - INFO - Connected to server
+2025-03-24 20:43:16,118 - DEBUG - Managing communication with server
+2025-03-24 20:43:16,220 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 20:43:16,221 - INFO - Starting client execution with ID: 7
+2025-03-24 20:43:16,222 - DEBUG - Loading dataset
+2025-03-24 20:43:16,225 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:43:16,225 - DEBUG - Loading and compiling model
+2025-03-24 20:43:16,332 - INFO - Model compiled successfully
+2025-03-24 20:43:16,333 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:43:16,335 - INFO - Connected to server
+2025-03-24 20:43:16,417 - DEBUG - Managing communication with server
+2025-03-24 20:43:16,637 - INFO - Model compiled successfully
+2025-03-24 20:43:16,718 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:43:16,719 - INFO - Connected to server
+2025-03-24 20:43:16,720 - DEBUG - Managing communication with server
+2025-03-24 20:43:16,735 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:43:16,736 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:43:16,826 - INFO - Model compiled successfully
+2025-03-24 20:43:16,826 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:43:16,828 - INFO - Connected to server
+2025-03-24 20:43:16,828 - DEBUG - Managing communication with server
+2025-03-24 20:43:16,851 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 20:43:16,852 - INFO - Starting client execution with ID: 0
+2025-03-24 20:43:16,917 - DEBUG - Loading dataset
+2025-03-24 20:43:16,920 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:43:16,921 - DEBUG - Loading and compiling model
+2025-03-24 20:43:17,230 - INFO - Model compiled successfully
+2025-03-24 20:43:17,231 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:43:17,233 - INFO - Connected to server
+2025-03-24 20:43:17,234 - DEBUG - Managing communication with server
+2025-03-24 20:43:17,459 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 20:43:17,460 - INFO - Starting client execution with ID: 6
+2025-03-24 20:43:17,461 - DEBUG - Loading dataset
+2025-03-24 20:43:17,463 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:43:17,517 - DEBUG - Loading and compiling model
+2025-03-24 20:43:17,543 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:43:17,544 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:43:17,728 - INFO - Model compiled successfully
+2025-03-24 20:43:17,728 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:43:17,731 - INFO - Connected to server
+2025-03-24 20:43:17,731 - DEBUG - Managing communication with server
+2025-03-24 20:43:17,964 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:43:17,965 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:43:18,045 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 20:43:18,046 - INFO - Starting client execution with ID: 3
+2025-03-24 20:43:18,047 - DEBUG - Loading dataset
+2025-03-24 20:43:18,050 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:43:18,051 - DEBUG - Loading and compiling model
+2025-03-24 20:43:18,261 - INFO - Model compiled successfully
+2025-03-24 20:43:18,262 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:43:18,264 - INFO - Connected to server
+2025-03-24 20:43:18,264 - DEBUG - Managing communication with server
+2025-03-24 20:43:18,341 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:43:18,342 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:43:18,432 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 20:43:18,434 - INFO - Starting client execution with ID: 8
+2025-03-24 20:43:18,434 - DEBUG - Loading dataset
+2025-03-24 20:43:18,437 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:43:18,438 - DEBUG - Loading and compiling model
+2025-03-24 20:43:18,558 - INFO - Model compiled successfully
+2025-03-24 20:43:18,559 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:43:18,560 - INFO - Connected to server
+2025-03-24 20:43:18,561 - DEBUG - Managing communication with server
+2025-03-24 20:43:18,614 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 20:43:18,615 - INFO - Starting client execution with ID: 1
+2025-03-24 20:43:18,616 - DEBUG - Loading dataset
+2025-03-24 20:43:18,618 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:43:18,619 - DEBUG - Loading and compiling model
+2025-03-24 20:43:18,698 - INFO - Model compiled successfully
+2025-03-24 20:43:18,699 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:43:18,701 - INFO - Connected to server
+2025-03-24 20:43:18,701 - DEBUG - Managing communication with server
+2025-03-24 20:50:39,711 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:50:39,712 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:50:39,804 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:50:39,805 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:50:39,909 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:50:39,910 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:50:40,011 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:50:40,012 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:50:41,104 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:50:41,105 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:50:41,414 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 20:50:41,416 - INFO - Starting client execution with ID: 1
+2025-03-24 20:50:41,417 - DEBUG - Loading dataset
+2025-03-24 20:50:41,501 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:50:41,501 - DEBUG - Loading and compiling model
+2025-03-24 20:50:41,506 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 20:50:41,507 - INFO - Starting client execution with ID: 0
+2025-03-24 20:50:41,509 - DEBUG - Loading dataset
+2025-03-24 20:50:41,513 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:50:41,513 - DEBUG - Loading and compiling model
+2025-03-24 20:50:41,611 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 20:50:41,612 - INFO - Starting client execution with ID: 6
+2025-03-24 20:50:41,613 - DEBUG - Loading dataset
+2025-03-24 20:50:41,616 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:50:41,617 - DEBUG - Loading and compiling model
+2025-03-24 20:50:41,815 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 20:50:41,816 - INFO - Starting client execution with ID: 2
+2025-03-24 20:50:41,816 - DEBUG - Loading dataset
+2025-03-24 20:50:41,900 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:50:41,902 - DEBUG - Loading and compiling model
+2025-03-24 20:50:42,116 - INFO - Model compiled successfully
+2025-03-24 20:50:42,200 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:50:42,201 - INFO - Connected to server
+2025-03-24 20:50:42,201 - DEBUG - Managing communication with server
+2025-03-24 20:50:42,311 - INFO - Model compiled successfully
+2025-03-24 20:50:42,311 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:50:42,313 - INFO - Connected to server
+2025-03-24 20:50:42,313 - DEBUG - Managing communication with server
+2025-03-24 20:50:42,318 - INFO - Model compiled successfully
+2025-03-24 20:50:42,318 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:50:42,320 - INFO - Connected to server
+2025-03-24 20:50:42,400 - DEBUG - Managing communication with server
+2025-03-24 20:50:42,501 - INFO - Model compiled successfully
+2025-03-24 20:50:42,501 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:50:42,502 - INFO - Connected to server
+2025-03-24 20:50:42,503 - DEBUG - Managing communication with server
+2025-03-24 20:50:42,524 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 20:50:42,526 - INFO - Starting client execution with ID: 4
+2025-03-24 20:50:42,526 - DEBUG - Loading dataset
+2025-03-24 20:50:42,529 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:50:42,530 - DEBUG - Loading and compiling model
+2025-03-24 20:50:42,713 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:50:42,715 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:50:42,821 - INFO - Model compiled successfully
+2025-03-24 20:50:42,821 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:50:42,822 - INFO - Connected to server
+2025-03-24 20:50:42,823 - DEBUG - Managing communication with server
+2025-03-24 20:50:43,220 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 20:50:43,221 - INFO - Starting client execution with ID: 3
+2025-03-24 20:50:43,222 - DEBUG - Loading dataset
+2025-03-24 20:50:43,224 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:50:43,225 - DEBUG - Loading and compiling model
+2025-03-24 20:50:43,226 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:50:43,226 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:50:43,434 - INFO - Model compiled successfully
+2025-03-24 20:50:43,434 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:50:43,435 - INFO - Connected to server
+2025-03-24 20:50:43,436 - DEBUG - Managing communication with server
+2025-03-24 20:50:43,647 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 20:50:43,648 - INFO - Starting client execution with ID: 5
+2025-03-24 20:50:43,649 - DEBUG - Loading dataset
+2025-03-24 20:50:43,651 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:50:43,652 - DEBUG - Loading and compiling model
+2025-03-24 20:50:43,828 - INFO - Model compiled successfully
+2025-03-24 20:50:43,829 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:50:43,830 - INFO - Connected to server
+2025-03-24 20:50:43,830 - DEBUG - Managing communication with server
+2025-03-24 20:50:43,846 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:50:43,847 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:50:44,129 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 20:50:44,130 - INFO - Starting client execution with ID: 7
+2025-03-24 20:50:44,131 - DEBUG - Loading dataset
+2025-03-24 20:50:44,133 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:50:44,134 - DEBUG - Loading and compiling model
+2025-03-24 20:50:44,155 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 20:50:44,156 - DEBUG - Using selector: EpollSelector
+2025-03-24 20:50:44,234 - INFO - Model compiled successfully
+2025-03-24 20:50:44,235 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:50:44,236 - INFO - Connected to server
+2025-03-24 20:50:44,237 - DEBUG - Managing communication with server
+2025-03-24 20:50:44,373 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 20:50:44,374 - INFO - Starting client execution with ID: 8
+2025-03-24 20:50:44,374 - DEBUG - Loading dataset
+2025-03-24 20:50:44,376 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 20:50:44,377 - DEBUG - Loading and compiling model
+2025-03-24 20:50:44,464 - INFO - Model compiled successfully
+2025-03-24 20:50:44,465 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 20:50:44,466 - INFO - Connected to server
+2025-03-24 20:50:44,466 - DEBUG - Managing communication with server
+2025-03-24 21:00:33,882 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:00:33,885 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:00:33,894 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:00:33,977 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:00:35,581 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 21:00:35,583 - INFO - Starting client execution with ID: 4
+2025-03-24 21:00:35,584 - DEBUG - Loading dataset
+2025-03-24 21:00:35,589 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:00:35,590 - DEBUG - Loading and compiling model
+2025-03-24 21:00:35,684 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 21:00:35,685 - INFO - Starting client execution with ID: 0
+2025-03-24 21:00:35,686 - DEBUG - Loading dataset
+2025-03-24 21:00:35,690 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:00:35,690 - DEBUG - Loading and compiling model
+2025-03-24 21:00:36,383 - INFO - Model compiled successfully
+2025-03-24 21:00:36,383 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:00:36,386 - INFO - Connected to server
+2025-03-24 21:00:36,387 - DEBUG - Managing communication with server
+2025-03-24 21:00:36,477 - DEBUG - Waiting for message length from server
+2025-03-24 21:00:36,483 - INFO - Model compiled successfully
+2025-03-24 21:00:36,484 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:00:36,485 - INFO - Connected to server
+2025-03-24 21:00:36,485 - DEBUG - Managing communication with server
+2025-03-24 21:00:36,486 - DEBUG - Waiting for message length from server
+2025-03-24 21:00:36,999 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:00:37,000 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:00:37,282 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:00:37,282 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:00:37,497 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:00:37,498 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:00:38,179 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 21:00:38,181 - INFO - Starting client execution with ID: 2
+2025-03-24 21:00:38,181 - DEBUG - Loading dataset
+2025-03-24 21:00:38,184 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:00:38,184 - DEBUG - Loading and compiling model
+2025-03-24 21:00:38,496 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 21:00:38,578 - INFO - Starting client execution with ID: 6
+2025-03-24 21:00:38,579 - DEBUG - Loading dataset
+2025-03-24 21:00:38,582 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:00:38,582 - DEBUG - Loading and compiling model
+2025-03-24 21:00:38,700 - INFO - Model compiled successfully
+2025-03-24 21:00:38,701 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:00:38,777 - INFO - Connected to server
+2025-03-24 21:00:38,778 - DEBUG - Managing communication with server
+2025-03-24 21:00:38,778 - DEBUG - Waiting for message length from server
+2025-03-24 21:00:38,798 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 21:00:38,799 - INFO - Starting client execution with ID: 3
+2025-03-24 21:00:38,799 - DEBUG - Loading dataset
+2025-03-24 21:00:38,801 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:00:38,802 - DEBUG - Loading and compiling model
+2025-03-24 21:00:38,992 - INFO - Model compiled successfully
+2025-03-24 21:00:38,992 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:00:38,994 - INFO - Connected to server
+2025-03-24 21:00:38,994 - DEBUG - Managing communication with server
+2025-03-24 21:00:38,995 - DEBUG - Waiting for message length from server
+2025-03-24 21:00:39,082 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:00:39,083 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:00:39,196 - INFO - Model compiled successfully
+2025-03-24 21:00:39,197 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:00:39,199 - INFO - Connected to server
+2025-03-24 21:00:39,199 - DEBUG - Managing communication with server
+2025-03-24 21:00:39,200 - DEBUG - Waiting for message length from server
+2025-03-24 21:00:39,604 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 21:00:39,605 - INFO - Starting client execution with ID: 5
+2025-03-24 21:00:39,605 - DEBUG - Loading dataset
+2025-03-24 21:00:39,608 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:00:39,608 - DEBUG - Loading and compiling model
+2025-03-24 21:00:39,878 - INFO - Model compiled successfully
+2025-03-24 21:00:39,878 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:00:39,880 - INFO - Connected to server
+2025-03-24 21:00:39,880 - DEBUG - Managing communication with server
+2025-03-24 21:00:39,880 - DEBUG - Waiting for message length from server
+2025-03-24 21:00:44,010 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:00:44,011 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:00:44,408 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 21:00:44,409 - INFO - Starting client execution with ID: 1
+2025-03-24 21:00:44,410 - DEBUG - Loading dataset
+2025-03-24 21:00:44,413 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:00:44,414 - DEBUG - Loading and compiling model
+2025-03-24 21:00:44,607 - INFO - Model compiled successfully
+2025-03-24 21:00:44,608 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:00:44,610 - INFO - Connected to server
+2025-03-24 21:00:44,610 - DEBUG - Managing communication with server
+2025-03-24 21:00:44,611 - DEBUG - Waiting for message length from server
+2025-03-24 21:00:44,783 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:00:44,784 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:00:45,014 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 21:00:45,015 - INFO - Starting client execution with ID: 8
+2025-03-24 21:00:45,016 - DEBUG - Loading dataset
+2025-03-24 21:00:45,019 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:00:45,020 - DEBUG - Loading and compiling model
+2025-03-24 21:00:45,123 - INFO - Model compiled successfully
+2025-03-24 21:00:45,124 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:00:45,125 - INFO - Connected to server
+2025-03-24 21:00:45,125 - DEBUG - Managing communication with server
+2025-03-24 21:00:45,126 - DEBUG - Waiting for message length from server
+2025-03-24 21:00:45,206 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:00:45,207 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:00:45,411 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 21:00:45,411 - INFO - Starting client execution with ID: 7
+2025-03-24 21:00:45,412 - DEBUG - Loading dataset
+2025-03-24 21:00:45,414 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:00:45,415 - DEBUG - Loading and compiling model
+2025-03-24 21:00:45,501 - INFO - Model compiled successfully
+2025-03-24 21:00:45,502 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:00:45,503 - INFO - Connected to server
+2025-03-24 21:00:45,504 - DEBUG - Managing communication with server
+2025-03-24 21:00:45,504 - DEBUG - Waiting for message length from server
+2025-03-24 21:11:02,471 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:11:02,473 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:11:03,061 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:11:03,062 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:11:04,074 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 21:11:04,075 - INFO - Starting client execution with ID: 2
+2025-03-24 21:11:04,075 - DEBUG - Loading dataset
+2025-03-24 21:11:04,078 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:11:04,156 - DEBUG - Loading and compiling model
+2025-03-24 21:11:04,570 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 21:11:04,571 - INFO - Starting client execution with ID: 1
+2025-03-24 21:11:04,656 - DEBUG - Loading dataset
+2025-03-24 21:11:04,659 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:11:04,660 - DEBUG - Loading and compiling model
+2025-03-24 21:11:04,783 - INFO - Model compiled successfully
+2025-03-24 21:11:04,856 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:11:04,858 - INFO - Connected to server
+2025-03-24 21:11:04,861 - DEBUG - Managing communication with server
+2025-03-24 21:11:05,457 - INFO - Model compiled successfully
+2025-03-24 21:11:05,458 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:11:05,459 - INFO - Connected to server
+2025-03-24 21:11:05,460 - DEBUG - Managing communication with server
+2025-03-24 21:11:06,068 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:11:06,070 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:11:06,485 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:11:06,556 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:11:06,561 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:11:06,562 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:11:07,177 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 21:11:07,179 - INFO - Starting client execution with ID: 5
+2025-03-24 21:11:07,256 - DEBUG - Loading dataset
+2025-03-24 21:11:07,259 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:11:07,260 - DEBUG - Loading and compiling model
+2025-03-24 21:11:07,784 - INFO - Model compiled successfully
+2025-03-24 21:11:07,856 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:11:07,858 - INFO - Connected to server
+2025-03-24 21:11:07,858 - DEBUG - Managing communication with server
+2025-03-24 21:11:07,862 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 21:11:07,864 - INFO - Starting client execution with ID: 3
+2025-03-24 21:11:07,864 - DEBUG - Loading dataset
+2025-03-24 21:11:07,867 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:11:07,868 - DEBUG - Loading and compiling model
+2025-03-24 21:11:07,964 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 21:11:07,966 - INFO - Starting client execution with ID: 0
+2025-03-24 21:11:07,967 - DEBUG - Loading dataset
+2025-03-24 21:11:07,970 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:11:07,971 - DEBUG - Loading and compiling model
+2025-03-24 21:11:08,056 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:11:08,057 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:11:08,285 - INFO - Model compiled successfully
+2025-03-24 21:11:08,356 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:11:08,358 - INFO - Connected to server
+2025-03-24 21:11:08,358 - DEBUG - Managing communication with server
+2025-03-24 21:11:08,363 - INFO - Model compiled successfully
+2025-03-24 21:11:08,364 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:11:08,365 - INFO - Connected to server
+2025-03-24 21:11:08,366 - DEBUG - Managing communication with server
+2025-03-24 21:11:08,681 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 21:11:08,682 - INFO - Starting client execution with ID: 6
+2025-03-24 21:11:08,683 - DEBUG - Loading dataset
+2025-03-24 21:11:08,685 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:11:08,686 - DEBUG - Loading and compiling model
+2025-03-24 21:11:08,879 - INFO - Model compiled successfully
+2025-03-24 21:11:08,880 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:11:08,881 - INFO - Connected to server
+2025-03-24 21:11:08,881 - DEBUG - Managing communication with server
+2025-03-24 21:11:09,083 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:11:09,084 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:11:09,397 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 21:11:09,398 - INFO - Starting client execution with ID: 4
+2025-03-24 21:11:09,399 - DEBUG - Loading dataset
+2025-03-24 21:11:09,401 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:11:09,401 - DEBUG - Loading and compiling model
+2025-03-24 21:11:09,565 - INFO - Model compiled successfully
+2025-03-24 21:11:09,565 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:11:09,567 - INFO - Connected to server
+2025-03-24 21:11:09,567 - DEBUG - Managing communication with server
+2025-03-24 21:11:09,594 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:11:09,595 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:11:09,672 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:11:09,673 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:11:09,826 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 21:11:09,827 - INFO - Starting client execution with ID: 7
+2025-03-24 21:11:09,828 - DEBUG - Loading dataset
+2025-03-24 21:11:09,830 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:11:09,831 - DEBUG - Loading and compiling model
+2025-03-24 21:11:09,880 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 21:11:09,880 - INFO - Starting client execution with ID: 8
+2025-03-24 21:11:09,881 - DEBUG - Loading dataset
+2025-03-24 21:11:09,883 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:11:09,883 - DEBUG - Loading and compiling model
+2025-03-24 21:11:09,923 - INFO - Model compiled successfully
+2025-03-24 21:11:09,924 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:11:09,925 - INFO - Connected to server
+2025-03-24 21:11:09,925 - DEBUG - Managing communication with server
+2025-03-24 21:11:09,988 - INFO - Model compiled successfully
+2025-03-24 21:11:09,989 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:11:09,990 - INFO - Connected to server
+2025-03-24 21:11:09,990 - DEBUG - Managing communication with server
+2025-03-24 21:13:24,776 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:13:24,777 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:13:24,970 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:13:24,972 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:13:25,467 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:13:25,552 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:13:25,653 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:13:25,655 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:13:26,370 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 21:13:26,371 - INFO - Starting client execution with ID: 3
+2025-03-24 21:13:26,372 - DEBUG - Loading dataset
+2025-03-24 21:13:26,375 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:13:26,452 - DEBUG - Loading and compiling model
+2025-03-24 21:13:26,957 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 21:13:26,959 - INFO - Starting client execution with ID: 2
+2025-03-24 21:13:26,960 - DEBUG - Loading dataset
+2025-03-24 21:13:26,963 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:13:26,963 - DEBUG - Loading and compiling model
+2025-03-24 21:13:27,070 - INFO - Model compiled successfully
+2025-03-24 21:13:27,071 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:13:27,072 - INFO - Connected to server
+2025-03-24 21:13:27,153 - DEBUG - Managing communication with server
+2025-03-24 21:13:27,157 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:13:27,158 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:13:27,268 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 21:13:27,269 - INFO - Starting client execution with ID: 0
+2025-03-24 21:13:27,270 - DEBUG - Loading dataset
+2025-03-24 21:13:27,353 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:13:27,354 - DEBUG - Loading and compiling model
+2025-03-24 21:13:27,463 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 21:13:27,464 - INFO - Starting client execution with ID: 8
+2025-03-24 21:13:27,465 - DEBUG - Loading dataset
+2025-03-24 21:13:27,469 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:13:27,469 - DEBUG - Loading and compiling model
+2025-03-24 21:13:27,556 - INFO - Model compiled successfully
+2025-03-24 21:13:27,556 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:13:27,558 - INFO - Connected to server
+2025-03-24 21:13:27,558 - DEBUG - Managing communication with server
+2025-03-24 21:13:27,870 - INFO - Model compiled successfully
+2025-03-24 21:13:27,871 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:13:27,872 - INFO - Connected to server
+2025-03-24 21:13:27,952 - DEBUG - Managing communication with server
+2025-03-24 21:13:27,976 - INFO - Model compiled successfully
+2025-03-24 21:13:27,977 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:13:28,052 - INFO - Connected to server
+2025-03-24 21:13:28,053 - DEBUG - Managing communication with server
+2025-03-24 21:13:28,361 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 21:13:28,362 - INFO - Starting client execution with ID: 7
+2025-03-24 21:13:28,363 - DEBUG - Loading dataset
+2025-03-24 21:13:28,367 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:13:28,367 - DEBUG - Loading and compiling model
+2025-03-24 21:13:28,378 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:13:28,452 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:13:28,753 - INFO - Model compiled successfully
+2025-03-24 21:13:28,753 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:13:28,754 - INFO - Connected to server
+2025-03-24 21:13:28,755 - DEBUG - Managing communication with server
+2025-03-24 21:13:28,956 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:13:28,957 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:13:29,090 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 21:13:29,091 - INFO - Starting client execution with ID: 4
+2025-03-24 21:13:29,091 - DEBUG - Loading dataset
+2025-03-24 21:13:29,094 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:13:29,152 - DEBUG - Loading and compiling model
+2025-03-24 21:13:29,366 - INFO - Model compiled successfully
+2025-03-24 21:13:29,367 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:13:29,368 - INFO - Connected to server
+2025-03-24 21:13:29,369 - DEBUG - Managing communication with server
+2025-03-24 21:13:29,387 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:13:29,388 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:13:29,396 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 21:13:29,397 - INFO - Starting client execution with ID: 6
+2025-03-24 21:13:29,397 - DEBUG - Loading dataset
+2025-03-24 21:13:29,400 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:13:29,400 - DEBUG - Loading and compiling model
+2025-03-24 21:13:29,589 - INFO - Model compiled successfully
+2025-03-24 21:13:29,590 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:13:29,591 - INFO - Connected to server
+2025-03-24 21:13:29,591 - DEBUG - Managing communication with server
+2025-03-24 21:13:29,707 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 21:13:29,708 - INFO - Starting client execution with ID: 1
+2025-03-24 21:13:29,709 - DEBUG - Loading dataset
+2025-03-24 21:13:29,711 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:13:29,711 - DEBUG - Loading and compiling model
+2025-03-24 21:13:29,805 - INFO - Model compiled successfully
+2025-03-24 21:13:29,805 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:13:29,807 - INFO - Connected to server
+2025-03-24 21:13:29,807 - DEBUG - Managing communication with server
+2025-03-24 21:13:29,847 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:13:29,852 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:13:30,058 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 21:13:30,059 - INFO - Starting client execution with ID: 5
+2025-03-24 21:13:30,059 - DEBUG - Loading dataset
+2025-03-24 21:13:30,062 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:13:30,062 - DEBUG - Loading and compiling model
+2025-03-24 21:13:30,157 - INFO - Model compiled successfully
+2025-03-24 21:13:30,158 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:13:30,159 - INFO - Connected to server
+2025-03-24 21:13:30,159 - DEBUG - Managing communication with server
+2025-03-24 21:32:56,732 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:32:56,734 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:33:02,619 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:33:02,620 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:33:02,725 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:33:02,727 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:33:03,128 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:33:03,130 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:33:05,027 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:33:05,028 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:33:05,930 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:33:05,932 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:33:06,924 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:33:06,925 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:33:09,129 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:33:09,131 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:33:09,643 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:33:09,715 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:37:19,212 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:37:19,213 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:37:19,626 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:37:19,708 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:37:19,921 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:37:19,922 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:37:20,019 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:37:20,021 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:37:20,320 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:37:20,321 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:37:21,213 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 21:37:21,215 - INFO - Starting client execution with ID: 4
+2025-03-24 21:37:21,216 - DEBUG - Loading dataset
+2025-03-24 21:37:21,221 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:37:21,221 - DEBUG - Loading and compiling model
+2025-03-24 21:37:21,313 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 21:37:21,315 - INFO - Starting client execution with ID: 3
+2025-03-24 21:37:21,315 - DEBUG - Loading dataset
+2025-03-24 21:37:21,319 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:37:21,319 - DEBUG - Loading and compiling model
+2025-03-24 21:37:21,714 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 21:37:21,715 - INFO - Starting client execution with ID: 6
+2025-03-24 21:37:21,715 - DEBUG - Loading dataset
+2025-03-24 21:37:21,719 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:37:21,719 - DEBUG - Loading and compiling model
+2025-03-24 21:37:21,909 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 21:37:21,910 - INFO - Model compiled successfully
+2025-03-24 21:37:21,910 - INFO - Starting client execution with ID: 2
+2025-03-24 21:37:21,911 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:37:21,911 - DEBUG - Loading dataset
+2025-03-24 21:37:21,913 - INFO - Connected to server
+2025-03-24 21:37:21,913 - DEBUG - Managing communication with server
+2025-03-24 21:37:21,914 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:37:21,915 - DEBUG - Loading and compiling model
+2025-03-24 21:37:22,110 - INFO - Model compiled successfully
+2025-03-24 21:37:22,111 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:37:22,112 - INFO - Connected to server
+2025-03-24 21:37:22,112 - DEBUG - Managing communication with server
+2025-03-24 21:37:22,121 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 21:37:22,122 - INFO - Starting client execution with ID: 5
+2025-03-24 21:37:22,123 - DEBUG - Loading dataset
+2025-03-24 21:37:22,125 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:37:22,126 - DEBUG - Loading and compiling model
+2025-03-24 21:37:22,312 - INFO - Model compiled successfully
+2025-03-24 21:37:22,313 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:37:22,314 - INFO - Connected to server
+2025-03-24 21:37:22,315 - DEBUG - Managing communication with server
+2025-03-24 21:37:22,336 - INFO - Model compiled successfully
+2025-03-24 21:37:22,407 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:37:22,408 - INFO - Connected to server
+2025-03-24 21:37:22,409 - DEBUG - Managing communication with server
+2025-03-24 21:37:22,534 - INFO - Model compiled successfully
+2025-03-24 21:37:22,607 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:37:22,608 - INFO - Connected to server
+2025-03-24 21:37:22,609 - DEBUG - Managing communication with server
+2025-03-24 21:37:22,733 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:37:22,734 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:37:23,311 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 21:37:23,313 - INFO - Starting client execution with ID: 0
+2025-03-24 21:37:23,313 - DEBUG - Loading dataset
+2025-03-24 21:37:23,316 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:37:23,316 - DEBUG - Loading and compiling model
+2025-03-24 21:37:23,538 - INFO - Model compiled successfully
+2025-03-24 21:37:23,539 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:37:23,540 - INFO - Connected to server
+2025-03-24 21:37:23,541 - DEBUG - Managing communication with server
+2025-03-24 21:37:23,649 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:37:23,650 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:37:24,029 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 21:37:24,029 - INFO - Starting client execution with ID: 1
+2025-03-24 21:37:24,030 - DEBUG - Loading dataset
+2025-03-24 21:37:24,032 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:37:24,032 - DEBUG - Loading and compiling model
+2025-03-24 21:37:24,224 - INFO - Model compiled successfully
+2025-03-24 21:37:24,225 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:37:24,226 - INFO - Connected to server
+2025-03-24 21:37:24,227 - DEBUG - Managing communication with server
+2025-03-24 21:37:24,379 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:37:24,380 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:37:24,458 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:37:24,459 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:37:24,627 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 21:37:24,628 - INFO - Starting client execution with ID: 8
+2025-03-24 21:37:24,629 - DEBUG - Loading dataset
+2025-03-24 21:37:24,631 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:37:24,632 - DEBUG - Loading and compiling model
+2025-03-24 21:37:24,686 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 21:37:24,687 - INFO - Starting client execution with ID: 7
+2025-03-24 21:37:24,688 - DEBUG - Loading dataset
+2025-03-24 21:37:24,690 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:37:24,707 - DEBUG - Loading and compiling model
+2025-03-24 21:37:24,733 - INFO - Model compiled successfully
+2025-03-24 21:37:24,733 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:37:24,735 - INFO - Connected to server
+2025-03-24 21:37:24,735 - DEBUG - Managing communication with server
+2025-03-24 21:37:24,790 - INFO - Model compiled successfully
+2025-03-24 21:37:24,791 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:37:24,792 - INFO - Connected to server
+2025-03-24 21:37:24,792 - DEBUG - Managing communication with server
+2025-03-24 21:39:33,804 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:39:33,806 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:39:33,810 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:39:33,811 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:39:33,917 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:39:33,918 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:39:34,004 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:39:34,006 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:39:34,904 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:39:34,905 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:39:35,717 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 2
+2025-03-24 21:39:35,718 - INFO - Starting client execution with ID: 2
+2025-03-24 21:39:35,719 - DEBUG - Loading dataset
+2025-03-24 21:39:35,804 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:39:35,805 - DEBUG - Loading and compiling model
+2025-03-24 21:39:35,814 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 5
+2025-03-24 21:39:35,815 - INFO - Starting client execution with ID: 5
+2025-03-24 21:39:35,816 - DEBUG - Loading dataset
+2025-03-24 21:39:35,820 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:39:35,901 - DEBUG - Loading and compiling model
+2025-03-24 21:39:36,010 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 1
+2025-03-24 21:39:36,012 - INFO - Starting client execution with ID: 1
+2025-03-24 21:39:36,012 - DEBUG - Loading dataset
+2025-03-24 21:39:36,015 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:39:36,016 - DEBUG - Loading and compiling model
+2025-03-24 21:39:36,018 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 21:39:36,019 - INFO - Starting client execution with ID: 0
+2025-03-24 21:39:36,020 - DEBUG - Loading dataset
+2025-03-24 21:39:36,023 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:39:36,102 - DEBUG - Loading and compiling model
+2025-03-24 21:39:36,604 - INFO - Model compiled successfully
+2025-03-24 21:39:36,605 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:39:36,607 - INFO - Connected to server
+2025-03-24 21:39:36,607 - DEBUG - Managing communication with server
+2025-03-24 21:39:36,614 - INFO - Model compiled successfully
+2025-03-24 21:39:36,615 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:39:36,616 - INFO - Connected to server
+2025-03-24 21:39:36,617 - DEBUG - Managing communication with server
+2025-03-24 21:39:36,624 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:39:36,624 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:39:36,724 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 3
+2025-03-24 21:39:36,725 - INFO - Starting client execution with ID: 3
+2025-03-24 21:39:36,801 - DEBUG - Loading dataset
+2025-03-24 21:39:36,805 - INFO - Model compiled successfully
+2025-03-24 21:39:36,805 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:39:36,806 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:39:36,806 - DEBUG - Loading and compiling model
+2025-03-24 21:39:36,807 - INFO - Connected to server
+2025-03-24 21:39:36,808 - DEBUG - Managing communication with server
+2025-03-24 21:39:36,812 - INFO - Model compiled successfully
+2025-03-24 21:39:36,813 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:39:36,814 - INFO - Connected to server
+2025-03-24 21:39:36,815 - DEBUG - Managing communication with server
+2025-03-24 21:39:37,314 - INFO - Model compiled successfully
+2025-03-24 21:39:37,314 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:39:37,316 - INFO - Connected to server
+2025-03-24 21:39:37,317 - DEBUG - Managing communication with server
+2025-03-24 21:39:37,537 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 8
+2025-03-24 21:39:37,538 - INFO - Starting client execution with ID: 8
+2025-03-24 21:39:37,539 - DEBUG - Loading dataset
+2025-03-24 21:39:37,542 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:39:37,543 - DEBUG - Loading and compiling model
+2025-03-24 21:39:37,823 - INFO - Model compiled successfully
+2025-03-24 21:39:37,824 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:39:37,825 - INFO - Connected to server
+2025-03-24 21:39:37,825 - DEBUG - Managing communication with server
+2025-03-24 21:39:37,938 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:39:37,939 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:39:38,314 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:39:38,315 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:39:38,511 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 6
+2025-03-24 21:39:38,513 - INFO - Starting client execution with ID: 6
+2025-03-24 21:39:38,513 - DEBUG - Loading dataset
+2025-03-24 21:39:38,516 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:39:38,517 - DEBUG - Loading and compiling model
+2025-03-24 21:39:38,556 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:39:38,557 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:39:38,732 - INFO - Model compiled successfully
+2025-03-24 21:39:38,732 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:39:38,734 - INFO - Connected to server
+2025-03-24 21:39:38,734 - DEBUG - Managing communication with server
+2025-03-24 21:39:38,802 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 4
+2025-03-24 21:39:38,804 - INFO - Starting client execution with ID: 4
+2025-03-24 21:39:38,804 - DEBUG - Loading dataset
+2025-03-24 21:39:38,807 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:39:38,808 - DEBUG - Loading and compiling model
+2025-03-24 21:39:38,934 - INFO - Model compiled successfully
+2025-03-24 21:39:38,934 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:39:38,936 - INFO - Connected to server
+2025-03-24 21:39:38,936 - DEBUG - Managing communication with server
+2025-03-24 21:39:38,957 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 7
+2025-03-24 21:39:38,958 - INFO - Starting client execution with ID: 7
+2025-03-24 21:39:38,959 - DEBUG - Loading dataset
+2025-03-24 21:39:38,962 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:39:38,963 - DEBUG - Loading and compiling model
+2025-03-24 21:39:39,057 - INFO - Model compiled successfully
+2025-03-24 21:39:39,058 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:39:39,059 - INFO - Connected to server
+2025-03-24 21:39:39,059 - DEBUG - Managing communication with server
+2025-03-24 21:43:28,873 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 21:43:28,874 - DEBUG - Using selector: EpollSelector
+2025-03-24 21:43:29,134 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 21:43:29,135 - INFO - Starting client execution with ID: 0
+2025-03-24 21:43:29,135 - DEBUG - Loading dataset
+2025-03-24 21:43:29,138 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 21:43:29,138 - DEBUG - Loading and compiling model
+2025-03-24 21:43:29,235 - INFO - Model compiled successfully
+2025-03-24 21:43:29,236 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 21:43:29,237 - INFO - Connected to server
+2025-03-24 21:43:29,238 - DEBUG - Managing communication with server
+2025-03-24 22:41:36,560 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 22:41:36,561 - DEBUG - Using selector: EpollSelector
+2025-03-24 22:41:36,785 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 22:41:36,787 - INFO - Starting client execution with ID: 0
+2025-03-24 22:41:36,787 - DEBUG - Loading dataset
+2025-03-24 22:41:36,796 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 22:41:36,796 - DEBUG - Loading and compiling model
+2025-03-24 22:41:36,889 - INFO - Model compiled successfully
+2025-03-24 22:41:36,890 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 22:41:36,892 - INFO - Connected to server
+2025-03-24 22:41:36,893 - DEBUG - Managing communication with server
+2025-03-24 22:43:52,741 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 22:43:52,741 - DEBUG - Using selector: EpollSelector
+2025-03-24 22:43:52,942 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 22:43:52,942 - INFO - Starting client execution with ID: 0
+2025-03-24 22:43:52,943 - DEBUG - Loading dataset
+2025-03-24 22:43:52,946 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 22:43:52,946 - DEBUG - Loading and compiling model
+2025-03-24 22:43:53,052 - INFO - Model compiled successfully
+2025-03-24 22:43:53,053 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 22:43:53,054 - INFO - Connected to server
+2025-03-24 22:43:53,057 - DEBUG - Managing communication with server
+2025-03-24 22:45:08,197 - INFO - Closing connection with server
+2025-03-24 22:45:08,198 - DEBUG - Connection closed
+2025-03-24 22:45:08,198 - INFO - Client execution completed
+2025-03-24 22:45:27,787 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 22:45:27,788 - DEBUG - Using selector: EpollSelector
+2025-03-24 22:45:27,976 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 22:45:27,977 - INFO - Starting client execution with ID: 0
+2025-03-24 22:45:27,978 - DEBUG - Loading dataset
+2025-03-24 22:45:27,980 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 22:45:27,981 - DEBUG - Loading and compiling model
+2025-03-24 22:45:28,066 - INFO - Model compiled successfully
+2025-03-24 22:45:28,067 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 22:46:17,295 - INFO - Closing connection with server
+2025-03-24 22:46:17,296 - DEBUG - Connection closed
+2025-03-24 22:46:17,296 - INFO - Client execution completed
+2025-03-24 22:58:27,177 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 22:58:27,178 - DEBUG - Using selector: EpollSelector
+2025-03-24 22:58:27,396 - DEBUG - Initializing TCPClient with server address: ('federated-learning-server-svc', 12345) and client ID: 0
+2025-03-24 22:58:27,397 - INFO - Starting client execution with ID: 0
+2025-03-24 22:58:27,397 - DEBUG - Loading dataset
+2025-03-24 22:58:27,400 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 22:58:27,401 - DEBUG - Loading and compiling model
+2025-03-24 22:58:27,501 - INFO - Model compiled successfully
+2025-03-24 22:58:27,501 - DEBUG - Connecting to server at address: ('federated-learning-server-svc', 12345)
+2025-03-24 22:58:27,502 - INFO - Connected to server
+2025-03-24 22:58:27,503 - DEBUG - Managing communication with server
+2025-03-24 23:08:07,261 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 23:08:07,262 - DEBUG - Using selector: EpollSelector
+2025-03-24 23:08:07,576 - DEBUG - Initializing TCPClient with server address: ('federated-learning-benchmarker-server-svc', 12345) and client ID: 0
+2025-03-24 23:08:07,577 - INFO - Starting client execution with ID: 0
+2025-03-24 23:08:07,577 - DEBUG - Loading dataset
+2025-03-24 23:08:07,580 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 23:08:07,580 - DEBUG - Loading and compiling model
+2025-03-24 23:08:07,678 - INFO - Model compiled successfully
+2025-03-24 23:08:07,679 - DEBUG - Connecting to server at address: ('federated-learning-benchmarker-server-svc', 12345)
+2025-03-24 23:08:07,681 - ERROR - Socket error: [Errno 111] Connection refused
+2025-03-24 23:08:07,682 - INFO - Closing connection with server
+2025-03-24 23:08:07,682 - DEBUG - Connection closed
+2025-03-24 23:08:07,682 - INFO - Client execution completed
+2025-03-24 23:21:22,924 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 23:21:22,925 - DEBUG - Using selector: EpollSelector
+2025-03-24 23:21:23,138 - DEBUG - Initializing TCPClient with server address: ('federated-learning-benchmarker-server-svc', 12345) and client ID: 0
+2025-03-24 23:21:23,139 - INFO - Starting client execution with ID: 0
+2025-03-24 23:21:23,139 - DEBUG - Loading dataset
+2025-03-24 23:21:23,142 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 23:21:23,142 - DEBUG - Loading and compiling model
+2025-03-24 23:21:23,246 - INFO - Model compiled successfully
+2025-03-24 23:21:23,247 - DEBUG - Connecting to server at address: ('federated-learning-benchmarker-server-svc', 12345)
+2025-03-24 23:21:23,249 - INFO - Connected to server
+2025-03-24 23:21:23,249 - DEBUG - Managing communication with server
+2025-03-24 23:44:39,827 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-24 23:44:39,828 - DEBUG - Using selector: EpollSelector
+2025-03-24 23:44:40,018 - DEBUG - Initializing TCPClient with server address: ('federated-learning-benchmarker-server-svc', 12345) and client ID: 0
+2025-03-24 23:44:40,019 - INFO - Starting client execution with ID: 0
+2025-03-24 23:44:40,019 - DEBUG - Loading dataset
+2025-03-24 23:44:40,022 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-24 23:44:40,022 - DEBUG - Loading and compiling model
+2025-03-24 23:44:40,101 - INFO - Model compiled successfully
+2025-03-24 23:44:40,101 - DEBUG - Connecting to server at address: ('federated-learning-benchmarker-server-svc', 12345)
+2025-03-24 23:44:40,102 - INFO - Connected to server
+2025-03-24 23:44:40,102 - DEBUG - Managing communication with server
+2025-03-25 07:39:00,384 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-25 07:39:00,385 - DEBUG - Using selector: EpollSelector
+2025-03-25 07:39:00,601 - DEBUG - Initializing TCPClient with server address: ('federated-learning-benchmarker-server-svc', 12345) and client ID: 0
+2025-03-25 07:39:00,602 - INFO - Starting client execution with ID: 0
+2025-03-25 07:39:00,603 - DEBUG - Loading dataset
+2025-03-25 07:39:00,606 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-25 07:39:00,607 - DEBUG - Loading and compiling model
+2025-03-25 07:39:00,705 - INFO - Model compiled successfully
+2025-03-25 07:39:00,706 - DEBUG - Connecting to server at address: ('federated-learning-benchmarker-server-svc', 12345)
+2025-03-25 07:39:00,707 - INFO - Connected to server
+2025-03-25 07:39:00,708 - DEBUG - Managing communication with server
+2025-03-25 08:33:39,049 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-25 08:33:39,050 - DEBUG - Using selector: EpollSelector
+2025-03-25 08:33:39,254 - DEBUG - Initializing TCPClient with server address: ('federated-learning-benchmarker-server-svc', 12345) and client ID: 0
+2025-03-25 08:33:39,255 - INFO - Starting client execution with ID: 0
+2025-03-25 08:33:39,255 - DEBUG - Loading dataset
+2025-03-25 08:33:39,258 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-25 08:33:39,258 - DEBUG - Loading and compiling model
+2025-03-25 08:33:39,349 - INFO - Model compiled successfully
+2025-03-25 08:33:39,349 - DEBUG - Connecting to server at address: ('federated-learning-benchmarker-server-svc', 12345)
+2025-03-25 08:33:39,350 - INFO - Connected to server
+2025-03-25 08:33:39,351 - DEBUG - Managing communication with server
+2025-03-25 08:40:58,514 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-25 08:40:58,515 - DEBUG - Using selector: EpollSelector
+2025-03-25 08:40:58,703 - DEBUG - Initializing TCPClient with server address: ('federated-learning-benchmarker-server-svc', 12345) and client ID: 0
+2025-03-25 08:40:58,704 - INFO - Starting client execution with ID: 0
+2025-03-25 08:40:58,704 - DEBUG - Loading dataset
+2025-03-25 08:40:58,706 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-25 08:40:58,707 - DEBUG - Loading and compiling model
+2025-03-25 08:40:58,788 - INFO - Model compiled successfully
+2025-03-25 08:40:58,788 - DEBUG - Connecting to server at address: ('federated-learning-benchmarker-server-svc', 12345)
+2025-03-25 08:40:58,789 - INFO - Connected to server
+2025-03-25 08:40:58,789 - DEBUG - Managing communication with server
+2025-03-25 08:46:56,768 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-25 08:46:56,769 - DEBUG - Using selector: EpollSelector
+2025-03-25 08:46:56,960 - DEBUG - Initializing TCPClient with server address: ('federated-learning-benchmarker-server-svc', 12345) and client ID: 0
+2025-03-25 08:46:56,961 - INFO - Starting client execution with ID: 0
+2025-03-25 08:46:56,962 - DEBUG - Loading dataset
+2025-03-25 08:46:56,964 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-25 08:46:56,964 - DEBUG - Loading and compiling model
+2025-03-25 08:46:57,046 - INFO - Model compiled successfully
+2025-03-25 08:46:57,046 - DEBUG - Connecting to server at address: ('federated-learning-benchmarker-server-svc', 12345)
+2025-03-25 08:46:57,047 - INFO - Connected to server
+2025-03-25 08:46:57,047 - DEBUG - Managing communication with server
+2025-03-25 08:46:57,048 - DEBUG - CLIENT: about to call _receive_message()
+2025-03-25 08:49:36,914 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-25 08:49:36,915 - DEBUG - Using selector: EpollSelector
+2025-03-25 08:49:37,160 - DEBUG - Initializing TCPClient with server address: ('federated-learning-benchmarker-server-svc', 12345) and client ID: 0
+2025-03-25 08:49:37,162 - INFO - Starting client execution with ID: 0
+2025-03-25 08:49:37,162 - DEBUG - Loading dataset
+2025-03-25 08:49:37,165 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-25 08:49:37,166 - DEBUG - Loading and compiling model
+2025-03-25 08:49:37,267 - INFO - Model compiled successfully
+2025-03-25 08:49:37,267 - DEBUG - Connecting to server at address: ('federated-learning-benchmarker-server-svc', 12345)
+2025-03-25 08:49:37,268 - INFO - Connected to server
+2025-03-25 08:49:37,268 - DEBUG - Managing communication with server
+2025-03-25 08:49:37,269 - DEBUG - CLIENT: about to call _receive_message()
+2025-03-25 08:54:06,687 - DEBUG - Found a worker binary at: /usr/local/lib/python3.11/site-packages/tensorflow_federated/python/core/impl/executor_stacks/../../../../data/worker_binary
+2025-03-25 08:54:06,687 - DEBUG - Using selector: EpollSelector
+2025-03-25 08:54:06,879 - DEBUG - Initializing TCPClient with server address: ('federated-learning-benchmarker-server-svc', 12345) and client ID: 0
+2025-03-25 08:54:06,879 - INFO - Starting client execution with ID: 0
+2025-03-25 08:54:06,880 - DEBUG - Loading dataset
+2025-03-25 08:54:06,882 - INFO - Dataset loaded: 216 training samples, 72 test samples
+2025-03-25 08:54:06,883 - DEBUG - Loading and compiling model
+2025-03-25 08:54:06,968 - INFO - Model compiled successfully
+2025-03-25 08:54:06,968 - DEBUG - Connecting to server at address: ('federated-learning-benchmarker-server-svc', 12345)
+2025-03-25 08:54:06,970 - INFO - Connected to server
+2025-03-25 08:54:06,970 - DEBUG - Managing communication with server
+2025-03-25 08:54:06,970 - DEBUG - CLIENT: about to call _receive_message()

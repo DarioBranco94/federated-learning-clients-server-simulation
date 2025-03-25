@@ -1,0 +1,46 @@
+replicas:
+  server: 1
+  client: 1
+
+experiment: "BNCI"
+
+
+
+server:
+  image: "fed-server:latest"
+  imagePullPolicy: "Always"
+  port: 12345
+  numberOfRounds: 3
+  input_shape: [253, 1]
+  class_names: ["Left", "Right"]
+client:
+  image: "fed-client:latest"
+  imagePullPolicy: "IfNotPresent"
+  port: 12345
+  serverHost: "federated-learning-benchmarker-server-svc"
+  model: "src.models.model2"
+  datasetLoader: "src.dataLoaders.bnci.datasetLoader"
+  loss: "CategoricalCrossentropy"
+  lossParams: "{}"
+  metric: "CategoricalAccuracy"
+  metricParams: "{}"
+  optimizer: "Adam"
+  optimizerParams: '{"learning_rate": 0.002}'
+  numClasses: 2
+  batchSize: 32
+  trainEpochs: 20
+
+volumes:
+  logs:
+    name: logs-volume
+    mountPath: /app/output/logs
+    size: 1Gi
+    storageClass: manual
+    hostPath: /output/logs
+
+  evaluations:
+    name: evaluations-volume
+    mountPath: /app/output/experiments
+    size: 1Gi
+    storageClass: manual
+    hostPath: /output/evaluations

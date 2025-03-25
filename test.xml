@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/C:/Users/Eric/Desktop/Exchanger/template.xsd">
+	<header>
+		<title>
+			BNCI
+		</title>
+		<description>
+			Federated Learning experiment 'BNCI'
+		</description>
+		<id>
+			9e4d9f80-2db7-48dd-8aeb-5ae7fa81a764
+		</id>
+		<date>
+			24/03/2025
+		</date>
+		<version>
+			1.0
+		</version>
+		<authors>
+			<author />
+		</authors>
+		<url />
+	</header>
+	<body>
+		<datas>
+			<data id="1">
+				<description />
+				<datasource>
+					<dataset name="">
+						<group name="training set">
+							<url />
+							<data_size />
+						</group>
+						<group name="test set">
+							<url />
+							<data_size />
+						</group>
+						<records />
+						<data_format />
+						<metadata>
+							<parameter name="classes">
+								2
+							</parameter>
+						</metadata>
+					</dataset>
+				</datasource>
+				<metadata>
+					<documentation id="1">
+						<description>
+						</description>
+						<link>
+						</link>
+						<authors>
+							<author>
+							</author>
+						</authors>
+						<year>
+						</year>
+					</documentation>
+				</metadata>
+			</data>
+		</datas>
+		<applications>
+			<application id="1">
+				<title>
+					Federated Learning
+				</title>
+				<model>
+					FedAvg
+				</model>
+				<fl_type>
+					collaborative
+				</fl_type>
+				<codebase />
+				<description>
+					Federated Learning experiment with TCPServer.
+				</description>
+				<license>
+					Apache-2.0
+				</license>
+				<author />
+			</application>
+		</applications>
+		<executions>
+			<execution id="1">
+				<data>
+					1
+				</data>
+				<application>
+					1
+				</application>
+				<deployment environment="k8s">
+					<parameter type="desktop_application">
+					</parameter>
+					<parameter type="operation_system">
+						Linux
+					</parameter>
+					<parameter type="name_system">
+						0247b5c6f0aa
+					</parameter>
+					<parameter type="release">
+						5.15.146.1-microsoft-standard-WSL2
+					</parameter>
+					<parameter type="version">
+						#1 SMP Thu Jan 11 04:09:03 UTC 2024
+					</parameter>
+					<parameter type="architecture">
+						x86_64
+					</parameter>
+					<parameter type="processor" />
+					<parameter type="ram">
+					</parameter>
+					<parameter type="python_version">
+						3.11.11
+					</parameter>
+				</deployment>
+				<configuration_model>
+					<parameter name="train">
+						0.75
+					</parameter>
+					<parameter name="test">
+						0.25
+					</parameter>
+					<parameter name="learning_rate">
+						0.002
+					</parameter>
+					<parameter name="optimizer">
+						Adam
+					</parameter>
+					<parameter name="loss">
+						CategoricalCrossentropy
+					</parameter>
+					<parameter name="metrics">
+						CategoricalAccuracy
+					</parameter>
+					<parameter name="batch_size">
+						32
+					</parameter>
+					<parameter name="number_of_epochs_for_each_client">
+						20
+					</parameter>
+					<parameter name="number_of_clients">
+						1
+					</parameter>
+					<parameter name="number_of_round">
+						3
+					</parameter>
+				</configuration_model>
+			</execution>
+		</executions>
+		<evaluations>
+			<evaluation id="1">
+				<execution>
+					1
+				</execution>
+				<kpis>
+					<kpi type="accuracy" unit="perc">
+						0.91
+					</kpi>
+					<kpi type="loss" unit="perc">
+						0.81
+					</kpi>
+					<kpi type="average_execution_time" unit="sec">
+						15.80
+					</kpi>
+					<kpi type="average_instruction_count">
+						0
+					</kpi>
+					<kpi type="average_ram_usage" unit="GB">
+						0.00
+					</kpi>
+				</kpis>
+			</evaluation>
+		</evaluations>
+	</body>
+</document>
