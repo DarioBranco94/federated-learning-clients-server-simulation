@@ -9,12 +9,12 @@ import inspect
 
 
 class Server(TCPServer):
-    def __init__(self, server_address, number_clients, number_rounds, experiment_name, save_weights_path, model,  input_shape, class_names):
-        self.input_shape = tuple(map(int, args.input_shape.split(",")))
-        self.parsed_class_names = args.class_names.split(",")
+    def __init__(self, server_address, number_clients, number_rounds, experiment_name, save_weights_path, model,  input_shape, class_names, batch_size, train_epochs, dataset_loader, loss, metric, optimizer, optimizer_params):
+        self.input_shape = tuple(map(int, input_shape.split(",")))
+        self.parsed_class_names = class_names.split(",")
         self.model_instance = self.load_model_class(model)()
 
-        super().__init__(server_address, number_clients, number_rounds, experiment_name, save_weights_path)
+        super().__init__(server_address, number_clients, number_rounds, experiment_name, save_weights_path, batch_size, train_epochs, dataset_loader, loss, metric, optimizer, optimizer_params)
 
     def load_model_class(self, model_name):
         """Carica dinamicamente l'unica classe presente in un file Python specificato da model_name."""
@@ -58,14 +58,21 @@ if __name__ == "__main__":
     parser.add_argument('--model', type=str, help='Model Name')
     parser.add_argument('--input_shape', type=str, help='Input shape of the model', default='28,28,1')
     parser.add_argument('--class_names', type=str, help='Class names', default='zero,one,two,three,four,five,six,seven,eight')
+    parser.add_argument('--batch_size', type=int, help='Batch size')
+    parser.add_argument('--train_epochs', type=int, help='Number of epochs')
+    parser.add_argument('--datasetLoader', type=str, help='Experiment name')
+    parser.add_argument('--loss', type=str, help='Keras Loss Metric')
+    parser.add_argument('--metric', type=str, help='Keras Metric')
+    parser.add_argument('--optimizer', type=str, help='Keras Optimizer')
+    parser.add_argument("--optimizer_params", type=str, help="Optimizer parameters in JSON", default='{}')
     args = parser.parse_args()
     server_address = ('0.0.0.0', 12345)
 
     # Server creation and execution
-    server = Server(server_address, args.numberOfClients, args.numberOfRounds,args.experiment, None, args.model, args.input_shape, args.class_names)
+    server = Server(server_address, args.numberOfClients, args.numberOfRounds,args.experiment, None, args.model, args.input_shape, args.class_names, args.batch_size, args.train_epochs, args.datasetLoader, args.loss, args.metric, args.optimizer, args.optimizer_params)
     server.set_aggregation_algorithm(FedAvg())
     # server.set_aggregation_algorithm(FedAdam(beta1=0.5,learning_rate=0.01))
     # server.load_initial_weights("weights/prova.npy")
-    server.enable_clients_profiling(False)
+    server.enable_clients_profiling(True)
     server.enable_evaluations_plots(True)
     server.run()

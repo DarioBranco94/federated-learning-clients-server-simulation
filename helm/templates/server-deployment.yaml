@@ -45,17 +45,19 @@ spec:
               --numberOfRounds {{.Values.server.numberOfRounds }} \
               --experiment {{ .Values.experiment }} \
               --model {{ .Values.client.model }} \
+              --optimizer_params '{{ .Values.client.optimizerParams }}' \
+              --optimizer {{ .Values.client.optimizer }} \
+              --loss  {{ .Values.client.loss }} \
+              --metric  {{ .Values.client.metric }} \
+              --batch_size {{ .Values.client.batchSize }} \
+              --train_epochs {{ .Values.client.trainEpochs }} \
+              --datasetLoader {{ .Values.client.datasetLoader }} \
               --input_shape {{ .Values.server.input_shape | join "," }} \
               --class_names  "{{ .Values.server.class_names | join "," }}"
         volumeMounts:
-          - name: logs-volume
-            mountPath: {{ .Values.volumes.logs.mountPath }}
           - name: evaluations-volume
             mountPath: {{ .Values.volumes.evaluations.mountPath }}
       volumes:
-        - name: logs-volume
-          persistentVolumeClaim:
-            claimName: {{ .Values.volumes.logs.name }}-pvc
         - name: evaluations-volume
           persistentVolumeClaim:
             claimName: {{ .Values.volumes.evaluations.name }}-pvc

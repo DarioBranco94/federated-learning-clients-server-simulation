@@ -1,4 +1,10 @@
+import datetime
+import importlib
+import inspect
+import json
 import os
+import platform
+import xml.etree.ElementTree as ET
 
 from AggregationAlgorithm import AggregationAlgorithm, FedAvg
 
@@ -19,6 +25,7 @@ logging.basicConfig(
     ]
 )
 
+import uuid
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from abc import ABC, abstractmethod
@@ -33,12 +40,26 @@ from tensorflow.keras.models import Model
 
 class TCPServer(ABC):
 
-    def __init__(self, address, number_clients: int, number_rounds: int, experiment_name: str, save_weights_path: str = None):
+    def __init__(self, address, number_clients: int, number_rounds: int, experiment_name: str, save_weights_path: str, batch_size, train_epochs, dataset_loader, loss, metric, optimizer, optimizer_params):
         logging.debug("Initializing TCPServer with address: %s, clients: %d, rounds: %d", 
                      address, number_clients, number_rounds)
         self._server_address = address
         self.experiment_name = experiment_name
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        
+        self._batch_size = batch_size
+        self._train_epochs = train_epochs
+        self.load_dataset = self.load_dataset_function(dataset_loader)
+
+
+        self.loss = loss
+        self.metric = metric
+        self.optimizer = optimizer
+        #load optimizer params and use learning_rate
+        self.optimizer_params = json.loads(optimizer_params)
+        self.learning_rate = self.optimizer_params['learning_rate']
+
+
         self._client_sockets = []  # list of client sockets
         self._clients_profiling_enabled = True
         self._evaluation_plots_enabled = True
@@ -131,6 +152,144 @@ class TCPServer(ABC):
             # For any exception socket is not active
             print(f"Error during the check of the socket: {e}")
             return False
+
+
+
+    def load_dataset_function(self, dataset_loader_name):
+        """ Carica dinamicamente la funzione load_dataset dalla classe DatasetLoader nella cartella Dataset/{dataset_loader_name}."""
+        dataset_sanitized = dataset_loader_name.replace(".", "/")
+        module_path = dataset_sanitized + ".py"
+        spec = importlib.util.spec_from_file_location("datasetLoader", module_path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        
+        # Trova tutte le classi definite nel modulo
+        classes = [cls for _, cls in inspect.getmembers(module, inspect.isclass) if cls.__module__ == module.__name__]
+
+        # Controlla che ci sia una sola classe
+        if len(classes) != 1:
+            raise ValueError(f"Il modulo {dataset_loader_name} deve contenere esattamente una classe, trovate {len(classes)}.")
+
+        # Istanzia la classe
+        dataset_loader_class = classes[0]
+        dataset_loader_instance = dataset_loader_class()
+
+        # Restituisce la funzione load_dataset della classe
+        if hasattr(dataset_loader_instance, "load_dataset"):
+            return lambda: dataset_loader_instance.load_dataset(0)
+        else:
+            raise AttributeError(f"La classe {dataset_loader_class.__name__} non contiene il metodo load_dataset.")
+
+
+
+
+    def save_evaluation_xml(self, xml_template_path: str, output_path: str):
+        """
+        Compila il template XML con i dati dell'esperimento FL appena concluso.
+        
+        :param xml_template_path: percorso del template XML da compilare
+        :param output_path: percorso dove salvare l'XML compilato
+        """
+        # Carica il template XML
+        tree = ET.parse(xml_template_path)
+        root = tree.getroot()
+
+        # ======== HEADER =========
+        root.find('.//header/title').text = self.experiment_name
+        root.find('.//header/description').text = f"Federated Learning experiment '{self.experiment_name}'"
+        root.find('.//header/id').text = str(uuid.uuid4())
+        root.find('.//header/date').text = datetime.datetime.now().strftime("%d/%m/%Y")
+        root.find('.//header/version').text = "1.0"
+        root.find('.//header/authors/author').text = ""
+        root.find('.//header/url').text = ""
+
+        # ======== DATAS =========
+        data = root.find('.//datas/data[@id="1"]')
+        data.find('./description').text = ""
+        dataset = data.find('./datasource/dataset')
+        dataset.attrib['name'] = ""
+        dataset.find('./group[@name="training set"]/url').text = ""
+        dataset.find('./group[@name="training set"]/data_size').text = ""
+        dataset.find('./group[@name="test set"]/url').text = ""
+        dataset.find('./group[@name="test set"]/data_size').text = ""
+        dataset.find('./records').text = ""
+        dataset.find('./data_format').text = ""
+
+        # Metadata Dataset
+        metadata = dataset.find('./metadata')
+        metadata.find("./parameter[@name='classes']").text = str(len(self.get_classes_name()))
+
+        # ======== APPLICATIONS =========
+        application = root.find('.//applications/application[@id="1"]')
+        application.find('./title').text = "Federated Learning"
+        application.find('./model').text = self.aggregation_algorithm.__class__.__name__
+        application.find('./fl_type').text = "collaborative"
+        application.find('./codebase').text = ""
+        application.find('./description').text = "Federated Learning experiment with TCPServer."
+        application.find('./license').text = "Apache-2.0"
+        application.find('./author').text = ""
+
+        # ======== EXECUTIONS =========
+        execution = root.find('.//executions/execution[@id="1"]')
+        execution.find('./deployment').attrib['environment'] = "k8s"
+        execution.find("./deployment/parameter[@type='operation_system']").text = platform.system()
+        execution.find("./deployment/parameter[@type='name_system']").text = platform.node()
+        execution.find("./deployment/parameter[@type='release']").text = platform.release()
+        execution.find("./deployment/parameter[@type='version']").text = platform.version()
+        execution.find("./deployment/parameter[@type='architecture']").text = platform.machine()
+        execution.find("./deployment/parameter[@type='processor']").text = platform.processor()
+        execution.find("./deployment/parameter[@type='python_version']").text = platform.python_version()
+
+        # configurazione del modello (usa i parametri del tuo esperimento)
+        config_model = execution.find('./configuration_model')
+        config_model.find("./parameter[@name='train']").text = str(self.percentage_train)
+        config_model.find("./parameter[@name='test']").text = str(self.percentage_test)
+        config_model.find("./parameter[@name='learning_rate']").text = str(self.learning_rate)
+        config_model.find("./parameter[@name='optimizer']").text = str(self.optimizer)
+        config_model.find("./parameter[@name='loss']").text = str(self.loss)
+        config_model.find("./parameter[@name='metrics']").text = str(self.metric)
+        config_model.find("./parameter[@name='batch_size']").text = str(self._batch_size)
+        config_model.find("./parameter[@name='number_of_epochs_for_each_client']").text = str(self._train_epochs)
+        config_model.find("./parameter[@name='number_of_clients']").text = str(self.number_clients)
+        config_model.find("./parameter[@name='number_of_round']").text = str(self.number_rounds)
+
+        # ======== EVALUATIONS =========
+        evaluation = root.find('.//evaluations/evaluation[@id="1"]/kpis')
+
+        # KPI (prendiamo valori calcolati da self.clients_evaluations)
+        accuracy_avg = np.mean([
+            val['evaluation_federated'][-1][0] for val in self.clients_evaluations.values()
+        ])
+        loss_avg = np.mean([
+            val['evaluation_federated'][-1][1] for val in self.clients_evaluations.values()
+        ])
+        exec_time_avg = np.mean([
+            val['training_execution_time'] for val in self.clients_evaluations.values()
+        ])
+
+        ram_avg = np.mean([
+            val.get('info_profiling', {}).get('max_ram_used', 0) / (1024.0 ** 2)
+            for val in self.clients_evaluations.values()
+        ])
+
+        instr_avg = np.mean([
+            val.get('info_profiling', {}).get('training_n_instructions', 0)
+            for val in self.clients_evaluations.values()
+        ])
+
+        evaluation.find("./kpi[@type='accuracy']").text = f"{accuracy_avg:.2f}"
+        evaluation.find("./kpi[@type='loss']").text = f"{loss_avg:.2f}"
+        evaluation.find("./kpi[@type='average_execution_time']").text = f"{exec_time_avg:.2f}"
+        evaluation.find("./kpi[@type='average_instruction_count']").text = f"{int(instr_avg)}"
+        evaluation.find("./kpi[@type='average_ram_usage']").text = f"{ram_avg:.2f}"
+
+        # Salva XML finale
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        tree.write(output_path, encoding='UTF-8', xml_declaration=True)
+
+        logging.info("XML evaluation saved at: %s", output_path)
+
+
 
     def _initialize_server(self) -> None:
         """
@@ -405,7 +564,7 @@ class TCPServer(ABC):
                         import os
 
                         # Crea la directory per salvare i grafici
-                        save_dir = '/app/output/experiments/'+self.experiment_name+'/profiling'
+                        save_dir = '/app/output/evaluations/'+self.experiment_name+'/profiling'
                         os.makedirs(save_dir, exist_ok=True)
                         
                         clients = []
@@ -444,7 +603,7 @@ class TCPServer(ABC):
                         import os
 
                         # Crea la directory per salvare i grafici
-                        save_dir = '/app/output/experiments/'+self.experiment_name+'/metrics'
+                        save_dir = '/app/output/evaluations/'+self.experiment_name+'/metrics'
                         os.makedirs(save_dir, exist_ok=True)
 
                         fig, ax = plt.subplots(figsize=(10, 6))
@@ -474,7 +633,7 @@ class TCPServer(ABC):
                         import os
 
                         # Crea la directory per salvare i grafici
-                        save_dir = '/app/output/experiments/'+self.experiment_name+'/average'
+                        save_dir = '/app/output/evaluations/'+self.experiment_name+'/average'
                         os.makedirs(save_dir, exist_ok=True)
 
                         rounds = list(range(len(values)))
@@ -497,7 +656,7 @@ class TCPServer(ABC):
                         method_name = self.aggregation_algorithm.__class__.__name__
                         # Save the rounds values to a NumPy file
                         # Define the directory to save the file
-                        directory = '/app/output/experiments/'+self.experiment_name
+                        directory = '/app/output/evaluations/'+self.experiment_name
 
                         # Check if the directory exists, if not, create it
                         os.makedirs(directory, exist_ok=True)
@@ -511,7 +670,7 @@ class TCPServer(ABC):
                         import os
 
                         # Crea la directory per salvare i grafici
-                        save_dir = '/app/output/experiments/'+self.experiment_name+'/confusion_matrix'
+                        save_dir = '/app/output/evaluations/'+self.experiment_name+'/confusion_matrix'
                         os.makedirs(save_dir, exist_ok=True)
                         
                         plt.figure(figsize=(10, 8))
@@ -590,6 +749,14 @@ class TCPServer(ABC):
                             plot_profiling_data('max_ram_used',
                                                 "Max memory used during all the training process",
                                                 "GB")
+                    x_train, x_test, y_train, y_test = self.load_dataset()
+                    self.percentage_train = len(x_train) / (len(x_train) + len(x_test))
+                    self.percentage_test = len(x_test) / (len(x_train) + len(x_test))
+
+                    self.save_evaluation_xml(
+                        xml_template_path='/app/src/templates/template.xml',
+                        output_path=f'/app/output/evaluations/{self.experiment_name}/evaluation_classes.xml'
+                    )
 
     def _send_fl_model_to_client(self, client_socket: socket.socket) -> None:
         """

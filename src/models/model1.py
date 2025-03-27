@@ -8,9 +8,9 @@ import tensorflow_federated as tff
 import json
 
 class model1():
-    def get_skeleton_model(self) -> keras.Model:
+    def get_skeleton_model(self, shape) -> keras.Model:
         return keras.models.Sequential([
-            keras.layers.Conv1D(filters=32, kernel_size=5, padding='same', activation='relu', input_shape=(28, 28)),
+            keras.layers.Conv1D(filters=32, kernel_size=5, padding='same', activation='relu', input_shape=shape),
             keras.layers.AvgPool1D(strides=2),
             keras.layers.Conv1D(filters=48, kernel_size=5, padding='valid', activation='relu'),
             keras.layers.AvgPool1D(strides=2),

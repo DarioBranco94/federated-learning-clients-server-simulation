@@ -12,6 +12,10 @@ spec:
         app: {{ .Chart.Name }}-client
     spec:
       restartPolicy: Never
+      initContainers:
+      - name: wait-five-seconds
+        image: busybox
+        command: ['sh', '-c', 'echo "Waiting 5s..."; sleep 5;']
       containers:
       - name: fed-client
         image: {{ .Values.client.image }}
@@ -47,10 +51,10 @@ spec:
 
             echo "Training complete. Exiting..."
         volumeMounts:
-          - name: logs-volume
-            mountPath: {{ .Values.volumes.logs.mountPath }}
+          - name: evaluations-volume
+            mountPath: {{ .Values.volumes.evaluations.mountPath }}
       volumes:
-        - name: logs-volume
+        - name: evaluations-volume
           persistentVolumeClaim:
-            claimName: {{ .Values.volumes.logs.name }}-pvc
+            claimName: {{ .Values.volumes.evaluations.name }}-pvc
   backoffLimit: 0
